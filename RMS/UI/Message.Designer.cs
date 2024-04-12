@@ -40,10 +40,10 @@
             this.MessagePanel.Controls.Add(this.TxtMessage);
             this.MessagePanel.Controls.Add(this.Username);
             this.MessagePanel.FillColor = System.Drawing.Color.White;
-            this.MessagePanel.Location = new System.Drawing.Point(133, 22);
+            this.MessagePanel.Location = new System.Drawing.Point(133, 24);
             this.MessagePanel.Name = "MessagePanel";
             this.MessagePanel.ShadowColor = System.Drawing.Color.Black;
-            this.MessagePanel.Size = new System.Drawing.Size(744, 144);
+            this.MessagePanel.Size = new System.Drawing.Size(757, 144);
             this.MessagePanel.TabIndex = 0;
             // 
             // TxtMessage
@@ -61,7 +61,7 @@
             this.TxtMessage.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.TxtMessage.ForeColor = System.Drawing.Color.Black;
             this.TxtMessage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtMessage.Location = new System.Drawing.Point(138, 43);
+            this.TxtMessage.Location = new System.Drawing.Point(143, 43);
             this.TxtMessage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.TxtMessage.Multiline = true;
             this.TxtMessage.Name = "TxtMessage";
@@ -76,7 +76,7 @@
             // 
             this.Username.AutoSize = true;
             this.Username.Font = new System.Drawing.Font("Mongolian Baiti", 20F);
-            this.Username.Location = new System.Drawing.Point(19, 17);
+            this.Username.Location = new System.Drawing.Point(19, 15);
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(123, 29);
             this.Username.TabIndex = 0;

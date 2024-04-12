@@ -15,6 +15,13 @@ namespace RMS.UI
 {
     public partial class AdminDashboard : Form
     {
+        string username;
+        string password;
+        string email;
+        long phone;
+        string role;
+        double salary;
+
         public AdminDashboard(User admin)
         {
             InitializeComponent();
@@ -56,6 +63,23 @@ namespace RMS.UI
             messagesFlowPanel.Controls.Add(new Message());
             messagesFlowPanel.Controls.Add(new Message());
             messagesFlowPanel.Controls.Add(new Message());
+        }
+
+        private void showPanel (Panel panel)
+        {
+            AdminSideBarMainPanel.Visible = true;
+            AdminPanelMain.Visible = true;
+
+            UserDetailsMainPanel.Visible = false;
+            ItemDetailsMainPanel.Visible = false;
+            FinancialDataMainPanel.Visible = false;
+            AnalyticsMainPanel.Visible = false;
+            InboxMainPanel.Visible = false;
+            FeedbackMainPanel.Visible = false;
+            AttendanceMainPanel.Visible = false;
+            personalInfoAdmin.Visible = false;
+
+            panel.Visible = true;
         }
 
         private void personalInfo1_Load(object sender, EventArgs e)
@@ -139,6 +163,80 @@ namespace RMS.UI
             {
                 MessageBox.Show("Failed to delete item.");
             }
+        }
+
+        private void guna2Button11_Click(object sender, EventArgs e)
+        {
+            username = txtUsername.Text.ToLower();
+            password = ObjectHandler.GetUserDL().HashPassword(txtUserPassword.Text);
+            email = txtEmail.Text;
+            phone = Convert.ToInt64(txtContact.Text);
+            role = comboRole.Text.ToLower();
+            salary = Convert.ToDouble(txtSalary.Text);
+
+            if (role.ToLower() == "admin")
+            {
+                User admin = new Admin(username, password, role, email, phone, DateTime.Now);
+                ObjectHandler.GetUserDL().AddUserData(admin);
+            }
+            else if (role.ToLower() == "manager" || role.ToLower() == "rider")
+            {
+                User employee = new Employee(username, password, role, email, phone, DateTime.Now, salary);
+                ObjectHandler.GetUserDL().AddUserData(employee);
+            }
+            else if (role.ToLower() == "customer")
+            {
+                User customer = new Customer(username, password, role, email, phone, DateTime.Now);
+                ObjectHandler.GetUserDL().AddUserData(customer);
+            }
+        }
+
+        private void btnItemDetails_Click(object sender, EventArgs e)
+        {
+            showPanel(ItemDetailsMainPanel);
+        }
+
+        private void btnUserDetails_Click(object sender, EventArgs e)
+        {
+            showPanel(UserDetailsMainPanel);
+        }
+
+        private void btnAnalytics_Click(object sender, EventArgs e)
+        {
+            showPanel(AnalyticsMainPanel);
+        }
+
+        private void btnFinancialData_Click(object sender, EventArgs e)
+        {
+            showPanel(FinancialDataMainPanel);
+        }
+
+        private void btnInbox_Click(object sender, EventArgs e)
+        {
+            showPanel(InboxMainPanel);
+        }
+
+        private void btnFeedback_Click(object sender, EventArgs e)
+        {
+            showPanel(FeedbackMainPanel);
+        }
+
+        private void btnCheckAttendance_Click(object sender, EventArgs e)
+        {
+            showPanel(AttendanceMainPanel);
+        }
+
+        private void btnPersonalInfo_Click(object sender, EventArgs e)
+        {
+            showPanel(UserDetailsMainPanel);
+            personalInfoAdmin.Visible = true;
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
         }
     }
 }

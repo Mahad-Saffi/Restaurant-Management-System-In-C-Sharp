@@ -20,6 +20,21 @@ namespace RMS.UI
             InitializeComponent();
         }
 
+        private void showPanel(Panel panel)
+        {
+            RiderPanelMain.Visible = true;
+            RiderSideBarMainPanel.Visible = true;
+
+            OrderHistoryMain.Visible = false;
+            OrdersMain.Visible = false;
+            DeliveryStatusMain.Visible = false;
+            EarningTrackerMain.Visible = false;
+            PersonalInfoMain.Visible = false;
+            InboxMainPanel.Visible = false;
+
+            panel.Visible = true;
+        }
+
         private void LabelOrders_Click(object sender, EventArgs e)
         {
 
@@ -167,6 +182,48 @@ namespace RMS.UI
             string url = acceptedOrder.GetAddressInConcatenatedForm();
             System.Diagnostics.Process.Start(url);
             AddressLabel.LinkVisited = true;
+        }
+
+        private void RiderDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnActiveOrders_Click(object sender, EventArgs e)
+        {
+            showPanel(OrdersMain);
+        }
+
+        private void btnOrderHistory_Click(object sender, EventArgs e)
+        {
+            showPanel(OrderHistoryMain);
+        }
+
+        private void btnDeliveryStatus_Click(object sender, EventArgs e)
+        {
+            showPanel(DeliveryStatusMain);
+        }
+
+        private void btnEarningTracker_Click(object sender, EventArgs e)
+        {
+            showPanel(EarningTrackerMain);
+        }
+
+        private void btnPersonalInfo_Click(object sender, EventArgs e)
+        {
+            showPanel(PersonalInfoMain);
+        }
+
+        private void btnInbox_Click(object sender, EventArgs e)
+        {
+            showPanel(InboxMainPanel);
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
         }
     }
 }

@@ -48,7 +48,7 @@ namespace RMS.UI
 
         private void txtUserName_TextChanged(object sender, EventArgs e)
         {
-            username = txtUserName.Text;
+            username = txtUserName.Text.ToLower();
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
@@ -63,7 +63,8 @@ namespace RMS.UI
 
         private void txtContact_TextChanged(object sender, EventArgs e)
         {
-            phone = long.Parse(txtContact.Text);
+            string phoneStr = txtContact.Text;
+            phone = long.Parse(phoneStr);
         }
 
         private void btnSignUp_Click_1(object sender, EventArgs e)

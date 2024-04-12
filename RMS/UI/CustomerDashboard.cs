@@ -140,6 +140,11 @@ namespace RMS.UI
             AllitemFlowPanel.Controls.Add(new FoodItem());
             AllitemFlowPanel.Controls.Add(new FoodItem());
             AllitemFlowPanel.Controls.Add(new FoodItem());
+            messagesFlowPanel.Controls.Clear();
+            messagesFlowPanel.Controls.Add(new Message());
+            messagesFlowPanel.Controls.Add(new Message());
+            messagesFlowPanel.Controls.Add(new Message());
+            messagesFlowPanel.Controls.Add(new Message());
 
         }
 
@@ -269,6 +274,11 @@ namespace RMS.UI
         private void InboxMainPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void messagesFlowPanel_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
     }
 }

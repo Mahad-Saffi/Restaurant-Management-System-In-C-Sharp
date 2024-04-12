@@ -18,7 +18,7 @@ namespace RMS.UI
         private string username;
         private string password;
         private string storedPassword;
-        DLLForRMS.DL.UserDB userDB = new DLLForRMS.DL.UserDB();
+        UserDB userDB = new UserDB();
 
         public LoginForm()
         {
@@ -104,7 +104,7 @@ namespace RMS.UI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            username = txtUsername.Text;
+            username = txtUsername.Text.ToLower();
             password = txtPassword.Text;
 
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
@@ -116,6 +116,8 @@ namespace RMS.UI
                 // To get the stored password from the database By the given username in textbox
                 storedPassword = ObjectHandler.GetUserDL().RetrieveStoredPassword(username);
 
+                MessageBox.Show(storedPassword);
+
                 if (storedPassword == null)
                 {
                     MessageBox.Show("Username not found.");
@@ -125,14 +127,47 @@ namespace RMS.UI
                 //If the password entered by the user matches the stored password
                 if (ObjectHandler.GetUserDL().VerifyPassword(password, storedPassword))
                 {
+                    Customer customer = null;
+                    Admin admin = null;
+                    Employee employee = null;
                     User user = ObjectHandler.GetUserDL().GetUserByUsername(username);
-                    Customer customer = new Customer(user);
 
-                    if (user != null && user.getRole() == "Customer")
+                    if (user.getRole() == "customer")
+                    {
+                        customer = new Customer(user);
+                    }
+                    else if (user.getRole() == "admin")
+                    {
+                        admin = new Admin(user);
+                    }
+                    else if (user.getRole() == "manager" || user.getRole() == "rider")
+                    {
+                        employee = new Employee();
+                    }
+
+                    if (user != null && user.getRole() == "customer")
                     {
                         this.Hide();
                         var customerDashboard = new CustomerDashboard(customer);
                         customerDashboard.Show();
+                    }
+                    else if (user != null && user.getRole() == "admin")
+                    {
+                        this.Hide();
+                        var adminDashboard = new AdminDashboard(admin);
+                        adminDashboard.Show();
+                    }
+                    else if (user != null && user.getRole() == "manager")
+                    {
+                        this.Hide();
+                        var managerDashboard = new ManagerDashboard();
+                        managerDashboard.Show();
+                    }
+                    else if (user != null && user.getRole() == "rider")
+                    {
+                        this.Hide();
+                        var riderDashboard = new RiderDashboard();
+                        riderDashboard.Show();
                     }
                     else
                     {
@@ -141,7 +176,7 @@ namespace RMS.UI
                 }
                 else
                 {
-                    MessageBox.Show("Invalid password.");
+                    MessageBox.Show("Verified password failed...");
                 }
             }
         }
