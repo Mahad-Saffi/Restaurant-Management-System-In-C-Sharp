@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DLLForRMS">
+      <HintPath>..\..\DLLForRMS\DLLForRMS\bin\Debug\DLLForRMS.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.Charts.WinForms, Version=1.0.9.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.Charts.WinForms.1.0.9\lib\net472\Guna.Charts.WinForms.dll</HintPath>
     </Reference>
@@ -55,8 +58,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ObjectHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RMSDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RMSDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UI\AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +176,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="RMSDatabaseDataSet.xsc">
+      <DependentUpon>RMSDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RMSDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RMSDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RMSDatabaseDataSet.xss">
+      <DependentUpon>RMSDatabaseDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

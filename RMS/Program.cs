@@ -18,7 +18,7 @@ namespace RMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ManagerDashboard());
+            Application.Run(new AdminDashboard());
         }
     }
 }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonalInfo));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.TxtSalaryPersonalInfo = new Guna.UI2.WinForms.Guna2TextBox();
             this.PersonalInfoSalary = new System.Windows.Forms.Label();
             this.btnPersonalInfoSave = new Guna.UI2.WinForms.Guna2Button();
             this.TxtRolePersonalInfo = new Guna.UI2.WinForms.Guna2TextBox();
@@ -48,7 +49,6 @@
             this.PersonalInfoName = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.PersonalInfoLabel = new System.Windows.Forms.Label();
-            this.TxtSalaryPersonalInfo = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PersonalInfoPic)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -79,6 +79,30 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1084, 694);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            // 
+            // TxtSalaryPersonalInfo
+            // 
+            this.TxtSalaryPersonalInfo.BorderColor = System.Drawing.Color.Silver;
+            this.TxtSalaryPersonalInfo.BorderRadius = 5;
+            this.TxtSalaryPersonalInfo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxtSalaryPersonalInfo.DefaultText = "Amount";
+            this.TxtSalaryPersonalInfo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TxtSalaryPersonalInfo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TxtSalaryPersonalInfo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtSalaryPersonalInfo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtSalaryPersonalInfo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtSalaryPersonalInfo.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.TxtSalaryPersonalInfo.ForeColor = System.Drawing.Color.Black;
+            this.TxtSalaryPersonalInfo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtSalaryPersonalInfo.Location = new System.Drawing.Point(245, 513);
+            this.TxtSalaryPersonalInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtSalaryPersonalInfo.Name = "TxtSalaryPersonalInfo";
+            this.TxtSalaryPersonalInfo.PasswordChar = '\0';
+            this.TxtSalaryPersonalInfo.PlaceholderText = "";
+            this.TxtSalaryPersonalInfo.ReadOnly = true;
+            this.TxtSalaryPersonalInfo.SelectedText = "";
+            this.TxtSalaryPersonalInfo.Size = new System.Drawing.Size(180, 41);
+            this.TxtSalaryPersonalInfo.TabIndex = 18;
             // 
             // PersonalInfoSalary
             // 
@@ -123,6 +147,7 @@
             this.TxtRolePersonalInfo.ForeColor = System.Drawing.Color.Black;
             this.TxtRolePersonalInfo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtRolePersonalInfo.Location = new System.Drawing.Point(245, 460);
+            this.TxtRolePersonalInfo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.TxtRolePersonalInfo.Name = "TxtRolePersonalInfo";
             this.TxtRolePersonalInfo.PasswordChar = '\0';
             this.TxtRolePersonalInfo.PlaceholderText = "";
@@ -146,6 +171,7 @@
             this.TxtSincePersonalInfo.ForeColor = System.Drawing.Color.Black;
             this.TxtSincePersonalInfo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtSincePersonalInfo.Location = new System.Drawing.Point(245, 411);
+            this.TxtSincePersonalInfo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.TxtSincePersonalInfo.Name = "TxtSincePersonalInfo";
             this.TxtSincePersonalInfo.PasswordChar = '\0';
             this.TxtSincePersonalInfo.PlaceholderText = "";
@@ -169,6 +195,7 @@
             this.TxtEmailPersonalInfo.ForeColor = System.Drawing.Color.Black;
             this.TxtEmailPersonalInfo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtEmailPersonalInfo.Location = new System.Drawing.Point(245, 361);
+            this.TxtEmailPersonalInfo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.TxtEmailPersonalInfo.Name = "TxtEmailPersonalInfo";
             this.TxtEmailPersonalInfo.PasswordChar = '\0';
             this.TxtEmailPersonalInfo.PlaceholderText = "";
@@ -191,6 +218,7 @@
             this.TxtContactPersonalInfo.ForeColor = System.Drawing.Color.Black;
             this.TxtContactPersonalInfo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtContactPersonalInfo.Location = new System.Drawing.Point(245, 311);
+            this.TxtContactPersonalInfo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.TxtContactPersonalInfo.Name = "TxtContactPersonalInfo";
             this.TxtContactPersonalInfo.PasswordChar = '\0';
             this.TxtContactPersonalInfo.PlaceholderText = "";
@@ -213,6 +241,7 @@
             this.TxtPassPersonalInfo.ForeColor = System.Drawing.Color.Black;
             this.TxtPassPersonalInfo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtPassPersonalInfo.Location = new System.Drawing.Point(245, 262);
+            this.TxtPassPersonalInfo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.TxtPassPersonalInfo.Name = "TxtPassPersonalInfo";
             this.TxtPassPersonalInfo.PasswordChar = '\0';
             this.TxtPassPersonalInfo.PlaceholderText = "";
@@ -235,6 +264,7 @@
             this.TxtNamePersonalInfo.ForeColor = System.Drawing.Color.Black;
             this.TxtNamePersonalInfo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtNamePersonalInfo.Location = new System.Drawing.Point(245, 216);
+            this.TxtNamePersonalInfo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.TxtNamePersonalInfo.Name = "TxtNamePersonalInfo";
             this.TxtNamePersonalInfo.PasswordChar = '\0';
             this.TxtNamePersonalInfo.PlaceholderText = "";
@@ -260,6 +290,7 @@
             this.btnAddPicPersonalInfo.Size = new System.Drawing.Size(180, 45);
             this.btnAddPicPersonalInfo.TabIndex = 9;
             this.btnAddPicPersonalInfo.Text = "Add Picture";
+            this.btnAddPicPersonalInfo.Click += new System.EventHandler(this.btnAddPicPersonalInfo_Click);
             // 
             // PersonalInfoPic
             // 
@@ -361,30 +392,6 @@
             this.PersonalInfoLabel.TabIndex = 0;
             this.PersonalInfoLabel.Text = "Personal Information";
             this.PersonalInfoLabel.Click += new System.EventHandler(this.PersonalInfoLabel_Click);
-            // 
-            // TxtSalaryPersonalInfo
-            // 
-            this.TxtSalaryPersonalInfo.BorderColor = System.Drawing.Color.Silver;
-            this.TxtSalaryPersonalInfo.BorderRadius = 5;
-            this.TxtSalaryPersonalInfo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TxtSalaryPersonalInfo.DefaultText = "Amount";
-            this.TxtSalaryPersonalInfo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TxtSalaryPersonalInfo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TxtSalaryPersonalInfo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtSalaryPersonalInfo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtSalaryPersonalInfo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtSalaryPersonalInfo.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.TxtSalaryPersonalInfo.ForeColor = System.Drawing.Color.Black;
-            this.TxtSalaryPersonalInfo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtSalaryPersonalInfo.Location = new System.Drawing.Point(245, 513);
-            this.TxtSalaryPersonalInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TxtSalaryPersonalInfo.Name = "TxtSalaryPersonalInfo";
-            this.TxtSalaryPersonalInfo.PasswordChar = '\0';
-            this.TxtSalaryPersonalInfo.PlaceholderText = "";
-            this.TxtSalaryPersonalInfo.ReadOnly = true;
-            this.TxtSalaryPersonalInfo.SelectedText = "";
-            this.TxtSalaryPersonalInfo.Size = new System.Drawing.Size(180, 41);
-            this.TxtSalaryPersonalInfo.TabIndex = 18;
             // 
             // PersonalInfo
             // 

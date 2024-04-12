@@ -8,11 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DLLForRMS.BL;
 
 namespace RMS.UI
 {
     public partial class RiderDashboard : Form
     {
+        private Order acceptedOrder;
         public RiderDashboard()
         {
             InitializeComponent();
@@ -162,8 +164,9 @@ namespace RMS.UI
 
         private void AddressLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            string url = acceptedOrder.GetAddressInConcatenatedForm();
+            System.Diagnostics.Process.Start(url);
             AddressLabel.LinkVisited = true;
-            System.Diagnostics.Process.Start("https://www.google.com/maps/place/jaranwala+Road");
         }
     }
 }

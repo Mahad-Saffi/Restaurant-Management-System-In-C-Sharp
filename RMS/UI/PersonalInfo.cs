@@ -78,5 +78,25 @@ namespace RMS.UI
             get { return TxtSalaryPersonalInfo.Text; }
             set { TxtSalaryPersonalInfo.Text = value; }
         }
+
+        public Image PersonalInfoPicBox
+        {
+            get { return PersonalInfoPic.Image; }
+            set { PersonalInfoPic.Image = value; }
+        }
+
+        private void btnAddPicPersonalInfo_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            ofd.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            ofd.FilterIndex = 1;
+            ofd.Multiselect = false;
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                PersonalInfoPic.Image = Image.FromFile(ofd.FileName);
+            }
+        }
     }
 }

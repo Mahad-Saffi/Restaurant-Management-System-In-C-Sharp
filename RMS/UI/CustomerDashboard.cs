@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DLLForRMS.BL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,14 +8,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DLLForRMS.DL;
 
 namespace RMS.UI
 {
     public partial class CustomerDashboard : Form
     {
-        public CustomerDashboard()
+        public CustomerDashboard(Customer customer)
         {
             InitializeComponent();
+            SetCustomerDetails(customer);
+        }
+
+        private void SetCustomerDetails(Customer customer)
+        {
+            // Set customer details
+            personalInfo1.NameTextPersonalInfo = customer.getUsername();
+            personalInfo1.PassTextPersonalInfo = customer.getUserHashPassword();
+            personalInfo1.EmailTextPersonalInfo = customer.getUserEmail();
+            personalInfo1.ContactTextPersonalInfo = customer.getUserPhone().ToString();
+            personalInfo1.SinceTextPersonalInfo = customer.getUserRegistrationDate().ToString();
+            personalInfo1.RoleTextPersonalInfo = customer.getRole();
         }
 
         private void guna2Button5_Click(object sender, EventArgs e)

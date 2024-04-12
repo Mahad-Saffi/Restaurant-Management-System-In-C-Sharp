@@ -7,11 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DLLForRMS.DL;
+using DLLForRMS.BL;
+using DLLForRMS.DLInterfaces;
 
 namespace RMS.UI
 {
     public partial class LoginForm : Form
     {
+        private string username;
+        private string password;
+        private string storedPassword;
+        DLLForRMS.DL.UserDB userDB = new DLLForRMS.DL.UserDB();
+
         public LoginForm()
         {
             InitializeComponent();
@@ -41,6 +49,7 @@ namespace RMS.UI
 
         private void txtPassword_IconRightClick(object sender, EventArgs e)
         {
+            // To work as a password hider
             if (txtPassword.UseSystemPasswordChar)
             {
                 txtPassword.UseSystemPasswordChar = false;
@@ -67,6 +76,7 @@ namespace RMS.UI
 
             // Subscribe to the KeyDown event of the username TextBox
             txtUsername.KeyDown += TxtUsername_KeyDown;
+
         }
 
         private void TxtUsername_KeyDown(object sender, KeyEventArgs e)
@@ -94,9 +104,46 @@ namespace RMS.UI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            var customer = new CustomerDashboard();
-            customer.Show();
+            username = txtUsername.Text;
+            password = txtPassword.Text;
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Please fill all the fields");
+            }
+            else
+            {
+                // To get the stored password from the database By the given username in textbox
+                storedPassword = ObjectHandler.GetUserDL().RetrieveStoredPassword(username);
+
+                if (storedPassword == null)
+                {
+                    MessageBox.Show("Username not found.");
+                    return;
+                }
+
+                //If the password entered by the user matches the stored password
+                if (ObjectHandler.GetUserDL().VerifyPassword(password, storedPassword))
+                {
+                    User user = ObjectHandler.GetUserDL().GetUserByUsername(username);
+                    Customer customer = new Customer(user);
+
+                    if (user != null && user.getRole() == "Customer")
+                    {
+                        this.Hide();
+                        var customerDashboard = new CustomerDashboard(customer);
+                        customerDashboard.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid password.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Invalid password.");
+                }
+            }
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)

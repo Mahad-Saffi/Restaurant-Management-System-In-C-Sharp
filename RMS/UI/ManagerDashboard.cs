@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DLLForRMS.BL;
+using DLLForRMS.DL;
 
 namespace RMS.UI
 {
@@ -18,6 +20,11 @@ namespace RMS.UI
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InventoryPanelMain_Paint(object sender, PaintEventArgs e)
         {
 
         }
