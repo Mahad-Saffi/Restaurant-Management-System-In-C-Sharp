@@ -14,6 +14,8 @@ namespace RMS
         private static IUser userDB = new UserDB();
         private static IItem itemDB = new ItemDB();
         private static IOrder orderDB = new OrderDB();
+        private static IInbox inboxDB = new InboxDB();
+        private static IAttendance attendanceDB = new AttendanceDB();
         private static IUtility utilityDB = new UtilityDB();
 
         public static IUser GetUserDL()
@@ -34,6 +36,16 @@ namespace RMS
         public static IUtility GetUtilityDL()
         {
             return utilityDB;
+        }
+
+        public static IInbox GetInboxDL()
+        {
+            return inboxDB;
+        }
+
+        public static IAttendance GetAttendanceDL()
+        {
+            return attendanceDB;
         }
     }
 }

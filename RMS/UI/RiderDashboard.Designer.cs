@@ -29,63 +29,63 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Guna.Charts.WinForms.ChartFont chartFont1 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont2 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont3 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont4 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid1 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick1 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont5 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid2 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick2 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont6 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid3 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.PointLabel pointLabel1 = new Guna.Charts.WinForms.PointLabel();
+            Guna.Charts.WinForms.ChartFont chartFont7 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Tick tick3 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont8 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont9 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont10 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont11 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont12 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid4 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick4 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont13 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid5 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick5 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont14 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid6 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.PointLabel pointLabel2 = new Guna.Charts.WinForms.PointLabel();
+            Guna.Charts.WinForms.ChartFont chartFont15 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Tick tick6 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont16 = new Guna.Charts.WinForms.ChartFont();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RiderDashboard));
-            Guna.Charts.WinForms.ChartFont chartFont241 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont242 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont243 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont244 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid91 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick91 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont245 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid92 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick92 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont246 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid93 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.PointLabel pointLabel31 = new Guna.Charts.WinForms.PointLabel();
-            Guna.Charts.WinForms.ChartFont chartFont247 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Tick tick93 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont248 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont249 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont250 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont251 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont252 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid94 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick94 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont253 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid95 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick95 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont254 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid96 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.PointLabel pointLabel32 = new Guna.Charts.WinForms.PointLabel();
-            Guna.Charts.WinForms.ChartFont chartFont255 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Tick tick96 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont256 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont257 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont258 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont259 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont260 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid97 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick97 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont261 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid98 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick98 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont262 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid99 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.PointLabel pointLabel33 = new Guna.Charts.WinForms.PointLabel();
-            Guna.Charts.WinForms.ChartFont chartFont263 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Tick tick99 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont264 = new Guna.Charts.WinForms.ChartFont();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            Guna.Charts.WinForms.ChartFont chartFont17 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont18 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont19 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont20 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid7 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick7 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont21 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid8 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick8 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont22 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid9 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.PointLabel pointLabel3 = new Guna.Charts.WinForms.PointLabel();
+            Guna.Charts.WinForms.ChartFont chartFont23 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Tick tick9 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont24 = new Guna.Charts.WinForms.ChartFont();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.RiderPanelMain = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.labelDashboardName = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.UserUpperNavPic = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.CustomerSideSubPanel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.RiderSideBarMainPanel = new Guna.UI2.WinForms.Guna2Panel();
@@ -98,20 +98,6 @@
             this.btnOrderHistory = new Guna.UI2.WinForms.Guna2Button();
             this.btnActiveOrders = new Guna.UI2.WinForms.Guna2Button();
             this.RiderMain = new Guna.UI2.WinForms.Guna2Panel();
-            this.OrderHistoryMain = new Guna.UI2.WinForms.Guna2Panel();
-            this.OrdersPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.OrdersInWeekLabel = new System.Windows.Forms.Label();
-            this.TipOnOrder = new Guna.UI2.WinForms.Guna2Panel();
-            this.TipLabel = new System.Windows.Forms.Label();
-            this.gunaChart1 = new Guna.Charts.WinForms.GunaChart();
-            this.OrderHistoryChart = new Guna.Charts.WinForms.GunaChart();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.OrderHistory = new System.Windows.Forms.Label();
-            this.EarningTrackerMain = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
-            this.EarningDuringWholeYearChart = new Guna.Charts.WinForms.GunaChart();
-            this.EarningTrackerMainPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.EarningTrackerLabel = new System.Windows.Forms.Label();
             this.DeliveryStatusMain = new Guna.UI2.WinForms.Guna2Panel();
             this.DeliveryStatusPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.txtRecievablePayment = new Guna.UI2.WinForms.Guna2TextBox();
@@ -135,6 +121,15 @@
             this.ItemsDeliveryStatus = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.DeliveryStatus = new System.Windows.Forms.Label();
+            this.OrderHistoryMain = new Guna.UI2.WinForms.Guna2Panel();
+            this.OrdersPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.OrdersInWeekLabel = new System.Windows.Forms.Label();
+            this.TipOnOrder = new Guna.UI2.WinForms.Guna2Panel();
+            this.TipLabel = new System.Windows.Forms.Label();
+            this.gunaChart1 = new Guna.Charts.WinForms.GunaChart();
+            this.OrderHistoryChart = new Guna.Charts.WinForms.GunaChart();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.OrderHistory = new System.Windows.Forms.Label();
             this.OrdersMain = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
@@ -147,30 +142,28 @@
             this.MethodOfPayment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.LabelOrders = new System.Windows.Forms.Label();
+            this.PersonalInfoMain = new Guna.UI2.WinForms.Guna2Panel();
+            this.personalInfoRider = new RMS.UI.PersonalInfo();
             this.InboxMainPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.UsernamesCombo = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Usernames = new System.Windows.Forms.Label();
             this.guna2Button16 = new Guna.UI2.WinForms.Guna2Button();
-            this.SendTextTxt = new Guna.UI2.WinForms.Guna2TextBox();
-            this.TxtEmailInbox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.EmailLabelInbox = new System.Windows.Forms.Label();
+            this.txtMessage = new Guna.UI2.WinForms.Guna2TextBox();
             this.messagesFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.InboxPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.label38 = new System.Windows.Forms.Label();
-            this.personalInfoRider = new RMS.UI.PersonalInfo();
-            this.PersonalInfoMain = new Guna.UI2.WinForms.Guna2Panel();
+            this.EarningTrackerMain = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
+            this.EarningDuringWholeYearChart = new Guna.Charts.WinForms.GunaChart();
+            this.EarningTrackerMainPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.EarningTrackerLabel = new System.Windows.Forms.Label();
             this.RiderPanelMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserUpperNavPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.CustomerSideSubPanel1.SuspendLayout();
             this.RiderSideBarMainPanel.SuspendLayout();
             this.SubSideBarOptions.SuspendLayout();
             this.RiderMain.SuspendLayout();
-            this.OrderHistoryMain.SuspendLayout();
-            this.OrdersPanel.SuspendLayout();
-            this.TipOnOrder.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
-            this.EarningTrackerMain.SuspendLayout();
-            this.guna2Panel9.SuspendLayout();
-            this.EarningTrackerMainPanel.SuspendLayout();
             this.DeliveryStatusMain.SuspendLayout();
             this.DeliveryStatusPanel.SuspendLayout();
             this.panel.SuspendLayout();
@@ -180,12 +173,19 @@
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
+            this.OrderHistoryMain.SuspendLayout();
+            this.OrdersPanel.SuspendLayout();
+            this.TipOnOrder.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             this.OrdersMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActiveOrdersGrid)).BeginInit();
             this.guna2Panel3.SuspendLayout();
+            this.PersonalInfoMain.SuspendLayout();
             this.InboxMainPanel.SuspendLayout();
             this.InboxPanel.SuspendLayout();
-            this.PersonalInfoMain.SuspendLayout();
+            this.EarningTrackerMain.SuspendLayout();
+            this.guna2Panel9.SuspendLayout();
+            this.EarningTrackerMainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -201,7 +201,7 @@
             this.RiderPanelMain.Controls.Add(this.guna2ControlBox2);
             this.RiderPanelMain.Controls.Add(this.guna2ControlBox1);
             this.RiderPanelMain.Controls.Add(this.labelDashboardName);
-            this.RiderPanelMain.Controls.Add(this.guna2CirclePictureBox1);
+            this.RiderPanelMain.Controls.Add(this.UserUpperNavPic);
             this.RiderPanelMain.CustomBorderColor = System.Drawing.Color.Silver;
             this.RiderPanelMain.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.RiderPanelMain.Dock = System.Windows.Forms.DockStyle.Top;
@@ -257,24 +257,24 @@
             this.labelDashboardName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDashboardName.Location = new System.Drawing.Point(89, 19);
             this.labelDashboardName.Name = "labelDashboardName";
-            this.labelDashboardName.Size = new System.Drawing.Size(64, 25);
+            this.labelDashboardName.Size = new System.Drawing.Size(101, 25);
             this.labelDashboardName.TabIndex = 1;
-            this.labelDashboardName.Text = "Name";
+            this.labelDashboardName.Text = "Username";
             // 
-            // guna2CirclePictureBox1
+            // UserUpperNavPic
             // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(33, 8);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(46, 45);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
-            this.guna2CirclePictureBox1.UseTransparentBackground = true;
+            this.UserUpperNavPic.BackColor = System.Drawing.Color.Transparent;
+            this.UserUpperNavPic.FillColor = System.Drawing.Color.Transparent;
+            this.UserUpperNavPic.Image = ((System.Drawing.Image)(resources.GetObject("UserUpperNavPic.Image")));
+            this.UserUpperNavPic.ImageRotate = 0F;
+            this.UserUpperNavPic.Location = new System.Drawing.Point(33, 8);
+            this.UserUpperNavPic.Name = "UserUpperNavPic";
+            this.UserUpperNavPic.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.UserUpperNavPic.Size = new System.Drawing.Size(46, 45);
+            this.UserUpperNavPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.UserUpperNavPic.TabIndex = 0;
+            this.UserUpperNavPic.TabStop = false;
+            this.UserUpperNavPic.UseTransparentBackground = true;
             // 
             // guna2PictureBox1
             // 
@@ -500,242 +500,16 @@
             // 
             // RiderMain
             // 
-            this.RiderMain.Controls.Add(this.InboxMainPanel);
             this.RiderMain.Controls.Add(this.OrdersMain);
+            this.RiderMain.Controls.Add(this.DeliveryStatusMain);
             this.RiderMain.Controls.Add(this.OrderHistoryMain);
             this.RiderMain.Controls.Add(this.PersonalInfoMain);
-            this.RiderMain.Controls.Add(this.DeliveryStatusMain);
+            this.RiderMain.Controls.Add(this.InboxMainPanel);
             this.RiderMain.Controls.Add(this.EarningTrackerMain);
             this.RiderMain.Location = new System.Drawing.Point(193, 61);
             this.RiderMain.Name = "RiderMain";
             this.RiderMain.Size = new System.Drawing.Size(1090, 699);
             this.RiderMain.TabIndex = 5;
-            // 
-            // OrderHistoryMain
-            // 
-            this.OrderHistoryMain.BackColor = System.Drawing.SystemColors.Control;
-            this.OrderHistoryMain.Controls.Add(this.OrdersPanel);
-            this.OrderHistoryMain.Controls.Add(this.TipOnOrder);
-            this.OrderHistoryMain.Controls.Add(this.gunaChart1);
-            this.OrderHistoryMain.Controls.Add(this.OrderHistoryChart);
-            this.OrderHistoryMain.Controls.Add(this.guna2Panel1);
-            this.OrderHistoryMain.Location = new System.Drawing.Point(0, 0);
-            this.OrderHistoryMain.Name = "OrderHistoryMain";
-            this.OrderHistoryMain.Size = new System.Drawing.Size(1091, 699);
-            this.OrderHistoryMain.TabIndex = 5;
-            this.OrderHistoryMain.Paint += new System.Windows.Forms.PaintEventHandler(this.OrderHistoryMain_Paint);
-            // 
-            // OrdersPanel
-            // 
-            this.OrdersPanel.BackColor = System.Drawing.Color.Transparent;
-            this.OrdersPanel.BorderColor = System.Drawing.Color.Silver;
-            this.OrdersPanel.BorderRadius = 20;
-            this.OrdersPanel.BorderThickness = 2;
-            this.OrdersPanel.Controls.Add(this.OrdersInWeekLabel);
-            this.OrdersPanel.Location = new System.Drawing.Point(103, 112);
-            this.OrdersPanel.Name = "OrdersPanel";
-            this.OrdersPanel.Size = new System.Drawing.Size(249, 76);
-            this.OrdersPanel.TabIndex = 2;
-            // 
-            // OrdersInWeekLabel
-            // 
-            this.OrdersInWeekLabel.AutoSize = true;
-            this.OrdersInWeekLabel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.OrdersInWeekLabel.Location = new System.Drawing.Point(18, 19);
-            this.OrdersInWeekLabel.Name = "OrdersInWeekLabel";
-            this.OrdersInWeekLabel.Size = new System.Drawing.Size(213, 37);
-            this.OrdersInWeekLabel.TabIndex = 0;
-            this.OrdersInWeekLabel.Text = "Orders In Week";
-            // 
-            // TipOnOrder
-            // 
-            this.TipOnOrder.BackColor = System.Drawing.Color.Transparent;
-            this.TipOnOrder.BorderColor = System.Drawing.Color.Silver;
-            this.TipOnOrder.BorderRadius = 20;
-            this.TipOnOrder.BorderThickness = 2;
-            this.TipOnOrder.Controls.Add(this.TipLabel);
-            this.TipOnOrder.Location = new System.Drawing.Point(767, 197);
-            this.TipOnOrder.Name = "TipOnOrder";
-            this.TipOnOrder.Size = new System.Drawing.Size(219, 76);
-            this.TipOnOrder.TabIndex = 1;
-            // 
-            // TipLabel
-            // 
-            this.TipLabel.AutoSize = true;
-            this.TipLabel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.TipLabel.Location = new System.Drawing.Point(21, 19);
-            this.TipLabel.Name = "TipLabel";
-            this.TipLabel.Size = new System.Drawing.Size(182, 37);
-            this.TipLabel.TabIndex = 0;
-            this.TipLabel.Text = "Tip On Order";
-            // 
-            // gunaChart1
-            // 
-            chartFont241.FontName = "Arial";
-            this.gunaChart1.Legend.LabelFont = chartFont241;
-            this.gunaChart1.Location = new System.Drawing.Point(652, 293);
-            this.gunaChart1.Name = "gunaChart1";
-            this.gunaChart1.Size = new System.Drawing.Size(417, 354);
-            this.gunaChart1.TabIndex = 2;
-            chartFont242.FontName = "Arial";
-            chartFont242.Size = 12;
-            chartFont242.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.gunaChart1.Title.Font = chartFont242;
-            chartFont243.FontName = "Arial";
-            this.gunaChart1.Tooltips.BodyFont = chartFont243;
-            chartFont244.FontName = "Arial";
-            chartFont244.Size = 9;
-            chartFont244.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.gunaChart1.Tooltips.TitleFont = chartFont244;
-            this.gunaChart1.XAxes.GridLines = grid91;
-            chartFont245.FontName = "Arial";
-            tick91.Font = chartFont245;
-            this.gunaChart1.XAxes.Ticks = tick91;
-            this.gunaChart1.YAxes.GridLines = grid92;
-            chartFont246.FontName = "Arial";
-            tick92.Font = chartFont246;
-            this.gunaChart1.YAxes.Ticks = tick92;
-            this.gunaChart1.ZAxes.GridLines = grid93;
-            chartFont247.FontName = "Arial";
-            pointLabel31.Font = chartFont247;
-            this.gunaChart1.ZAxes.PointLabels = pointLabel31;
-            chartFont248.FontName = "Arial";
-            tick93.Font = chartFont248;
-            this.gunaChart1.ZAxes.Ticks = tick93;
-            this.gunaChart1.Load += new System.EventHandler(this.gunaChart1_Load);
-            // 
-            // OrderHistoryChart
-            // 
-            chartFont249.FontName = "Arial";
-            this.OrderHistoryChart.Legend.LabelFont = chartFont249;
-            this.OrderHistoryChart.Location = new System.Drawing.Point(26, 197);
-            this.OrderHistoryChart.Name = "OrderHistoryChart";
-            this.OrderHistoryChart.Size = new System.Drawing.Size(594, 450);
-            this.OrderHistoryChart.TabIndex = 1;
-            chartFont250.FontName = "Arial";
-            chartFont250.Size = 12;
-            chartFont250.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.OrderHistoryChart.Title.Font = chartFont250;
-            chartFont251.FontName = "Arial";
-            this.OrderHistoryChart.Tooltips.BodyFont = chartFont251;
-            chartFont252.FontName = "Arial";
-            chartFont252.Size = 9;
-            chartFont252.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.OrderHistoryChart.Tooltips.TitleFont = chartFont252;
-            this.OrderHistoryChart.XAxes.GridLines = grid94;
-            chartFont253.FontName = "Arial";
-            tick94.Font = chartFont253;
-            this.OrderHistoryChart.XAxes.Ticks = tick94;
-            this.OrderHistoryChart.YAxes.GridLines = grid95;
-            chartFont254.FontName = "Arial";
-            tick95.Font = chartFont254;
-            this.OrderHistoryChart.YAxes.Ticks = tick95;
-            this.OrderHistoryChart.ZAxes.GridLines = grid96;
-            chartFont255.FontName = "Arial";
-            pointLabel32.Font = chartFont255;
-            this.OrderHistoryChart.ZAxes.PointLabels = pointLabel32;
-            chartFont256.FontName = "Arial";
-            tick96.Font = chartFont256;
-            this.OrderHistoryChart.ZAxes.Ticks = tick96;
-            this.OrderHistoryChart.Load += new System.EventHandler(this.OrderHistoryChart_Load);
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Panel1.BorderRadius = 10;
-            this.guna2Panel1.BorderThickness = 2;
-            this.guna2Panel1.Controls.Add(this.OrderHistory);
-            this.guna2Panel1.Location = new System.Drawing.Point(409, 25);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(323, 102);
-            this.guna2Panel1.TabIndex = 0;
-            // 
-            // OrderHistory
-            // 
-            this.OrderHistory.AutoSize = true;
-            this.OrderHistory.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OrderHistory.Location = new System.Drawing.Point(24, 21);
-            this.OrderHistory.Name = "OrderHistory";
-            this.OrderHistory.Size = new System.Drawing.Size(283, 54);
-            this.OrderHistory.TabIndex = 0;
-            this.OrderHistory.Text = "Order History";
-            // 
-            // EarningTrackerMain
-            // 
-            this.EarningTrackerMain.Controls.Add(this.guna2Panel9);
-            this.EarningTrackerMain.Controls.Add(this.EarningTrackerMainPanel);
-            this.EarningTrackerMain.Location = new System.Drawing.Point(0, 0);
-            this.EarningTrackerMain.Name = "EarningTrackerMain";
-            this.EarningTrackerMain.Size = new System.Drawing.Size(1091, 701);
-            this.EarningTrackerMain.TabIndex = 6;
-            // 
-            // guna2Panel9
-            // 
-            this.guna2Panel9.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Panel9.BorderRadius = 20;
-            this.guna2Panel9.BorderThickness = 2;
-            this.guna2Panel9.Controls.Add(this.EarningDuringWholeYearChart);
-            this.guna2Panel9.Location = new System.Drawing.Point(45, 157);
-            this.guna2Panel9.Name = "guna2Panel9";
-            this.guna2Panel9.Size = new System.Drawing.Size(1000, 529);
-            this.guna2Panel9.TabIndex = 1;
-            // 
-            // EarningDuringWholeYearChart
-            // 
-            chartFont257.FontName = "Arial";
-            this.EarningDuringWholeYearChart.Legend.LabelFont = chartFont257;
-            this.EarningDuringWholeYearChart.Location = new System.Drawing.Point(28, 22);
-            this.EarningDuringWholeYearChart.Name = "EarningDuringWholeYearChart";
-            this.EarningDuringWholeYearChart.Size = new System.Drawing.Size(945, 484);
-            this.EarningDuringWholeYearChart.TabIndex = 0;
-            chartFont258.FontName = "Arial";
-            chartFont258.Size = 12;
-            chartFont258.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.EarningDuringWholeYearChart.Title.Font = chartFont258;
-            chartFont259.FontName = "Arial";
-            this.EarningDuringWholeYearChart.Tooltips.BodyFont = chartFont259;
-            chartFont260.FontName = "Arial";
-            chartFont260.Size = 9;
-            chartFont260.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.EarningDuringWholeYearChart.Tooltips.TitleFont = chartFont260;
-            this.EarningDuringWholeYearChart.XAxes.GridLines = grid97;
-            chartFont261.FontName = "Arial";
-            tick97.Font = chartFont261;
-            this.EarningDuringWholeYearChart.XAxes.Ticks = tick97;
-            this.EarningDuringWholeYearChart.YAxes.GridLines = grid98;
-            chartFont262.FontName = "Arial";
-            tick98.Font = chartFont262;
-            this.EarningDuringWholeYearChart.YAxes.Ticks = tick98;
-            this.EarningDuringWholeYearChart.ZAxes.GridLines = grid99;
-            chartFont263.FontName = "Arial";
-            pointLabel33.Font = chartFont263;
-            this.EarningDuringWholeYearChart.ZAxes.PointLabels = pointLabel33;
-            chartFont264.FontName = "Arial";
-            tick99.Font = chartFont264;
-            this.EarningDuringWholeYearChart.ZAxes.Ticks = tick99;
-            this.EarningDuringWholeYearChart.Load += new System.EventHandler(this.gunaChart2_Load);
-            // 
-            // EarningTrackerMainPanel
-            // 
-            this.EarningTrackerMainPanel.BorderColor = System.Drawing.Color.Silver;
-            this.EarningTrackerMainPanel.BorderRadius = 10;
-            this.EarningTrackerMainPanel.BorderThickness = 2;
-            this.EarningTrackerMainPanel.Controls.Add(this.EarningTrackerLabel);
-            this.EarningTrackerMainPanel.Location = new System.Drawing.Point(408, 36);
-            this.EarningTrackerMainPanel.Name = "EarningTrackerMainPanel";
-            this.EarningTrackerMainPanel.Size = new System.Drawing.Size(329, 95);
-            this.EarningTrackerMainPanel.TabIndex = 0;
-            // 
-            // EarningTrackerLabel
-            // 
-            this.EarningTrackerLabel.AutoSize = true;
-            this.EarningTrackerLabel.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EarningTrackerLabel.Location = new System.Drawing.Point(8, 21);
-            this.EarningTrackerLabel.Name = "EarningTrackerLabel";
-            this.EarningTrackerLabel.Size = new System.Drawing.Size(313, 54);
-            this.EarningTrackerLabel.TabIndex = 0;
-            this.EarningTrackerLabel.Text = "Earning Tracker";
             // 
             // DeliveryStatusMain
             // 
@@ -1063,6 +837,156 @@
             this.DeliveryStatus.TabIndex = 1;
             this.DeliveryStatus.Text = "Delivery Status";
             // 
+            // OrderHistoryMain
+            // 
+            this.OrderHistoryMain.BackColor = System.Drawing.SystemColors.Control;
+            this.OrderHistoryMain.Controls.Add(this.OrdersPanel);
+            this.OrderHistoryMain.Controls.Add(this.TipOnOrder);
+            this.OrderHistoryMain.Controls.Add(this.gunaChart1);
+            this.OrderHistoryMain.Controls.Add(this.OrderHistoryChart);
+            this.OrderHistoryMain.Controls.Add(this.guna2Panel1);
+            this.OrderHistoryMain.Location = new System.Drawing.Point(0, 0);
+            this.OrderHistoryMain.Name = "OrderHistoryMain";
+            this.OrderHistoryMain.Size = new System.Drawing.Size(1091, 699);
+            this.OrderHistoryMain.TabIndex = 5;
+            this.OrderHistoryMain.Paint += new System.Windows.Forms.PaintEventHandler(this.OrderHistoryMain_Paint);
+            // 
+            // OrdersPanel
+            // 
+            this.OrdersPanel.BackColor = System.Drawing.Color.Transparent;
+            this.OrdersPanel.BorderColor = System.Drawing.Color.Silver;
+            this.OrdersPanel.BorderRadius = 20;
+            this.OrdersPanel.BorderThickness = 2;
+            this.OrdersPanel.Controls.Add(this.OrdersInWeekLabel);
+            this.OrdersPanel.Location = new System.Drawing.Point(103, 112);
+            this.OrdersPanel.Name = "OrdersPanel";
+            this.OrdersPanel.Size = new System.Drawing.Size(249, 76);
+            this.OrdersPanel.TabIndex = 2;
+            // 
+            // OrdersInWeekLabel
+            // 
+            this.OrdersInWeekLabel.AutoSize = true;
+            this.OrdersInWeekLabel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.OrdersInWeekLabel.Location = new System.Drawing.Point(18, 19);
+            this.OrdersInWeekLabel.Name = "OrdersInWeekLabel";
+            this.OrdersInWeekLabel.Size = new System.Drawing.Size(213, 37);
+            this.OrdersInWeekLabel.TabIndex = 0;
+            this.OrdersInWeekLabel.Text = "Orders In Week";
+            // 
+            // TipOnOrder
+            // 
+            this.TipOnOrder.BackColor = System.Drawing.Color.Transparent;
+            this.TipOnOrder.BorderColor = System.Drawing.Color.Silver;
+            this.TipOnOrder.BorderRadius = 20;
+            this.TipOnOrder.BorderThickness = 2;
+            this.TipOnOrder.Controls.Add(this.TipLabel);
+            this.TipOnOrder.Location = new System.Drawing.Point(767, 197);
+            this.TipOnOrder.Name = "TipOnOrder";
+            this.TipOnOrder.Size = new System.Drawing.Size(219, 76);
+            this.TipOnOrder.TabIndex = 1;
+            // 
+            // TipLabel
+            // 
+            this.TipLabel.AutoSize = true;
+            this.TipLabel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.TipLabel.Location = new System.Drawing.Point(21, 19);
+            this.TipLabel.Name = "TipLabel";
+            this.TipLabel.Size = new System.Drawing.Size(182, 37);
+            this.TipLabel.TabIndex = 0;
+            this.TipLabel.Text = "Tip On Order";
+            // 
+            // gunaChart1
+            // 
+            chartFont1.FontName = "Arial";
+            this.gunaChart1.Legend.LabelFont = chartFont1;
+            this.gunaChart1.Location = new System.Drawing.Point(652, 293);
+            this.gunaChart1.Name = "gunaChart1";
+            this.gunaChart1.Size = new System.Drawing.Size(417, 354);
+            this.gunaChart1.TabIndex = 2;
+            chartFont2.FontName = "Arial";
+            chartFont2.Size = 12;
+            chartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.gunaChart1.Title.Font = chartFont2;
+            chartFont3.FontName = "Arial";
+            this.gunaChart1.Tooltips.BodyFont = chartFont3;
+            chartFont4.FontName = "Arial";
+            chartFont4.Size = 9;
+            chartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.gunaChart1.Tooltips.TitleFont = chartFont4;
+            this.gunaChart1.XAxes.GridLines = grid1;
+            chartFont5.FontName = "Arial";
+            tick1.Font = chartFont5;
+            this.gunaChart1.XAxes.Ticks = tick1;
+            this.gunaChart1.YAxes.GridLines = grid2;
+            chartFont6.FontName = "Arial";
+            tick2.Font = chartFont6;
+            this.gunaChart1.YAxes.Ticks = tick2;
+            this.gunaChart1.ZAxes.GridLines = grid3;
+            chartFont7.FontName = "Arial";
+            pointLabel1.Font = chartFont7;
+            this.gunaChart1.ZAxes.PointLabels = pointLabel1;
+            chartFont8.FontName = "Arial";
+            tick3.Font = chartFont8;
+            this.gunaChart1.ZAxes.Ticks = tick3;
+            this.gunaChart1.Load += new System.EventHandler(this.gunaChart1_Load);
+            // 
+            // OrderHistoryChart
+            // 
+            chartFont9.FontName = "Arial";
+            this.OrderHistoryChart.Legend.LabelFont = chartFont9;
+            this.OrderHistoryChart.Location = new System.Drawing.Point(26, 197);
+            this.OrderHistoryChart.Name = "OrderHistoryChart";
+            this.OrderHistoryChart.Size = new System.Drawing.Size(594, 450);
+            this.OrderHistoryChart.TabIndex = 1;
+            chartFont10.FontName = "Arial";
+            chartFont10.Size = 12;
+            chartFont10.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.OrderHistoryChart.Title.Font = chartFont10;
+            chartFont11.FontName = "Arial";
+            this.OrderHistoryChart.Tooltips.BodyFont = chartFont11;
+            chartFont12.FontName = "Arial";
+            chartFont12.Size = 9;
+            chartFont12.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.OrderHistoryChart.Tooltips.TitleFont = chartFont12;
+            this.OrderHistoryChart.XAxes.GridLines = grid4;
+            chartFont13.FontName = "Arial";
+            tick4.Font = chartFont13;
+            this.OrderHistoryChart.XAxes.Ticks = tick4;
+            this.OrderHistoryChart.YAxes.GridLines = grid5;
+            chartFont14.FontName = "Arial";
+            tick5.Font = chartFont14;
+            this.OrderHistoryChart.YAxes.Ticks = tick5;
+            this.OrderHistoryChart.ZAxes.GridLines = grid6;
+            chartFont15.FontName = "Arial";
+            pointLabel2.Font = chartFont15;
+            this.OrderHistoryChart.ZAxes.PointLabels = pointLabel2;
+            chartFont16.FontName = "Arial";
+            tick6.Font = chartFont16;
+            this.OrderHistoryChart.ZAxes.Ticks = tick6;
+            this.OrderHistoryChart.Load += new System.EventHandler(this.OrderHistoryChart_Load);
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.BorderColor = System.Drawing.Color.Silver;
+            this.guna2Panel1.BorderRadius = 10;
+            this.guna2Panel1.BorderThickness = 2;
+            this.guna2Panel1.Controls.Add(this.OrderHistory);
+            this.guna2Panel1.Location = new System.Drawing.Point(409, 25);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(323, 102);
+            this.guna2Panel1.TabIndex = 0;
+            // 
+            // OrderHistory
+            // 
+            this.OrderHistory.AutoSize = true;
+            this.OrderHistory.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderHistory.Location = new System.Drawing.Point(24, 21);
+            this.OrderHistory.Name = "OrderHistory";
+            this.OrderHistory.Size = new System.Drawing.Size(283, 54);
+            this.OrderHistory.TabIndex = 0;
+            this.OrderHistory.Text = "Order History";
+            // 
             // OrdersMain
             // 
             this.OrdersMain.Controls.Add(this.guna2Button7);
@@ -1115,22 +1039,22 @@
             this.ActiveOrdersGrid.AllowUserToAddRows = false;
             this.ActiveOrdersGrid.AllowUserToDeleteRows = false;
             this.ActiveOrdersGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            dataGridViewCellStyle41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle41.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.Color.White;
-            this.ActiveOrdersGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle41;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.ActiveOrdersGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.ActiveOrdersGrid.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.ActiveOrdersGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ActiveOrdersGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle42;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ActiveOrdersGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.ActiveOrdersGrid.ColumnHeadersHeight = 30;
             this.ActiveOrdersGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.ActiveOrdersGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1140,29 +1064,29 @@
             this.OrderAmount,
             this.Status,
             this.MethodOfPayment});
-            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle43.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ActiveOrdersGrid.DefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ActiveOrdersGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.ActiveOrdersGrid.GridColor = System.Drawing.Color.Black;
-            this.ActiveOrdersGrid.Location = new System.Drawing.Point(26, 145);
+            this.ActiveOrdersGrid.Location = new System.Drawing.Point(33, 145);
             this.ActiveOrdersGrid.Name = "ActiveOrdersGrid";
             this.ActiveOrdersGrid.ReadOnly = true;
             this.ActiveOrdersGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle44.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle44.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ActiveOrdersGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle44;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ActiveOrdersGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.ActiveOrdersGrid.RowHeadersVisible = false;
-            this.ActiveOrdersGrid.Size = new System.Drawing.Size(1043, 427);
+            this.ActiveOrdersGrid.Size = new System.Drawing.Size(1019, 427);
             this.ActiveOrdersGrid.TabIndex = 1;
             this.ActiveOrdersGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.ActiveOrdersGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -1268,18 +1192,67 @@
             this.LabelOrders.Text = "Orders";
             this.LabelOrders.Click += new System.EventHandler(this.LabelOrders_Click);
             // 
+            // PersonalInfoMain
+            // 
+            this.PersonalInfoMain.Controls.Add(this.personalInfoRider);
+            this.PersonalInfoMain.Location = new System.Drawing.Point(-1, 1);
+            this.PersonalInfoMain.Name = "PersonalInfoMain";
+            this.PersonalInfoMain.Size = new System.Drawing.Size(1090, 700);
+            this.PersonalInfoMain.TabIndex = 12;
+            // 
+            // personalInfoRider
+            // 
+            this.personalInfoRider.ContactTextPersonalInfo = "";
+            this.personalInfoRider.EmailTextPersonalInfo = "";
+            this.personalInfoRider.Location = new System.Drawing.Point(0, 0);
+            this.personalInfoRider.Name = "personalInfoRider";
+            this.personalInfoRider.NameTextPersonalInfo = "";
+            this.personalInfoRider.PassTextPersonalInfo = "";
+            this.personalInfoRider.PersonalInfoPicBox = ((System.Drawing.Image)(resources.GetObject("personalInfoRider.PersonalInfoPicBox")));
+            this.personalInfoRider.RoleTextPersonalInfo = "";
+            this.personalInfoRider.SalaryTextPersonalInfo = "Amount";
+            this.personalInfoRider.SinceTextPersonalInfo = "";
+            this.personalInfoRider.Size = new System.Drawing.Size(1089, 697);
+            this.personalInfoRider.TabIndex = 2;
+            // 
             // InboxMainPanel
             // 
+            this.InboxMainPanel.Controls.Add(this.UsernamesCombo);
+            this.InboxMainPanel.Controls.Add(this.Usernames);
             this.InboxMainPanel.Controls.Add(this.guna2Button16);
-            this.InboxMainPanel.Controls.Add(this.SendTextTxt);
-            this.InboxMainPanel.Controls.Add(this.TxtEmailInbox);
-            this.InboxMainPanel.Controls.Add(this.EmailLabelInbox);
+            this.InboxMainPanel.Controls.Add(this.txtMessage);
             this.InboxMainPanel.Controls.Add(this.messagesFlowPanel);
             this.InboxMainPanel.Controls.Add(this.InboxPanel);
             this.InboxMainPanel.Location = new System.Drawing.Point(0, 0);
             this.InboxMainPanel.Name = "InboxMainPanel";
             this.InboxMainPanel.Size = new System.Drawing.Size(1088, 694);
             this.InboxMainPanel.TabIndex = 11;
+            this.InboxMainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.InboxMainPanel_Paint);
+            // 
+            // UsernamesCombo
+            // 
+            this.UsernamesCombo.BackColor = System.Drawing.Color.Transparent;
+            this.UsernamesCombo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.UsernamesCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.UsernamesCombo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.UsernamesCombo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.UsernamesCombo.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.UsernamesCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.UsernamesCombo.ItemHeight = 30;
+            this.UsernamesCombo.Location = new System.Drawing.Point(233, 610);
+            this.UsernamesCombo.Name = "UsernamesCombo";
+            this.UsernamesCombo.Size = new System.Drawing.Size(159, 36);
+            this.UsernamesCombo.TabIndex = 21;
+            // 
+            // Usernames
+            // 
+            this.Usernames.AutoSize = true;
+            this.Usernames.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Usernames.Location = new System.Drawing.Point(112, 617);
+            this.Usernames.Name = "Usernames";
+            this.Usernames.Size = new System.Drawing.Size(109, 25);
+            this.Usernames.TabIndex = 19;
+            this.Usernames.Text = "Username";
             // 
             // guna2Button16
             // 
@@ -1299,64 +1272,32 @@
             this.guna2Button16.Size = new System.Drawing.Size(144, 56);
             this.guna2Button16.TabIndex = 17;
             this.guna2Button16.Text = "Send";
+            this.guna2Button16.Click += new System.EventHandler(this.guna2Button16_Click);
             // 
-            // SendTextTxt
+            // txtMessage
             // 
-            this.SendTextTxt.BorderColor = System.Drawing.Color.Silver;
-            this.SendTextTxt.BorderRadius = 10;
-            this.SendTextTxt.BorderThickness = 2;
-            this.SendTextTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.SendTextTxt.DefaultText = "";
-            this.SendTextTxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.SendTextTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.SendTextTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.SendTextTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.SendTextTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.SendTextTxt.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.SendTextTxt.ForeColor = System.Drawing.Color.Black;
-            this.SendTextTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.SendTextTxt.Location = new System.Drawing.Point(127, 469);
-            this.SendTextTxt.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.SendTextTxt.Multiline = true;
-            this.SendTextTxt.Name = "SendTextTxt";
-            this.SendTextTxt.PasswordChar = '\0';
-            this.SendTextTxt.PlaceholderText = "Your Message Goes here...";
-            this.SendTextTxt.SelectedText = "";
-            this.SendTextTxt.Size = new System.Drawing.Size(877, 97);
-            this.SendTextTxt.TabIndex = 16;
-            // 
-            // TxtEmailInbox
-            // 
-            this.TxtEmailInbox.BorderColor = System.Drawing.Color.Silver;
-            this.TxtEmailInbox.BorderRadius = 10;
-            this.TxtEmailInbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TxtEmailInbox.DefaultText = "";
-            this.TxtEmailInbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TxtEmailInbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TxtEmailInbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtEmailInbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtEmailInbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtEmailInbox.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.TxtEmailInbox.ForeColor = System.Drawing.Color.Black;
-            this.TxtEmailInbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtEmailInbox.Location = new System.Drawing.Point(219, 605);
-            this.TxtEmailInbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.TxtEmailInbox.Name = "TxtEmailInbox";
-            this.TxtEmailInbox.PasswordChar = '\0';
-            this.TxtEmailInbox.PlaceholderText = "";
-            this.TxtEmailInbox.SelectedText = "";
-            this.TxtEmailInbox.Size = new System.Drawing.Size(180, 37);
-            this.TxtEmailInbox.TabIndex = 15;
-            // 
-            // EmailLabelInbox
-            // 
-            this.EmailLabelInbox.AutoSize = true;
-            this.EmailLabelInbox.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailLabelInbox.Location = new System.Drawing.Point(133, 611);
-            this.EmailLabelInbox.Name = "EmailLabelInbox";
-            this.EmailLabelInbox.Size = new System.Drawing.Size(68, 25);
-            this.EmailLabelInbox.TabIndex = 14;
-            this.EmailLabelInbox.Text = "Email";
+            this.txtMessage.BorderColor = System.Drawing.Color.Silver;
+            this.txtMessage.BorderRadius = 10;
+            this.txtMessage.BorderThickness = 2;
+            this.txtMessage.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMessage.DefaultText = "";
+            this.txtMessage.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMessage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMessage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMessage.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMessage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMessage.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtMessage.ForeColor = System.Drawing.Color.Black;
+            this.txtMessage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMessage.Location = new System.Drawing.Point(127, 469);
+            this.txtMessage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMessage.Multiline = true;
+            this.txtMessage.Name = "txtMessage";
+            this.txtMessage.PasswordChar = '\0';
+            this.txtMessage.PlaceholderText = "Your Message Goes here...";
+            this.txtMessage.SelectedText = "";
+            this.txtMessage.Size = new System.Drawing.Size(877, 97);
+            this.txtMessage.TabIndex = 16;
             // 
             // messagesFlowPanel
             // 
@@ -1389,28 +1330,81 @@
             this.label38.TabIndex = 0;
             this.label38.Text = "Inbox";
             // 
-            // personalInfoRider
+            // EarningTrackerMain
             // 
-            this.personalInfoRider.ContactTextPersonalInfo = "";
-            this.personalInfoRider.EmailTextPersonalInfo = "";
-            this.personalInfoRider.Location = new System.Drawing.Point(0, 0);
-            this.personalInfoRider.Name = "personalInfoRider";
-            this.personalInfoRider.NameTextPersonalInfo = "";
-            this.personalInfoRider.PassTextPersonalInfo = "";
-            this.personalInfoRider.PersonalInfoPicBox = ((System.Drawing.Image)(resources.GetObject("personalInfoRider.PersonalInfoPicBox")));
-            this.personalInfoRider.RoleTextPersonalInfo = "";
-            this.personalInfoRider.SalaryTextPersonalInfo = "Amount";
-            this.personalInfoRider.SinceTextPersonalInfo = "";
-            this.personalInfoRider.Size = new System.Drawing.Size(1089, 697);
-            this.personalInfoRider.TabIndex = 2;
+            this.EarningTrackerMain.Controls.Add(this.guna2Panel9);
+            this.EarningTrackerMain.Controls.Add(this.EarningTrackerMainPanel);
+            this.EarningTrackerMain.Location = new System.Drawing.Point(0, 0);
+            this.EarningTrackerMain.Name = "EarningTrackerMain";
+            this.EarningTrackerMain.Size = new System.Drawing.Size(1091, 701);
+            this.EarningTrackerMain.TabIndex = 6;
             // 
-            // PersonalInfoMain
+            // guna2Panel9
             // 
-            this.PersonalInfoMain.Controls.Add(this.personalInfoRider);
-            this.PersonalInfoMain.Location = new System.Drawing.Point(-1, 1);
-            this.PersonalInfoMain.Name = "PersonalInfoMain";
-            this.PersonalInfoMain.Size = new System.Drawing.Size(1090, 700);
-            this.PersonalInfoMain.TabIndex = 12;
+            this.guna2Panel9.BorderColor = System.Drawing.Color.Silver;
+            this.guna2Panel9.BorderRadius = 20;
+            this.guna2Panel9.BorderThickness = 2;
+            this.guna2Panel9.Controls.Add(this.EarningDuringWholeYearChart);
+            this.guna2Panel9.Location = new System.Drawing.Point(45, 157);
+            this.guna2Panel9.Name = "guna2Panel9";
+            this.guna2Panel9.Size = new System.Drawing.Size(1000, 529);
+            this.guna2Panel9.TabIndex = 1;
+            // 
+            // EarningDuringWholeYearChart
+            // 
+            chartFont17.FontName = "Arial";
+            this.EarningDuringWholeYearChart.Legend.LabelFont = chartFont17;
+            this.EarningDuringWholeYearChart.Location = new System.Drawing.Point(28, 22);
+            this.EarningDuringWholeYearChart.Name = "EarningDuringWholeYearChart";
+            this.EarningDuringWholeYearChart.Size = new System.Drawing.Size(945, 484);
+            this.EarningDuringWholeYearChart.TabIndex = 0;
+            chartFont18.FontName = "Arial";
+            chartFont18.Size = 12;
+            chartFont18.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.EarningDuringWholeYearChart.Title.Font = chartFont18;
+            chartFont19.FontName = "Arial";
+            this.EarningDuringWholeYearChart.Tooltips.BodyFont = chartFont19;
+            chartFont20.FontName = "Arial";
+            chartFont20.Size = 9;
+            chartFont20.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.EarningDuringWholeYearChart.Tooltips.TitleFont = chartFont20;
+            this.EarningDuringWholeYearChart.XAxes.GridLines = grid7;
+            chartFont21.FontName = "Arial";
+            tick7.Font = chartFont21;
+            this.EarningDuringWholeYearChart.XAxes.Ticks = tick7;
+            this.EarningDuringWholeYearChart.YAxes.GridLines = grid8;
+            chartFont22.FontName = "Arial";
+            tick8.Font = chartFont22;
+            this.EarningDuringWholeYearChart.YAxes.Ticks = tick8;
+            this.EarningDuringWholeYearChart.ZAxes.GridLines = grid9;
+            chartFont23.FontName = "Arial";
+            pointLabel3.Font = chartFont23;
+            this.EarningDuringWholeYearChart.ZAxes.PointLabels = pointLabel3;
+            chartFont24.FontName = "Arial";
+            tick9.Font = chartFont24;
+            this.EarningDuringWholeYearChart.ZAxes.Ticks = tick9;
+            this.EarningDuringWholeYearChart.Load += new System.EventHandler(this.gunaChart2_Load);
+            // 
+            // EarningTrackerMainPanel
+            // 
+            this.EarningTrackerMainPanel.BorderColor = System.Drawing.Color.Silver;
+            this.EarningTrackerMainPanel.BorderRadius = 10;
+            this.EarningTrackerMainPanel.BorderThickness = 2;
+            this.EarningTrackerMainPanel.Controls.Add(this.EarningTrackerLabel);
+            this.EarningTrackerMainPanel.Location = new System.Drawing.Point(408, 36);
+            this.EarningTrackerMainPanel.Name = "EarningTrackerMainPanel";
+            this.EarningTrackerMainPanel.Size = new System.Drawing.Size(329, 95);
+            this.EarningTrackerMainPanel.TabIndex = 0;
+            // 
+            // EarningTrackerLabel
+            // 
+            this.EarningTrackerLabel.AutoSize = true;
+            this.EarningTrackerLabel.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EarningTrackerLabel.Location = new System.Drawing.Point(8, 21);
+            this.EarningTrackerLabel.Name = "EarningTrackerLabel";
+            this.EarningTrackerLabel.Size = new System.Drawing.Size(313, 54);
+            this.EarningTrackerLabel.TabIndex = 0;
+            this.EarningTrackerLabel.Text = "Earning Tracker";
             // 
             // RiderDashboard
             // 
@@ -1427,23 +1421,12 @@
             this.Load += new System.EventHandler(this.RiderDashboard_Load);
             this.RiderPanelMain.ResumeLayout(false);
             this.RiderPanelMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserUpperNavPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.CustomerSideSubPanel1.ResumeLayout(false);
             this.RiderSideBarMainPanel.ResumeLayout(false);
             this.SubSideBarOptions.ResumeLayout(false);
             this.RiderMain.ResumeLayout(false);
-            this.OrderHistoryMain.ResumeLayout(false);
-            this.OrdersPanel.ResumeLayout(false);
-            this.OrdersPanel.PerformLayout();
-            this.TipOnOrder.ResumeLayout(false);
-            this.TipOnOrder.PerformLayout();
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
-            this.EarningTrackerMain.ResumeLayout(false);
-            this.guna2Panel9.ResumeLayout(false);
-            this.EarningTrackerMainPanel.ResumeLayout(false);
-            this.EarningTrackerMainPanel.PerformLayout();
             this.DeliveryStatusMain.ResumeLayout(false);
             this.DeliveryStatusPanel.ResumeLayout(false);
             this.DeliveryStatusPanel.PerformLayout();
@@ -1461,15 +1444,26 @@
             this.guna2Panel4.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
+            this.OrderHistoryMain.ResumeLayout(false);
+            this.OrdersPanel.ResumeLayout(false);
+            this.OrdersPanel.PerformLayout();
+            this.TipOnOrder.ResumeLayout(false);
+            this.TipOnOrder.PerformLayout();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.OrdersMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ActiveOrdersGrid)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
+            this.PersonalInfoMain.ResumeLayout(false);
             this.InboxMainPanel.ResumeLayout(false);
             this.InboxMainPanel.PerformLayout();
             this.InboxPanel.ResumeLayout(false);
             this.InboxPanel.PerformLayout();
-            this.PersonalInfoMain.ResumeLayout(false);
+            this.EarningTrackerMain.ResumeLayout(false);
+            this.guna2Panel9.ResumeLayout(false);
+            this.EarningTrackerMainPanel.ResumeLayout(false);
+            this.EarningTrackerMainPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1482,7 +1476,7 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private System.Windows.Forms.Label labelDashboardName;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox UserUpperNavPic;
         private Guna.UI2.WinForms.Guna2Panel CustomerSideSubPanel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Panel RiderSideBarMainPanel;
@@ -1543,9 +1537,7 @@
         private Guna.UI2.WinForms.Guna2Button btnInbox;
         private Guna.UI2.WinForms.Guna2Panel InboxMainPanel;
         private Guna.UI2.WinForms.Guna2Button guna2Button16;
-        private Guna.UI2.WinForms.Guna2TextBox SendTextTxt;
-        private Guna.UI2.WinForms.Guna2TextBox TxtEmailInbox;
-        private System.Windows.Forms.Label EmailLabelInbox;
+        private Guna.UI2.WinForms.Guna2TextBox txtMessage;
         private System.Windows.Forms.FlowLayoutPanel messagesFlowPanel;
         private Guna.UI2.WinForms.Guna2Panel InboxPanel;
         private System.Windows.Forms.Label label38;
@@ -1554,5 +1546,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtOrderItems;
         private Guna.UI2.WinForms.Guna2TextBox txtOrderID;
         private Guna.UI2.WinForms.Guna2Panel PersonalInfoMain;
+        private Guna.UI2.WinForms.Guna2ComboBox UsernamesCombo;
+        private System.Windows.Forms.Label Usernames;
     }
 }

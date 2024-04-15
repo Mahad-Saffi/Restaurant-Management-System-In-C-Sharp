@@ -14,13 +14,27 @@ namespace RMS.UI
 {
     public partial class CustomerDashboard : Form
     {
+        User customer;
         public CustomerDashboard(Customer customer)
         {
+            this.customer = customer;
             InitializeComponent();
-            SetCustomerDetails(customer);
+            InitializeInbox();
+            InitializeCustomerPersonalInfo(customer);
         }
 
-        private void SetCustomerDetails(Customer customer)
+        private void InitializeInbox()
+        {
+            // Load all the messages
+            List<Inbox> messages = ObjectHandler.GetInboxDL().LoadMessagesByUserID(customer);
+            messagesFlowPanel.Controls.Clear();
+            foreach (Inbox message in messages)
+            {
+                messagesFlowPanel.Controls.Add(new Message(message));
+            }
+        }
+
+        private void InitializeCustomerPersonalInfo(Customer customer)
         {
             // Set customer details
             personalInfo1.NameTextPersonalInfo = customer.getUsername();
@@ -141,10 +155,6 @@ namespace RMS.UI
             AllitemFlowPanel.Controls.Add(new FoodItem());
             AllitemFlowPanel.Controls.Add(new FoodItem());
             messagesFlowPanel.Controls.Clear();
-            messagesFlowPanel.Controls.Add(new Message());
-            messagesFlowPanel.Controls.Add(new Message());
-            messagesFlowPanel.Controls.Add(new Message());
-            messagesFlowPanel.Controls.Add(new Message());
 
         }
 
@@ -279,6 +289,28 @@ namespace RMS.UI
         private void messagesFlowPanel_Paint(object sender, PaintEventArgs e)
         {
             
+        }
+
+        private void guna2Button16_Click(object sender, EventArgs e)
+        {
+            string message = txtMessage.Text;
+            string username = "admin";
+
+            MessageBox.Show(username);
+
+            User reciever = ObjectHandler.GetUserDL().GetUserByUsername(username);
+
+            Inbox inbox = new Inbox(customer.getUserID(), reciever.getUserID(), message, DateTime.Now);
+
+            if (ObjectHandler.GetInboxDL().SendMessage(inbox))
+            {
+                txtMessage.Clear();
+                MessageBox.Show("Message sent successfully.");
+            }
+            else
+            {
+                MessageBox.Show("Failed to send message.");
+            }
         }
     }
 }

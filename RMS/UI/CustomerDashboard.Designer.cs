@@ -66,7 +66,7 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.labelDashboardName = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.UserUpperNavPic = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.CustomerSidePanel = new Guna.UI2.WinForms.Guna2Panel();
@@ -131,13 +131,13 @@
             this.PopularItemsFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.InboxMainPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button16 = new Guna.UI2.WinForms.Guna2Button();
-            this.SendTextTxt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMessage = new Guna.UI2.WinForms.Guna2TextBox();
             this.messagesFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.InboxPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.label38 = new System.Windows.Forms.Label();
             this.personalInfo1 = new RMS.UI.PersonalInfo();
             this.CustomerPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserUpperNavPic)).BeginInit();
             this.CustomerSidePanel.SuspendLayout();
             this.CustomerSideSubPanel2.SuspendLayout();
             this.CustomerSideSubPanel1.SuspendLayout();
@@ -169,7 +169,7 @@
             this.CustomerPanel.Controls.Add(this.guna2ControlBox2);
             this.CustomerPanel.Controls.Add(this.guna2ControlBox1);
             this.CustomerPanel.Controls.Add(this.labelDashboardName);
-            this.CustomerPanel.Controls.Add(this.guna2CirclePictureBox1);
+            this.CustomerPanel.Controls.Add(this.UserUpperNavPic);
             this.CustomerPanel.CustomBorderColor = System.Drawing.Color.Silver;
             this.CustomerPanel.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.CustomerPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -226,24 +226,24 @@
             this.labelDashboardName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDashboardName.Location = new System.Drawing.Point(89, 19);
             this.labelDashboardName.Name = "labelDashboardName";
-            this.labelDashboardName.Size = new System.Drawing.Size(64, 25);
+            this.labelDashboardName.Size = new System.Drawing.Size(101, 25);
             this.labelDashboardName.TabIndex = 1;
-            this.labelDashboardName.Text = "Name";
+            this.labelDashboardName.Text = "Username";
             // 
-            // guna2CirclePictureBox1
+            // UserUpperNavPic
             // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(33, 8);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(46, 45);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
-            this.guna2CirclePictureBox1.UseTransparentBackground = true;
+            this.UserUpperNavPic.BackColor = System.Drawing.Color.Transparent;
+            this.UserUpperNavPic.FillColor = System.Drawing.Color.Transparent;
+            this.UserUpperNavPic.Image = ((System.Drawing.Image)(resources.GetObject("UserUpperNavPic.Image")));
+            this.UserUpperNavPic.ImageRotate = 0F;
+            this.UserUpperNavPic.Location = new System.Drawing.Point(33, 8);
+            this.UserUpperNavPic.Name = "UserUpperNavPic";
+            this.UserUpperNavPic.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.UserUpperNavPic.Size = new System.Drawing.Size(46, 45);
+            this.UserUpperNavPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.UserUpperNavPic.TabIndex = 0;
+            this.UserUpperNavPic.TabStop = false;
+            this.UserUpperNavPic.UseTransparentBackground = true;
             // 
             // guna2BorderlessForm1
             // 
@@ -1243,7 +1243,7 @@
             // InboxMainPanel
             // 
             this.InboxMainPanel.Controls.Add(this.guna2Button16);
-            this.InboxMainPanel.Controls.Add(this.SendTextTxt);
+            this.InboxMainPanel.Controls.Add(this.txtMessage);
             this.InboxMainPanel.Controls.Add(this.messagesFlowPanel);
             this.InboxMainPanel.Controls.Add(this.InboxPanel);
             this.InboxMainPanel.Location = new System.Drawing.Point(194, 62);
@@ -1270,31 +1270,32 @@
             this.guna2Button16.Size = new System.Drawing.Size(144, 56);
             this.guna2Button16.TabIndex = 17;
             this.guna2Button16.Text = "Send";
+            this.guna2Button16.Click += new System.EventHandler(this.guna2Button16_Click);
             // 
-            // SendTextTxt
+            // txtMessage
             // 
-            this.SendTextTxt.BorderColor = System.Drawing.Color.Silver;
-            this.SendTextTxt.BorderRadius = 10;
-            this.SendTextTxt.BorderThickness = 2;
-            this.SendTextTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.SendTextTxt.DefaultText = "";
-            this.SendTextTxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.SendTextTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.SendTextTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.SendTextTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.SendTextTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.SendTextTxt.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.SendTextTxt.ForeColor = System.Drawing.Color.Black;
-            this.SendTextTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.SendTextTxt.Location = new System.Drawing.Point(127, 469);
-            this.SendTextTxt.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.SendTextTxt.Multiline = true;
-            this.SendTextTxt.Name = "SendTextTxt";
-            this.SendTextTxt.PasswordChar = '\0';
-            this.SendTextTxt.PlaceholderText = "Your Message Goes here...";
-            this.SendTextTxt.SelectedText = "";
-            this.SendTextTxt.Size = new System.Drawing.Size(877, 97);
-            this.SendTextTxt.TabIndex = 16;
+            this.txtMessage.BorderColor = System.Drawing.Color.Silver;
+            this.txtMessage.BorderRadius = 10;
+            this.txtMessage.BorderThickness = 2;
+            this.txtMessage.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMessage.DefaultText = "";
+            this.txtMessage.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMessage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMessage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMessage.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMessage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMessage.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtMessage.ForeColor = System.Drawing.Color.Black;
+            this.txtMessage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMessage.Location = new System.Drawing.Point(127, 469);
+            this.txtMessage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMessage.Multiline = true;
+            this.txtMessage.Name = "txtMessage";
+            this.txtMessage.PasswordChar = '\0';
+            this.txtMessage.PlaceholderText = "Your Message Goes here...";
+            this.txtMessage.SelectedText = "";
+            this.txtMessage.Size = new System.Drawing.Size(877, 108);
+            this.txtMessage.TabIndex = 16;
             // 
             // messagesFlowPanel
             // 
@@ -1364,7 +1365,7 @@
             this.Load += new System.EventHandler(this.CustomerDashboard_Load);
             this.CustomerPanel.ResumeLayout(false);
             this.CustomerPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserUpperNavPic)).EndInit();
             this.CustomerSidePanel.ResumeLayout(false);
             this.CustomerSideSubPanel2.ResumeLayout(false);
             this.CustomerSideSubPanel1.ResumeLayout(false);
@@ -1420,7 +1421,7 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private System.Windows.Forms.Label labelDashboardName;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox UserUpperNavPic;
         private System.Windows.Forms.Panel CartMain;
         private Guna.UI2.WinForms.Guna2Panel CartPanel;
         private Guna.UI2.WinForms.Guna2ShadowPanel CartGridPanel;
@@ -1473,7 +1474,7 @@
         private System.Windows.Forms.FlowLayoutPanel AllitemFlowPanel;
         private Guna.UI2.WinForms.Guna2Panel InboxMainPanel;
         private Guna.UI2.WinForms.Guna2Button guna2Button16;
-        private Guna.UI2.WinForms.Guna2TextBox SendTextTxt;
+        private Guna.UI2.WinForms.Guna2TextBox txtMessage;
         private System.Windows.Forms.FlowLayoutPanel messagesFlowPanel;
         private Guna.UI2.WinForms.Guna2Panel InboxPanel;
         private System.Windows.Forms.Label label38;

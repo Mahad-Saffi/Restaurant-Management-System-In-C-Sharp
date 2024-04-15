@@ -30,85 +30,85 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle133 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle134 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle135 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle136 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle137 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle138 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle139 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle140 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle141 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle142 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle143 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle144 = new System.Windows.Forms.DataGridViewCellStyle();
-            Guna.Charts.WinForms.ChartFont chartFont353 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont354 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont355 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont356 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid133 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick133 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont357 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid134 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick134 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont358 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid135 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.PointLabel pointLabel45 = new Guna.Charts.WinForms.PointLabel();
-            Guna.Charts.WinForms.ChartFont chartFont359 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Tick tick135 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont360 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont361 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont362 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont363 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont364 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid136 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick136 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont365 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid137 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick137 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont366 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid138 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.PointLabel pointLabel46 = new Guna.Charts.WinForms.PointLabel();
-            Guna.Charts.WinForms.ChartFont chartFont367 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Tick tick138 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont368 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont369 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont370 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont371 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont372 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid139 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick139 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont373 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid140 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick140 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont374 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid141 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.PointLabel pointLabel47 = new Guna.Charts.WinForms.PointLabel();
-            Guna.Charts.WinForms.ChartFont chartFont375 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Tick tick141 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont376 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont377 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont378 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont379 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.ChartFont chartFont380 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid142 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick142 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont381 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid143 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.Tick tick143 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont382 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Grid grid144 = new Guna.Charts.WinForms.Grid();
-            Guna.Charts.WinForms.PointLabel pointLabel48 = new Guna.Charts.WinForms.PointLabel();
-            Guna.Charts.WinForms.ChartFont chartFont383 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.Tick tick144 = new Guna.Charts.WinForms.Tick();
-            Guna.Charts.WinForms.ChartFont chartFont384 = new Guna.Charts.WinForms.ChartFont();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            Guna.Charts.WinForms.ChartFont chartFont1 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont2 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont3 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont4 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid1 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick1 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont5 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid2 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick2 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont6 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid3 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.PointLabel pointLabel1 = new Guna.Charts.WinForms.PointLabel();
+            Guna.Charts.WinForms.ChartFont chartFont7 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Tick tick3 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont8 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont9 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont10 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont11 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont12 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid4 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick4 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont13 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid5 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick5 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont14 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid6 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.PointLabel pointLabel2 = new Guna.Charts.WinForms.PointLabel();
+            Guna.Charts.WinForms.ChartFont chartFont15 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Tick tick6 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont16 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont17 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont18 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont19 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont20 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid7 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick7 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont21 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid8 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick8 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont22 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid9 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.PointLabel pointLabel3 = new Guna.Charts.WinForms.PointLabel();
+            Guna.Charts.WinForms.ChartFont chartFont23 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Tick tick9 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont24 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont25 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont26 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont27 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont28 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid10 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick10 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont29 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid11 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick11 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont30 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid12 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.PointLabel pointLabel4 = new Guna.Charts.WinForms.PointLabel();
+            Guna.Charts.WinForms.ChartFont chartFont31 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Tick tick12 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont32 = new Guna.Charts.WinForms.ChartFont();
             this.AdminPanelMain = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.labelDashboardName = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.UserUpperNavPic = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.AdminSideBarMainPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnPersonalInfo = new Guna.UI2.WinForms.Guna2Button();
@@ -125,6 +125,9 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.AdminMainPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.UserDetailsMainPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.UsersIDCombo = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.UserPicturebox = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnAddPhotoUserDetail = new Guna.UI2.WinForms.Guna2Button();
             this.label13 = new System.Windows.Forms.Label();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
@@ -133,8 +136,8 @@
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtTotalUsers = new Guna.UI2.WinForms.Guna2TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDeleteUser = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUpdateUser = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
             this.comboRole = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtSalary = new Guna.UI2.WinForms.Guna2TextBox();
@@ -152,6 +155,7 @@
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.ItemDetailsMainPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.ItemPicturebox = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.ItemIDCombo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnAddItemPhoto = new Guna.UI2.WinForms.Guna2Button();
@@ -166,37 +170,47 @@
             this.txtItemName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.ItemsGrid = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.itemIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costOfPurchaseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rMSDatabaseDataSet = new RMS.RMSDatabaseDataSet();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.PersonalInfoPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.personalInfoAdmin = new RMS.UI.PersonalInfo();
             this.AttendanceMainPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.MarkAttenManuallyCheckbox = new Guna.UI2.WinForms.Guna2CheckBox();
             this.BtnSaveAttendance = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button14 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
+            this.DateTimePickerTimeIn = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.DateTimePickerTimeOut = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.LabelMarkTimeOut = new System.Windows.Forms.Label();
+            this.LabelMarkTimeIn = new System.Windows.Forms.Label();
             this.guna2Button13 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button12 = new Guna.UI2.WinForms.Guna2Button();
-            this.AttendanceUserIDCombo = new System.Windows.Forms.ComboBox();
+            this.EmployeeIDCombo = new System.Windows.Forms.ComboBox();
             this.label42 = new System.Windows.Forms.Label();
             this.AttendanceGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Panel16 = new Guna.UI2.WinForms.Guna2Panel();
             this.label41 = new System.Windows.Forms.Label();
             this.InboxMainPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.UsernamesCombo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Button16 = new Guna.UI2.WinForms.Guna2Button();
-            this.SendTextTxt = new Guna.UI2.WinForms.Guna2TextBox();
-            this.TxtEmailInbox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMessage = new Guna.UI2.WinForms.Guna2TextBox();
             this.PersonalInfoEmail = new System.Windows.Forms.Label();
             this.messagesFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.InboxPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.label30 = new System.Windows.Forms.Label();
+            this.FeedbackMainPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2TextBox12 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.guna2Panel14 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2TextBox11 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.gunaChart1 = new Guna.Charts.WinForms.GunaChart();
+            this.guna2Panel13 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2TextBox9 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.FeedBackPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.FeedbackLabel = new System.Windows.Forms.Label();
             this.FinancialDataMainPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             this.YearlyIncomeAmount = new System.Windows.Forms.Label();
@@ -250,43 +264,35 @@
             this.TotalOrdersThisMonthChart = new Guna.Charts.WinForms.GunaChart();
             this.AnalyticsMainLabel = new Guna.UI2.WinForms.Guna2Panel();
             this.Analytics = new System.Windows.Forms.Label();
-            this.FeedbackMainPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2TextBox12 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.guna2Panel14 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2TextBox11 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.gunaChart1 = new Guna.Charts.WinForms.GunaChart();
-            this.guna2Panel13 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2TextBox9 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.FeedBackPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.FeedbackLabel = new System.Windows.Forms.Label();
-            this.itemsTableAdapter = new RMS.RMSDatabaseDataSetTableAdapters.ItemsTableAdapter();
-            this.personalInfoAdmin = new RMS.UI.PersonalInfo();
             this.AdminPanelMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserUpperNavPic)).BeginInit();
             this.AdminSideBarMainPanel.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.AdminMainPanel.SuspendLayout();
             this.UserDetailsMainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UserPicturebox)).BeginInit();
             this.guna2Panel7.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UsersGrid)).BeginInit();
             this.guna2Panel5.SuspendLayout();
             this.ItemDetailsMainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemPicturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemsGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rMSDatabaseDataSet)).BeginInit();
             this.guna2Panel3.SuspendLayout();
+            this.PersonalInfoPanel.SuspendLayout();
             this.AttendanceMainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AttendanceGridView)).BeginInit();
             this.guna2Panel16.SuspendLayout();
             this.InboxMainPanel.SuspendLayout();
             this.InboxPanel.SuspendLayout();
+            this.FeedbackMainPanel.SuspendLayout();
+            this.guna2Panel15.SuspendLayout();
+            this.guna2Panel14.SuspendLayout();
+            this.guna2Panel13.SuspendLayout();
+            this.FeedBackPanel.SuspendLayout();
             this.FinancialDataMainPanel.SuspendLayout();
             this.guna2Panel8.SuspendLayout();
             this.guna2Panel9.SuspendLayout();
@@ -302,11 +308,6 @@
             this.ExpendituresPanel.SuspendLayout();
             this.PaymentsRecieved.SuspendLayout();
             this.AnalyticsMainLabel.SuspendLayout();
-            this.FeedbackMainPanel.SuspendLayout();
-            this.guna2Panel15.SuspendLayout();
-            this.guna2Panel14.SuspendLayout();
-            this.guna2Panel13.SuspendLayout();
-            this.FeedBackPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // AdminPanelMain
@@ -319,7 +320,7 @@
             this.AdminPanelMain.Controls.Add(this.guna2ControlBox2);
             this.AdminPanelMain.Controls.Add(this.guna2ControlBox1);
             this.AdminPanelMain.Controls.Add(this.labelDashboardName);
-            this.AdminPanelMain.Controls.Add(this.guna2CirclePictureBox1);
+            this.AdminPanelMain.Controls.Add(this.UserUpperNavPic);
             this.AdminPanelMain.CustomBorderColor = System.Drawing.Color.Silver;
             this.AdminPanelMain.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.AdminPanelMain.Dock = System.Windows.Forms.DockStyle.Top;
@@ -382,24 +383,24 @@
             this.labelDashboardName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDashboardName.Location = new System.Drawing.Point(89, 19);
             this.labelDashboardName.Name = "labelDashboardName";
-            this.labelDashboardName.Size = new System.Drawing.Size(64, 25);
+            this.labelDashboardName.Size = new System.Drawing.Size(101, 25);
             this.labelDashboardName.TabIndex = 1;
-            this.labelDashboardName.Text = "Name";
+            this.labelDashboardName.Text = "Username";
             // 
-            // guna2CirclePictureBox1
+            // UserUpperNavPic
             // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(33, 8);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(46, 45);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
-            this.guna2CirclePictureBox1.UseTransparentBackground = true;
+            this.UserUpperNavPic.BackColor = System.Drawing.Color.Transparent;
+            this.UserUpperNavPic.FillColor = System.Drawing.Color.Transparent;
+            this.UserUpperNavPic.Image = ((System.Drawing.Image)(resources.GetObject("UserUpperNavPic.Image")));
+            this.UserUpperNavPic.ImageRotate = 0F;
+            this.UserUpperNavPic.Location = new System.Drawing.Point(33, 8);
+            this.UserUpperNavPic.Name = "UserUpperNavPic";
+            this.UserUpperNavPic.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.UserUpperNavPic.Size = new System.Drawing.Size(46, 45);
+            this.UserUpperNavPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.UserUpperNavPic.TabIndex = 0;
+            this.UserUpperNavPic.TabStop = false;
+            this.UserUpperNavPic.UseTransparentBackground = true;
             // 
             // AdminSideBarMainPanel
             // 
@@ -686,14 +687,14 @@
             // 
             // AdminMainPanel
             // 
-            this.AdminMainPanel.Controls.Add(this.UserDetailsMainPanel);
             this.AdminMainPanel.Controls.Add(this.ItemDetailsMainPanel);
-            this.AdminMainPanel.Controls.Add(this.personalInfoAdmin);
+            this.AdminMainPanel.Controls.Add(this.UserDetailsMainPanel);
+            this.AdminMainPanel.Controls.Add(this.PersonalInfoPanel);
             this.AdminMainPanel.Controls.Add(this.AttendanceMainPanel);
             this.AdminMainPanel.Controls.Add(this.InboxMainPanel);
+            this.AdminMainPanel.Controls.Add(this.FeedbackMainPanel);
             this.AdminMainPanel.Controls.Add(this.FinancialDataMainPanel);
             this.AdminMainPanel.Controls.Add(this.AnalyticsMainPanel);
-            this.AdminMainPanel.Controls.Add(this.FeedbackMainPanel);
             this.AdminMainPanel.Location = new System.Drawing.Point(193, 61);
             this.AdminMainPanel.Name = "AdminMainPanel";
             this.AdminMainPanel.Size = new System.Drawing.Size(1091, 797);
@@ -701,12 +702,15 @@
             // 
             // UserDetailsMainPanel
             // 
+            this.UserDetailsMainPanel.Controls.Add(this.UsersIDCombo);
+            this.UserDetailsMainPanel.Controls.Add(this.label14);
+            this.UserDetailsMainPanel.Controls.Add(this.UserPicturebox);
             this.UserDetailsMainPanel.Controls.Add(this.btnAddPhotoUserDetail);
             this.UserDetailsMainPanel.Controls.Add(this.label13);
             this.UserDetailsMainPanel.Controls.Add(this.guna2Panel7);
             this.UserDetailsMainPanel.Controls.Add(this.guna2Panel6);
-            this.UserDetailsMainPanel.Controls.Add(this.guna2Button4);
-            this.UserDetailsMainPanel.Controls.Add(this.guna2Button5);
+            this.UserDetailsMainPanel.Controls.Add(this.btnDeleteUser);
+            this.UserDetailsMainPanel.Controls.Add(this.btnUpdateUser);
             this.UserDetailsMainPanel.Controls.Add(this.btnAddUser);
             this.UserDetailsMainPanel.Controls.Add(this.comboRole);
             this.UserDetailsMainPanel.Controls.Add(this.txtSalary);
@@ -728,6 +732,42 @@
             this.UserDetailsMainPanel.TabIndex = 13;
             this.UserDetailsMainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.UserDetailsMainPanel_Paint);
             // 
+            // UsersIDCombo
+            // 
+            this.UsersIDCombo.BackColor = System.Drawing.Color.Transparent;
+            this.UsersIDCombo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.UsersIDCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.UsersIDCombo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.UsersIDCombo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.UsersIDCombo.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.UsersIDCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.UsersIDCombo.ItemHeight = 30;
+            this.UsersIDCombo.Location = new System.Drawing.Point(196, 512);
+            this.UsersIDCombo.Name = "UsersIDCombo";
+            this.UsersIDCombo.Size = new System.Drawing.Size(140, 36);
+            this.UsersIDCombo.TabIndex = 24;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Mongolian Baiti", 16F);
+            this.label14.Location = new System.Drawing.Point(85, 518);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(89, 24);
+            this.label14.TabIndex = 23;
+            this.label14.Text = "Users ID";
+            // 
+            // UserPicturebox
+            // 
+            this.UserPicturebox.ImageRotate = 0F;
+            this.UserPicturebox.Location = new System.Drawing.Point(657, 607);
+            this.UserPicturebox.Name = "UserPicturebox";
+            this.UserPicturebox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.UserPicturebox.Size = new System.Drawing.Size(89, 73);
+            this.UserPicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.UserPicturebox.TabIndex = 22;
+            this.UserPicturebox.TabStop = false;
+            // 
             // btnAddPhotoUserDetail
             // 
             this.btnAddPhotoUserDetail.BorderRadius = 10;
@@ -740,7 +780,7 @@
             this.btnAddPhotoUserDetail.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnAddPhotoUserDetail.ForeColor = System.Drawing.Color.Black;
             this.btnAddPhotoUserDetail.Image = ((System.Drawing.Image)(resources.GetObject("btnAddPhotoUserDetail.Image")));
-            this.btnAddPhotoUserDetail.Location = new System.Drawing.Point(196, 630);
+            this.btnAddPhotoUserDetail.Location = new System.Drawing.Point(503, 625);
             this.btnAddPhotoUserDetail.Name = "btnAddPhotoUserDetail";
             this.btnAddPhotoUserDetail.Size = new System.Drawing.Size(142, 41);
             this.btnAddPhotoUserDetail.TabIndex = 21;
@@ -751,7 +791,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Mongolian Baiti", 16F);
-            this.label13.Location = new System.Drawing.Point(107, 636);
+            this.label13.Location = new System.Drawing.Point(414, 631);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(72, 24);
             this.label13.TabIndex = 20;
@@ -764,7 +804,7 @@
             this.guna2Panel7.BorderThickness = 2;
             this.guna2Panel7.Controls.Add(this.txtRepeatingCustomers);
             this.guna2Panel7.Controls.Add(this.label15);
-            this.guna2Panel7.Location = new System.Drawing.Point(545, 681);
+            this.guna2Panel7.Location = new System.Drawing.Point(563, 686);
             this.guna2Panel7.Name = "guna2Panel7";
             this.guna2Panel7.Size = new System.Drawing.Size(435, 93);
             this.guna2Panel7.TabIndex = 19;
@@ -809,9 +849,9 @@
             this.guna2Panel6.BorderThickness = 2;
             this.guna2Panel6.Controls.Add(this.txtTotalUsers);
             this.guna2Panel6.Controls.Add(this.label12);
-            this.guna2Panel6.Location = new System.Drawing.Point(83, 681);
+            this.guna2Panel6.Location = new System.Drawing.Point(81, 686);
             this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(295, 93);
+            this.guna2Panel6.Size = new System.Drawing.Size(330, 93);
             this.guna2Panel6.TabIndex = 18;
             // 
             // txtTotalUsers
@@ -827,7 +867,7 @@
             this.txtTotalUsers.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotalUsers.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtTotalUsers.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTotalUsers.Location = new System.Drawing.Point(175, 28);
+            this.txtTotalUsers.Location = new System.Drawing.Point(181, 28);
             this.txtTotalUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTotalUsers.Name = "txtTotalUsers";
             this.txtTotalUsers.PasswordChar = '\0';
@@ -847,41 +887,43 @@
             this.label12.TabIndex = 1;
             this.label12.Text = "Total Users";
             // 
-            // guna2Button4
+            // btnDeleteUser
             // 
-            this.guna2Button4.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Button4.BorderRadius = 10;
-            this.guna2Button4.BorderThickness = 2;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.guna2Button4.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button4.Location = new System.Drawing.Point(815, 434);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(128, 40);
-            this.guna2Button4.TabIndex = 17;
-            this.guna2Button4.Text = "Delete";
+            this.btnDeleteUser.BorderColor = System.Drawing.Color.Silver;
+            this.btnDeleteUser.BorderRadius = 10;
+            this.btnDeleteUser.BorderThickness = 2;
+            this.btnDeleteUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeleteUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeleteUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDeleteUser.FillColor = System.Drawing.Color.Transparent;
+            this.btnDeleteUser.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.btnDeleteUser.ForeColor = System.Drawing.Color.Black;
+            this.btnDeleteUser.Location = new System.Drawing.Point(815, 434);
+            this.btnDeleteUser.Name = "btnDeleteUser";
+            this.btnDeleteUser.Size = new System.Drawing.Size(128, 40);
+            this.btnDeleteUser.TabIndex = 17;
+            this.btnDeleteUser.Text = "Delete";
+            this.btnDeleteUser.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
-            // guna2Button5
+            // btnUpdateUser
             // 
-            this.guna2Button5.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Button5.BorderRadius = 10;
-            this.guna2Button5.BorderThickness = 2;
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.guna2Button5.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button5.Location = new System.Drawing.Point(479, 434);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(128, 40);
-            this.guna2Button5.TabIndex = 16;
-            this.guna2Button5.Text = "Update";
+            this.btnUpdateUser.BorderColor = System.Drawing.Color.Silver;
+            this.btnUpdateUser.BorderRadius = 10;
+            this.btnUpdateUser.BorderThickness = 2;
+            this.btnUpdateUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdateUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUpdateUser.FillColor = System.Drawing.Color.Transparent;
+            this.btnUpdateUser.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.btnUpdateUser.ForeColor = System.Drawing.Color.Black;
+            this.btnUpdateUser.Location = new System.Drawing.Point(479, 434);
+            this.btnUpdateUser.Name = "btnUpdateUser";
+            this.btnUpdateUser.Size = new System.Drawing.Size(128, 40);
+            this.btnUpdateUser.TabIndex = 16;
+            this.btnUpdateUser.Text = "Update";
+            this.btnUpdateUser.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
             // btnAddUser
             // 
@@ -919,7 +961,7 @@
             "Rider",
             "Customer",
             "Admin"});
-            this.comboRole.Location = new System.Drawing.Point(496, 574);
+            this.comboRole.Location = new System.Drawing.Point(796, 564);
             this.comboRole.Name = "comboRole";
             this.comboRole.Size = new System.Drawing.Size(162, 36);
             this.comboRole.TabIndex = 14;
@@ -936,7 +978,8 @@
             this.txtSalary.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSalary.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtSalary.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSalary.Location = new System.Drawing.Point(815, 576);
+            this.txtSalary.Location = new System.Drawing.Point(196, 626);
+            this.txtSalary.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.PasswordChar = '\0';
             this.txtSalary.PlaceholderText = "";
@@ -948,7 +991,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Mongolian Baiti", 16F);
-            this.label9.Location = new System.Drawing.Point(738, 579);
+            this.label9.Location = new System.Drawing.Point(119, 629);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(66, 24);
             this.label9.TabIndex = 12;
@@ -959,7 +1002,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Mongolian Baiti", 16F);
-            this.label10.Location = new System.Drawing.Point(432, 580);
+            this.label10.Location = new System.Drawing.Point(732, 570);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(52, 24);
             this.label10.TabIndex = 10;
@@ -977,7 +1020,8 @@
             this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(196, 576);
+            this.txtEmail.Location = new System.Drawing.Point(496, 566);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "";
@@ -989,7 +1033,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Mongolian Baiti", 16F);
-            this.label11.Location = new System.Drawing.Point(117, 580);
+            this.label11.Location = new System.Drawing.Point(417, 570);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(62, 24);
             this.label11.TabIndex = 8;
@@ -1007,7 +1051,8 @@
             this.txtContact.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtContact.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtContact.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtContact.Location = new System.Drawing.Point(815, 517);
+            this.txtContact.Location = new System.Drawing.Point(196, 566);
+            this.txtContact.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtContact.Name = "txtContact";
             this.txtContact.PasswordChar = '\0';
             this.txtContact.PlaceholderText = "";
@@ -1019,7 +1064,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Mongolian Baiti", 16F);
-            this.label8.Location = new System.Drawing.Point(725, 521);
+            this.label8.Location = new System.Drawing.Point(106, 570);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 24);
             this.label8.TabIndex = 6;
@@ -1037,7 +1082,8 @@
             this.txtUserPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUserPassword.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtUserPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUserPassword.Location = new System.Drawing.Point(496, 517);
+            this.txtUserPassword.Location = new System.Drawing.Point(796, 508);
+            this.txtUserPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUserPassword.Name = "txtUserPassword";
             this.txtUserPassword.PasswordChar = '\0';
             this.txtUserPassword.PlaceholderText = "";
@@ -1049,7 +1095,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Mongolian Baiti", 16F);
-            this.label7.Location = new System.Drawing.Point(389, 521);
+            this.label7.Location = new System.Drawing.Point(689, 512);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(95, 24);
             this.label7.TabIndex = 4;
@@ -1067,7 +1113,8 @@
             this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.Location = new System.Drawing.Point(196, 517);
+            this.txtUsername.Location = new System.Drawing.Point(496, 508);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "";
@@ -1079,7 +1126,7 @@
             // 
             this.Usernamelabel.AutoSize = true;
             this.Usernamelabel.Font = new System.Drawing.Font("Mongolian Baiti", 16F);
-            this.Usernamelabel.Location = new System.Drawing.Point(89, 521);
+            this.Usernamelabel.Location = new System.Drawing.Point(389, 512);
             this.Usernamelabel.Name = "Usernamelabel";
             this.Usernamelabel.Size = new System.Drawing.Size(100, 24);
             this.Usernamelabel.TabIndex = 2;
@@ -1088,42 +1135,42 @@
             // UsersGrid
             // 
             this.UsersGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle133.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle133.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle133.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle133.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle133.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.UsersGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle133;
-            dataGridViewCellStyle134.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle134.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle134.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle134.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle134.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle134.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle134.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.UsersGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle134;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.UsersGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.UsersGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.UsersGrid.ColumnHeadersHeight = 25;
             this.UsersGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle135.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle135.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle135.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle135.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle135.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle135.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle135.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.UsersGrid.DefaultCellStyle = dataGridViewCellStyle135;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.UsersGrid.DefaultCellStyle = dataGridViewCellStyle7;
             this.UsersGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.UsersGrid.Location = new System.Drawing.Point(47, 141);
             this.UsersGrid.Name = "UsersGrid";
             this.UsersGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle136.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle136.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle136.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle136.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle136.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle136.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle136.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.UsersGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle136;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.UsersGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.UsersGrid.RowHeadersVisible = false;
             this.UsersGrid.RowTemplate.Height = 24;
             this.UsersGrid.Size = new System.Drawing.Size(980, 273);
@@ -1173,6 +1220,7 @@
             // 
             // ItemDetailsMainPanel
             // 
+            this.ItemDetailsMainPanel.Controls.Add(this.ItemPicturebox);
             this.ItemDetailsMainPanel.Controls.Add(this.label4);
             this.ItemDetailsMainPanel.Controls.Add(this.ItemIDCombo);
             this.ItemDetailsMainPanel.Controls.Add(this.btnAddItemPhoto);
@@ -1193,11 +1241,21 @@
             this.ItemDetailsMainPanel.Size = new System.Drawing.Size(1089, 793);
             this.ItemDetailsMainPanel.TabIndex = 0;
             // 
+            // ItemPicturebox
+            // 
+            this.ItemPicturebox.ImageRotate = 0F;
+            this.ItemPicturebox.Location = new System.Drawing.Point(392, 672);
+            this.ItemPicturebox.Name = "ItemPicturebox";
+            this.ItemPicturebox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.ItemPicturebox.Size = new System.Drawing.Size(90, 86);
+            this.ItemPicturebox.TabIndex = 17;
+            this.ItemPicturebox.TabStop = false;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 20F);
-            this.label4.Location = new System.Drawing.Point(50, 617);
+            this.label4.Location = new System.Drawing.Point(50, 598);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 29);
             this.label4.TabIndex = 16;
@@ -1215,15 +1273,11 @@
             this.ItemIDCombo.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.ItemIDCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.ItemIDCombo.ItemHeight = 30;
-            this.ItemIDCombo.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.ItemIDCombo.Location = new System.Drawing.Point(157, 613);
+            this.ItemIDCombo.Location = new System.Drawing.Point(157, 594);
             this.ItemIDCombo.Name = "ItemIDCombo";
             this.ItemIDCombo.Size = new System.Drawing.Size(185, 36);
             this.ItemIDCombo.TabIndex = 15;
+            this.ItemIDCombo.SelectedIndexChanged += new System.EventHandler(this.ItemIDCombo_SelectedIndexChanged);
             // 
             // btnAddItemPhoto
             // 
@@ -1238,7 +1292,7 @@
             this.btnAddItemPhoto.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnAddItemPhoto.ForeColor = System.Drawing.Color.Black;
             this.btnAddItemPhoto.Image = ((System.Drawing.Image)(resources.GetObject("btnAddItemPhoto.Image")));
-            this.btnAddItemPhoto.Location = new System.Drawing.Point(213, 701);
+            this.btnAddItemPhoto.Location = new System.Drawing.Point(213, 696);
             this.btnAddItemPhoto.Name = "btnAddItemPhoto";
             this.btnAddItemPhoto.Size = new System.Drawing.Size(153, 38);
             this.btnAddItemPhoto.TabIndex = 14;
@@ -1249,7 +1303,7 @@
             // 
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Mongolian Baiti", 20F);
-            this.label45.Location = new System.Drawing.Point(97, 705);
+            this.label45.Location = new System.Drawing.Point(97, 700);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(91, 29);
             this.label45.TabIndex = 13;
@@ -1328,7 +1382,7 @@
             this.txtCostOfPurchase.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCostOfPurchase.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtCostOfPurchase.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCostOfPurchase.Location = new System.Drawing.Point(720, 701);
+            this.txtCostOfPurchase.Location = new System.Drawing.Point(764, 691);
             this.txtCostOfPurchase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCostOfPurchase.Name = "txtCostOfPurchase";
             this.txtCostOfPurchase.PasswordChar = '\0';
@@ -1341,7 +1395,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Mongolian Baiti", 20F);
-            this.label5.Location = new System.Drawing.Point(584, 703);
+            this.label5.Location = new System.Drawing.Point(628, 693);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(130, 29);
             this.label5.TabIndex = 8;
@@ -1360,7 +1414,7 @@
             this.txtItemPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtItemPrice.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtItemPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtItemPrice.Location = new System.Drawing.Point(787, 614);
+            this.txtItemPrice.Location = new System.Drawing.Point(787, 595);
             this.txtItemPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtItemPrice.Name = "txtItemPrice";
             this.txtItemPrice.PasswordChar = '\0';
@@ -1373,7 +1427,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 20F);
-            this.label3.Location = new System.Drawing.Point(705, 617);
+            this.label3.Location = new System.Drawing.Point(705, 598);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 29);
             this.label3.TabIndex = 4;
@@ -1392,7 +1446,7 @@
             this.txtItemName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtItemName.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtItemName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtItemName.Location = new System.Drawing.Point(458, 614);
+            this.txtItemName.Location = new System.Drawing.Point(458, 595);
             this.txtItemName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtItemName.Name = "txtItemName";
             this.txtItemName.PasswordChar = '\0';
@@ -1405,7 +1459,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 20F);
-            this.label2.Location = new System.Drawing.Point(376, 617);
+            this.label2.Location = new System.Drawing.Point(376, 598);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 29);
             this.label2.TabIndex = 2;
@@ -1416,51 +1470,45 @@
             this.ItemsGrid.AllowUserToAddRows = false;
             this.ItemsGrid.AllowUserToDeleteRows = false;
             this.ItemsGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle137.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle137.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle137.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle137.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle137.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.ItemsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle137;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.ItemsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.ItemsGrid.AutoGenerateColumns = false;
-            dataGridViewCellStyle138.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle138.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle138.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle138.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle138.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle138.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle138.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ItemsGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle138;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ItemsGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.ItemsGrid.ColumnHeadersHeight = 25;
             this.ItemsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.ItemsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.itemIDDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn,
-            this.costOfPurchaseDataGridViewTextBoxColumn,
-            this.pictureDataGridViewImageColumn});
             this.ItemsGrid.DataSource = this.itemsBindingSource;
-            dataGridViewCellStyle139.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle139.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle139.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle139.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle139.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle139.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle139.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ItemsGrid.DefaultCellStyle = dataGridViewCellStyle139;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ItemsGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.ItemsGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.ItemsGrid.Location = new System.Drawing.Point(51, 147);
             this.ItemsGrid.Name = "ItemsGrid";
             this.ItemsGrid.ReadOnly = true;
             this.ItemsGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle140.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle140.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle140.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle140.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle140.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle140.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle140.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ItemsGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle140;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ItemsGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.ItemsGrid.RowHeadersVisible = false;
             this.ItemsGrid.RowTemplate.Height = 24;
             this.ItemsGrid.Size = new System.Drawing.Size(975, 291);
@@ -1488,50 +1536,9 @@
             this.ItemsGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.ItemsGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
             // 
-            // itemIDDataGridViewTextBoxColumn
-            // 
-            this.itemIDDataGridViewTextBoxColumn.DataPropertyName = "ItemID";
-            this.itemIDDataGridViewTextBoxColumn.HeaderText = "ItemID";
-            this.itemIDDataGridViewTextBoxColumn.Name = "itemIDDataGridViewTextBoxColumn";
-            this.itemIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // costOfPurchaseDataGridViewTextBoxColumn
-            // 
-            this.costOfPurchaseDataGridViewTextBoxColumn.DataPropertyName = "CostOfPurchase";
-            this.costOfPurchaseDataGridViewTextBoxColumn.HeaderText = "CostOfPurchase";
-            this.costOfPurchaseDataGridViewTextBoxColumn.Name = "costOfPurchaseDataGridViewTextBoxColumn";
-            this.costOfPurchaseDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pictureDataGridViewImageColumn
-            // 
-            this.pictureDataGridViewImageColumn.DataPropertyName = "Picture";
-            this.pictureDataGridViewImageColumn.HeaderText = "Picture";
-            this.pictureDataGridViewImageColumn.Name = "pictureDataGridViewImageColumn";
-            this.pictureDataGridViewImageColumn.ReadOnly = true;
-            // 
             // itemsBindingSource
             // 
             this.itemsBindingSource.DataMember = "Items";
-            this.itemsBindingSource.DataSource = this.rMSDatabaseDataSet;
-            // 
-            // rMSDatabaseDataSet
-            // 
-            this.rMSDatabaseDataSet.DataSetName = "RMSDatabaseDataSet";
-            this.rMSDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // guna2Panel3
             // 
@@ -1554,18 +1561,43 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Item Details";
             // 
+            // PersonalInfoPanel
+            // 
+            this.PersonalInfoPanel.Controls.Add(this.personalInfoAdmin);
+            this.PersonalInfoPanel.Location = new System.Drawing.Point(0, 0);
+            this.PersonalInfoPanel.Name = "PersonalInfoPanel";
+            this.PersonalInfoPanel.Size = new System.Drawing.Size(1088, 797);
+            this.PersonalInfoPanel.TabIndex = 21;
+            // 
+            // personalInfoAdmin
+            // 
+            this.personalInfoAdmin.ContactTextPersonalInfo = "";
+            this.personalInfoAdmin.EmailTextPersonalInfo = "";
+            this.personalInfoAdmin.Location = new System.Drawing.Point(0, 0);
+            this.personalInfoAdmin.Name = "personalInfoAdmin";
+            this.personalInfoAdmin.NameTextPersonalInfo = "";
+            this.personalInfoAdmin.PassTextPersonalInfo = "";
+            this.personalInfoAdmin.PersonalInfoPicBox = ((System.Drawing.Image)(resources.GetObject("personalInfoAdmin.PersonalInfoPicBox")));
+            this.personalInfoAdmin.RoleTextPersonalInfo = "";
+            this.personalInfoAdmin.SalaryTextPersonalInfo = "Amount";
+            this.personalInfoAdmin.SinceTextPersonalInfo = "";
+            this.personalInfoAdmin.Size = new System.Drawing.Size(1087, 788);
+            this.personalInfoAdmin.TabIndex = 13;
+            this.personalInfoAdmin.Load += new System.EventHandler(this.personalInfo1_Load);
+            // 
             // AttendanceMainPanel
             // 
             this.AttendanceMainPanel.BorderRadius = 10;
+            this.AttendanceMainPanel.Controls.Add(this.MarkAttenManuallyCheckbox);
             this.AttendanceMainPanel.Controls.Add(this.BtnSaveAttendance);
             this.AttendanceMainPanel.Controls.Add(this.guna2Button14);
-            this.AttendanceMainPanel.Controls.Add(this.guna2DateTimePicker1);
-            this.AttendanceMainPanel.Controls.Add(this.guna2DateTimePicker2);
-            this.AttendanceMainPanel.Controls.Add(this.label44);
-            this.AttendanceMainPanel.Controls.Add(this.label43);
+            this.AttendanceMainPanel.Controls.Add(this.DateTimePickerTimeIn);
+            this.AttendanceMainPanel.Controls.Add(this.DateTimePickerTimeOut);
+            this.AttendanceMainPanel.Controls.Add(this.LabelMarkTimeOut);
+            this.AttendanceMainPanel.Controls.Add(this.LabelMarkTimeIn);
             this.AttendanceMainPanel.Controls.Add(this.guna2Button13);
             this.AttendanceMainPanel.Controls.Add(this.guna2Button12);
-            this.AttendanceMainPanel.Controls.Add(this.AttendanceUserIDCombo);
+            this.AttendanceMainPanel.Controls.Add(this.EmployeeIDCombo);
             this.AttendanceMainPanel.Controls.Add(this.label42);
             this.AttendanceMainPanel.Controls.Add(this.AttendanceGridView);
             this.AttendanceMainPanel.Controls.Add(this.guna2Panel16);
@@ -1573,6 +1605,26 @@
             this.AttendanceMainPanel.Name = "AttendanceMainPanel";
             this.AttendanceMainPanel.Size = new System.Drawing.Size(1088, 791);
             this.AttendanceMainPanel.TabIndex = 5;
+            this.AttendanceMainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.AttendanceMainPanel_Paint);
+            // 
+            // MarkAttenManuallyCheckbox
+            // 
+            this.MarkAttenManuallyCheckbox.AutoSize = true;
+            this.MarkAttenManuallyCheckbox.CheckedState.BorderColor = System.Drawing.Color.Black;
+            this.MarkAttenManuallyCheckbox.CheckedState.BorderRadius = 7;
+            this.MarkAttenManuallyCheckbox.CheckedState.BorderThickness = 1;
+            this.MarkAttenManuallyCheckbox.CheckedState.FillColor = System.Drawing.Color.Black;
+            this.MarkAttenManuallyCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.MarkAttenManuallyCheckbox.Location = new System.Drawing.Point(49, 734);
+            this.MarkAttenManuallyCheckbox.Name = "MarkAttenManuallyCheckbox";
+            this.MarkAttenManuallyCheckbox.Size = new System.Drawing.Size(312, 33);
+            this.MarkAttenManuallyCheckbox.TabIndex = 13;
+            this.MarkAttenManuallyCheckbox.Text = "Mark Attendance Manually";
+            this.MarkAttenManuallyCheckbox.UncheckedState.BorderColor = System.Drawing.Color.Black;
+            this.MarkAttenManuallyCheckbox.UncheckedState.BorderRadius = 7;
+            this.MarkAttenManuallyCheckbox.UncheckedState.BorderThickness = 1;
+            this.MarkAttenManuallyCheckbox.UncheckedState.FillColor = System.Drawing.Color.White;
+            this.MarkAttenManuallyCheckbox.CheckedChanged += new System.EventHandler(this.MarkAttenManuallyCheckbox_CheckedChanged);
             // 
             // BtnSaveAttendance
             // 
@@ -1586,7 +1638,7 @@
             this.BtnSaveAttendance.FillColor = System.Drawing.Color.Transparent;
             this.BtnSaveAttendance.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.BtnSaveAttendance.ForeColor = System.Drawing.Color.Black;
-            this.BtnSaveAttendance.Location = new System.Drawing.Point(903, 719);
+            this.BtnSaveAttendance.Location = new System.Drawing.Point(903, 729);
             this.BtnSaveAttendance.Name = "BtnSaveAttendance";
             this.BtnSaveAttendance.Size = new System.Drawing.Size(101, 44);
             this.BtnSaveAttendance.TabIndex = 12;
@@ -1610,61 +1662,65 @@
             this.guna2Button14.TabIndex = 11;
             this.guna2Button14.Text = "Check Attendance";
             // 
-            // guna2DateTimePicker1
+            // DateTimePickerTimeIn
             // 
-            this.guna2DateTimePicker1.BorderRadius = 10;
-            this.guna2DateTimePicker1.BorderThickness = 2;
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.CustomFormat = "MM/dd/yyyy, hh:mm tt";
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.Silver;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(308, 645);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.ShowUpDown = true;
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(189, 45);
-            this.guna2DateTimePicker1.TabIndex = 10;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2024, 4, 7, 15, 58, 27, 644);
+            this.DateTimePickerTimeIn.BorderRadius = 10;
+            this.DateTimePickerTimeIn.BorderThickness = 2;
+            this.DateTimePickerTimeIn.Checked = true;
+            this.DateTimePickerTimeIn.CustomFormat = "MM/dd/yyyy, hh:mm tt";
+            this.DateTimePickerTimeIn.FillColor = System.Drawing.Color.Silver;
+            this.DateTimePickerTimeIn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DateTimePickerTimeIn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DateTimePickerTimeIn.Location = new System.Drawing.Point(313, 657);
+            this.DateTimePickerTimeIn.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DateTimePickerTimeIn.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DateTimePickerTimeIn.Name = "DateTimePickerTimeIn";
+            this.DateTimePickerTimeIn.ShowUpDown = true;
+            this.DateTimePickerTimeIn.Size = new System.Drawing.Size(189, 45);
+            this.DateTimePickerTimeIn.TabIndex = 10;
+            this.DateTimePickerTimeIn.Value = new System.DateTime(2024, 4, 7, 15, 58, 27, 644);
+            this.DateTimePickerTimeIn.Visible = false;
             // 
-            // guna2DateTimePicker2
+            // DateTimePickerTimeOut
             // 
-            this.guna2DateTimePicker2.BorderRadius = 10;
-            this.guna2DateTimePicker2.BorderThickness = 2;
-            this.guna2DateTimePicker2.Checked = true;
-            this.guna2DateTimePicker2.CustomFormat = "MM/dd/yyyy, hh:mm tt";
-            this.guna2DateTimePicker2.FillColor = System.Drawing.Color.Silver;
-            this.guna2DateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.guna2DateTimePicker2.Location = new System.Drawing.Point(846, 645);
-            this.guna2DateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            this.guna2DateTimePicker2.ShowUpDown = true;
-            this.guna2DateTimePicker2.Size = new System.Drawing.Size(193, 46);
-            this.guna2DateTimePicker2.TabIndex = 9;
-            this.guna2DateTimePicker2.Value = new System.DateTime(2024, 4, 7, 15, 58, 27, 644);
+            this.DateTimePickerTimeOut.BorderRadius = 10;
+            this.DateTimePickerTimeOut.BorderThickness = 2;
+            this.DateTimePickerTimeOut.Checked = true;
+            this.DateTimePickerTimeOut.CustomFormat = "MM/dd/yyyy, hh:mm tt";
+            this.DateTimePickerTimeOut.FillColor = System.Drawing.Color.Silver;
+            this.DateTimePickerTimeOut.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DateTimePickerTimeOut.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DateTimePickerTimeOut.Location = new System.Drawing.Point(851, 657);
+            this.DateTimePickerTimeOut.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DateTimePickerTimeOut.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DateTimePickerTimeOut.Name = "DateTimePickerTimeOut";
+            this.DateTimePickerTimeOut.ShowUpDown = true;
+            this.DateTimePickerTimeOut.Size = new System.Drawing.Size(193, 46);
+            this.DateTimePickerTimeOut.TabIndex = 9;
+            this.DateTimePickerTimeOut.Value = new System.DateTime(2024, 4, 7, 15, 58, 27, 644);
+            this.DateTimePickerTimeOut.Visible = false;
             // 
-            // label44
+            // LabelMarkTimeOut
             // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(570, 653);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(259, 25);
-            this.label44.TabIndex = 7;
-            this.label44.Text = "Mark Time Out Manually";
+            this.LabelMarkTimeOut.AutoSize = true;
+            this.LabelMarkTimeOut.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelMarkTimeOut.Location = new System.Drawing.Point(575, 665);
+            this.LabelMarkTimeOut.Name = "LabelMarkTimeOut";
+            this.LabelMarkTimeOut.Size = new System.Drawing.Size(259, 25);
+            this.LabelMarkTimeOut.TabIndex = 7;
+            this.LabelMarkTimeOut.Text = "Mark Time Out Manually";
+            this.LabelMarkTimeOut.Visible = false;
             // 
-            // label43
+            // LabelMarkTimeIn
             // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(49, 653);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(243, 25);
-            this.label43.TabIndex = 6;
-            this.label43.Text = "Mark Time In Manually";
+            this.LabelMarkTimeIn.AutoSize = true;
+            this.LabelMarkTimeIn.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelMarkTimeIn.Location = new System.Drawing.Point(54, 665);
+            this.LabelMarkTimeIn.Name = "LabelMarkTimeIn";
+            this.LabelMarkTimeIn.Size = new System.Drawing.Size(243, 25);
+            this.LabelMarkTimeIn.TabIndex = 6;
+            this.LabelMarkTimeIn.Text = "Mark Time In Manually";
+            this.LabelMarkTimeIn.Visible = false;
             // 
             // guna2Button13
             // 
@@ -1683,6 +1739,7 @@
             this.guna2Button13.Size = new System.Drawing.Size(181, 52);
             this.guna2Button13.TabIndex = 5;
             this.guna2Button13.Text = "Mark Time Out";
+            this.guna2Button13.Click += new System.EventHandler(this.guna2Button13_Click);
             // 
             // guna2Button12
             // 
@@ -1701,65 +1758,66 @@
             this.guna2Button12.Size = new System.Drawing.Size(181, 52);
             this.guna2Button12.TabIndex = 4;
             this.guna2Button12.Text = "Mark Time In";
+            this.guna2Button12.Click += new System.EventHandler(this.guna2Button12_Click);
             // 
-            // AttendanceUserIDCombo
+            // EmployeeIDCombo
             // 
-            this.AttendanceUserIDCombo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.AttendanceUserIDCombo.FormattingEnabled = true;
-            this.AttendanceUserIDCombo.Location = new System.Drawing.Point(172, 542);
-            this.AttendanceUserIDCombo.Name = "AttendanceUserIDCombo";
-            this.AttendanceUserIDCombo.Size = new System.Drawing.Size(104, 33);
-            this.AttendanceUserIDCombo.TabIndex = 3;
+            this.EmployeeIDCombo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.EmployeeIDCombo.FormattingEnabled = true;
+            this.EmployeeIDCombo.Location = new System.Drawing.Point(172, 542);
+            this.EmployeeIDCombo.Name = "EmployeeIDCombo";
+            this.EmployeeIDCombo.Size = new System.Drawing.Size(104, 33);
+            this.EmployeeIDCombo.TabIndex = 3;
             // 
             // label42
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(78, 545);
+            this.label42.Location = new System.Drawing.Point(28, 545);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(88, 25);
+            this.label42.Size = new System.Drawing.Size(140, 25);
             this.label42.TabIndex = 2;
-            this.label42.Text = "User ID";
+            this.label42.Text = "Employee ID";
             // 
             // AttendanceGridView
             // 
             this.AttendanceGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle141.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle141.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle141.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle141.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle141.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.AttendanceGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle141;
-            dataGridViewCellStyle142.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle142.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle142.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle142.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle142.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle142.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle142.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.AttendanceGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle142;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.AttendanceGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.AttendanceGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.AttendanceGridView.ColumnHeadersHeight = 25;
             this.AttendanceGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle143.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle143.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle143.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle143.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle143.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle143.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle143.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.AttendanceGridView.DefaultCellStyle = dataGridViewCellStyle143;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.AttendanceGridView.DefaultCellStyle = dataGridViewCellStyle11;
             this.AttendanceGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.AttendanceGridView.Location = new System.Drawing.Point(43, 141);
             this.AttendanceGridView.Name = "AttendanceGridView";
             this.AttendanceGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle144.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle144.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle144.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle144.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle144.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle144.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle144.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.AttendanceGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle144;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.AttendanceGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.AttendanceGridView.RowHeadersVisible = false;
             this.AttendanceGridView.RowTemplate.Height = 24;
             this.AttendanceGridView.Size = new System.Drawing.Size(1006, 356);
@@ -1785,6 +1843,7 @@
             this.AttendanceGridView.ThemeStyle.RowsStyle.Height = 24;
             this.AttendanceGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.AttendanceGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.AttendanceGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AttendanceGridView_CellContentClick);
             // 
             // guna2Panel16
             // 
@@ -1809,9 +1868,9 @@
             // 
             // InboxMainPanel
             // 
+            this.InboxMainPanel.Controls.Add(this.UsernamesCombo);
             this.InboxMainPanel.Controls.Add(this.guna2Button16);
-            this.InboxMainPanel.Controls.Add(this.SendTextTxt);
-            this.InboxMainPanel.Controls.Add(this.TxtEmailInbox);
+            this.InboxMainPanel.Controls.Add(this.txtMessage);
             this.InboxMainPanel.Controls.Add(this.PersonalInfoEmail);
             this.InboxMainPanel.Controls.Add(this.messagesFlowPanel);
             this.InboxMainPanel.Controls.Add(this.InboxPanel);
@@ -1820,6 +1879,21 @@
             this.InboxMainPanel.Size = new System.Drawing.Size(1088, 791);
             this.InboxMainPanel.TabIndex = 3;
             this.InboxMainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.InboxMainPanel_Paint);
+            // 
+            // UsernamesCombo
+            // 
+            this.UsernamesCombo.BackColor = System.Drawing.Color.Transparent;
+            this.UsernamesCombo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.UsernamesCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.UsernamesCombo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.UsernamesCombo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.UsernamesCombo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.UsernamesCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.UsernamesCombo.ItemHeight = 30;
+            this.UsernamesCombo.Location = new System.Drawing.Point(253, 726);
+            this.UsernamesCombo.Name = "UsernamesCombo";
+            this.UsernamesCombo.Size = new System.Drawing.Size(223, 36);
+            this.UsernamesCombo.TabIndex = 18;
             // 
             // guna2Button16
             // 
@@ -1839,54 +1913,32 @@
             this.guna2Button16.Size = new System.Drawing.Size(144, 56);
             this.guna2Button16.TabIndex = 17;
             this.guna2Button16.Text = "Send";
+            this.guna2Button16.Click += new System.EventHandler(this.guna2Button16_Click);
             // 
-            // SendTextTxt
+            // txtMessage
             // 
-            this.SendTextTxt.BorderColor = System.Drawing.Color.Silver;
-            this.SendTextTxt.BorderRadius = 10;
-            this.SendTextTxt.BorderThickness = 2;
-            this.SendTextTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.SendTextTxt.DefaultText = "";
-            this.SendTextTxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.SendTextTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.SendTextTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.SendTextTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.SendTextTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.SendTextTxt.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.SendTextTxt.ForeColor = System.Drawing.Color.Black;
-            this.SendTextTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.SendTextTxt.Location = new System.Drawing.Point(114, 604);
-            this.SendTextTxt.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.SendTextTxt.Multiline = true;
-            this.SendTextTxt.Name = "SendTextTxt";
-            this.SendTextTxt.PasswordChar = '\0';
-            this.SendTextTxt.PlaceholderText = "Your Message Goes here...";
-            this.SendTextTxt.SelectedText = "";
-            this.SendTextTxt.Size = new System.Drawing.Size(877, 97);
-            this.SendTextTxt.TabIndex = 16;
-            // 
-            // TxtEmailInbox
-            // 
-            this.TxtEmailInbox.BorderColor = System.Drawing.Color.Silver;
-            this.TxtEmailInbox.BorderRadius = 10;
-            this.TxtEmailInbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TxtEmailInbox.DefaultText = "";
-            this.TxtEmailInbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TxtEmailInbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TxtEmailInbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtEmailInbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtEmailInbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtEmailInbox.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.TxtEmailInbox.ForeColor = System.Drawing.Color.Black;
-            this.TxtEmailInbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtEmailInbox.Location = new System.Drawing.Point(205, 722);
-            this.TxtEmailInbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.TxtEmailInbox.Name = "TxtEmailInbox";
-            this.TxtEmailInbox.PasswordChar = '\0';
-            this.TxtEmailInbox.PlaceholderText = "";
-            this.TxtEmailInbox.SelectedText = "";
-            this.TxtEmailInbox.Size = new System.Drawing.Size(180, 37);
-            this.TxtEmailInbox.TabIndex = 15;
+            this.txtMessage.BorderColor = System.Drawing.Color.Silver;
+            this.txtMessage.BorderRadius = 10;
+            this.txtMessage.BorderThickness = 2;
+            this.txtMessage.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMessage.DefaultText = "";
+            this.txtMessage.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMessage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMessage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMessage.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMessage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMessage.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtMessage.ForeColor = System.Drawing.Color.Black;
+            this.txtMessage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMessage.Location = new System.Drawing.Point(114, 604);
+            this.txtMessage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMessage.Multiline = true;
+            this.txtMessage.Name = "txtMessage";
+            this.txtMessage.PasswordChar = '\0';
+            this.txtMessage.PlaceholderText = "Your Message Goes here...";
+            this.txtMessage.SelectedText = "";
+            this.txtMessage.Size = new System.Drawing.Size(877, 97);
+            this.txtMessage.TabIndex = 16;
             // 
             // PersonalInfoEmail
             // 
@@ -1894,9 +1946,9 @@
             this.PersonalInfoEmail.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PersonalInfoEmail.Location = new System.Drawing.Point(128, 730);
             this.PersonalInfoEmail.Name = "PersonalInfoEmail";
-            this.PersonalInfoEmail.Size = new System.Drawing.Size(68, 25);
+            this.PersonalInfoEmail.Size = new System.Drawing.Size(118, 25);
             this.PersonalInfoEmail.TabIndex = 14;
-            this.PersonalInfoEmail.Text = "Email";
+            this.PersonalInfoEmail.Text = "Usernames";
             // 
             // messagesFlowPanel
             // 
@@ -1929,6 +1981,202 @@
             this.label30.Size = new System.Drawing.Size(130, 54);
             this.label30.TabIndex = 0;
             this.label30.Text = "Inbox";
+            // 
+            // FeedbackMainPanel
+            // 
+            this.FeedbackMainPanel.Controls.Add(this.guna2Panel15);
+            this.FeedbackMainPanel.Controls.Add(this.guna2Panel14);
+            this.FeedbackMainPanel.Controls.Add(this.gunaChart1);
+            this.FeedbackMainPanel.Controls.Add(this.guna2Panel13);
+            this.FeedbackMainPanel.Controls.Add(this.FeedBackPanel);
+            this.FeedbackMainPanel.Location = new System.Drawing.Point(0, 0);
+            this.FeedbackMainPanel.Name = "FeedbackMainPanel";
+            this.FeedbackMainPanel.Size = new System.Drawing.Size(1088, 791);
+            this.FeedbackMainPanel.TabIndex = 4;
+            // 
+            // guna2Panel15
+            // 
+            this.guna2Panel15.BorderColor = System.Drawing.Color.Silver;
+            this.guna2Panel15.BorderRadius = 10;
+            this.guna2Panel15.BorderThickness = 2;
+            this.guna2Panel15.Controls.Add(this.guna2TextBox12);
+            this.guna2Panel15.Controls.Add(this.label40);
+            this.guna2Panel15.Location = new System.Drawing.Point(701, 667);
+            this.guna2Panel15.Name = "guna2Panel15";
+            this.guna2Panel15.Size = new System.Drawing.Size(297, 92);
+            this.guna2Panel15.TabIndex = 3;
+            // 
+            // guna2TextBox12
+            // 
+            this.guna2TextBox12.AutoRoundedCorners = true;
+            this.guna2TextBox12.BorderRadius = 17;
+            this.guna2TextBox12.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox12.DefaultText = "";
+            this.guna2TextBox12.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox12.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox12.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox12.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox12.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox12.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox12.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox12.Location = new System.Drawing.Point(202, 30);
+            this.guna2TextBox12.Name = "guna2TextBox12";
+            this.guna2TextBox12.PasswordChar = '\0';
+            this.guna2TextBox12.PlaceholderText = "";
+            this.guna2TextBox12.SelectedText = "";
+            this.guna2TextBox12.Size = new System.Drawing.Size(88, 36);
+            this.guna2TextBox12.TabIndex = 3;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(17, 36);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(180, 23);
+            this.label40.TabIndex = 2;
+            this.label40.Text = "Negative Feedbacks";
+            // 
+            // guna2Panel14
+            // 
+            this.guna2Panel14.BorderColor = System.Drawing.Color.Silver;
+            this.guna2Panel14.BorderRadius = 10;
+            this.guna2Panel14.BorderThickness = 2;
+            this.guna2Panel14.Controls.Add(this.guna2TextBox11);
+            this.guna2Panel14.Controls.Add(this.label39);
+            this.guna2Panel14.Location = new System.Drawing.Point(374, 667);
+            this.guna2Panel14.Name = "guna2Panel14";
+            this.guna2Panel14.Size = new System.Drawing.Size(297, 92);
+            this.guna2Panel14.TabIndex = 2;
+            // 
+            // guna2TextBox11
+            // 
+            this.guna2TextBox11.AutoRoundedCorners = true;
+            this.guna2TextBox11.BorderRadius = 17;
+            this.guna2TextBox11.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox11.DefaultText = "";
+            this.guna2TextBox11.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox11.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox11.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox11.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox11.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox11.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox11.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox11.Location = new System.Drawing.Point(200, 29);
+            this.guna2TextBox11.Name = "guna2TextBox11";
+            this.guna2TextBox11.PasswordChar = '\0';
+            this.guna2TextBox11.PlaceholderText = "";
+            this.guna2TextBox11.SelectedText = "";
+            this.guna2TextBox11.Size = new System.Drawing.Size(88, 36);
+            this.guna2TextBox11.TabIndex = 2;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(14, 35);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(180, 23);
+            this.label39.TabIndex = 1;
+            this.label39.Text = "Positiver Feedbacks";
+            // 
+            // gunaChart1
+            // 
+            chartFont1.FontName = "Arial";
+            this.gunaChart1.Legend.LabelFont = chartFont1;
+            this.gunaChart1.Location = new System.Drawing.Point(83, 149);
+            this.gunaChart1.Name = "gunaChart1";
+            this.gunaChart1.Size = new System.Drawing.Size(915, 462);
+            this.gunaChart1.TabIndex = 2;
+            chartFont2.FontName = "Arial";
+            chartFont2.Size = 12;
+            chartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.gunaChart1.Title.Font = chartFont2;
+            chartFont3.FontName = "Arial";
+            this.gunaChart1.Tooltips.BodyFont = chartFont3;
+            chartFont4.FontName = "Arial";
+            chartFont4.Size = 9;
+            chartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.gunaChart1.Tooltips.TitleFont = chartFont4;
+            this.gunaChart1.XAxes.GridLines = grid1;
+            chartFont5.FontName = "Arial";
+            tick1.Font = chartFont5;
+            this.gunaChart1.XAxes.Ticks = tick1;
+            this.gunaChart1.YAxes.GridLines = grid2;
+            chartFont6.FontName = "Arial";
+            tick2.Font = chartFont6;
+            this.gunaChart1.YAxes.Ticks = tick2;
+            this.gunaChart1.ZAxes.GridLines = grid3;
+            chartFont7.FontName = "Arial";
+            pointLabel1.Font = chartFont7;
+            this.gunaChart1.ZAxes.PointLabels = pointLabel1;
+            chartFont8.FontName = "Arial";
+            tick3.Font = chartFont8;
+            this.gunaChart1.ZAxes.Ticks = tick3;
+            // 
+            // guna2Panel13
+            // 
+            this.guna2Panel13.BorderColor = System.Drawing.Color.Silver;
+            this.guna2Panel13.BorderRadius = 10;
+            this.guna2Panel13.BorderThickness = 2;
+            this.guna2Panel13.Controls.Add(this.guna2TextBox9);
+            this.guna2Panel13.Controls.Add(this.label38);
+            this.guna2Panel13.Location = new System.Drawing.Point(53, 667);
+            this.guna2Panel13.Name = "guna2Panel13";
+            this.guna2Panel13.Size = new System.Drawing.Size(297, 92);
+            this.guna2Panel13.TabIndex = 1;
+            // 
+            // guna2TextBox9
+            // 
+            this.guna2TextBox9.AutoRoundedCorners = true;
+            this.guna2TextBox9.BorderRadius = 17;
+            this.guna2TextBox9.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox9.DefaultText = "";
+            this.guna2TextBox9.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox9.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox9.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox9.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox9.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox9.Location = new System.Drawing.Point(184, 29);
+            this.guna2TextBox9.Name = "guna2TextBox9";
+            this.guna2TextBox9.PasswordChar = '\0';
+            this.guna2TextBox9.PlaceholderText = "";
+            this.guna2TextBox9.SelectedText = "";
+            this.guna2TextBox9.Size = new System.Drawing.Size(88, 36);
+            this.guna2TextBox9.TabIndex = 1;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(20, 35);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(149, 23);
+            this.label38.TabIndex = 0;
+            this.label38.Text = "Total Feedbacks";
+            // 
+            // FeedBackPanel
+            // 
+            this.FeedBackPanel.BorderColor = System.Drawing.Color.Silver;
+            this.FeedBackPanel.BorderRadius = 10;
+            this.FeedBackPanel.BorderThickness = 2;
+            this.FeedBackPanel.Controls.Add(this.FeedbackLabel);
+            this.FeedBackPanel.Location = new System.Drawing.Point(403, 20);
+            this.FeedBackPanel.Name = "FeedBackPanel";
+            this.FeedBackPanel.Size = new System.Drawing.Size(297, 92);
+            this.FeedBackPanel.TabIndex = 0;
+            // 
+            // FeedbackLabel
+            // 
+            this.FeedbackLabel.AutoSize = true;
+            this.FeedbackLabel.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FeedbackLabel.Location = new System.Drawing.Point(48, 20);
+            this.FeedbackLabel.Name = "FeedbackLabel";
+            this.FeedbackLabel.Size = new System.Drawing.Size(201, 54);
+            this.FeedbackLabel.TabIndex = 0;
+            this.FeedbackLabel.Text = "Feedback";
             // 
             // FinancialDataMainPanel
             // 
@@ -2293,37 +2541,37 @@
             // 
             // SalesAndPurchasesChart
             // 
-            chartFont353.FontName = "Arial";
-            this.SalesAndPurchasesChart.Legend.LabelFont = chartFont353;
+            chartFont9.FontName = "Arial";
+            this.SalesAndPurchasesChart.Legend.LabelFont = chartFont9;
             this.SalesAndPurchasesChart.Location = new System.Drawing.Point(45, 201);
             this.SalesAndPurchasesChart.Name = "SalesAndPurchasesChart";
             this.SalesAndPurchasesChart.Size = new System.Drawing.Size(340, 500);
             this.SalesAndPurchasesChart.TabIndex = 8;
-            chartFont354.FontName = "Arial";
-            chartFont354.Size = 12;
-            chartFont354.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.SalesAndPurchasesChart.Title.Font = chartFont354;
-            chartFont355.FontName = "Arial";
-            this.SalesAndPurchasesChart.Tooltips.BodyFont = chartFont355;
-            chartFont356.FontName = "Arial";
-            chartFont356.Size = 9;
-            chartFont356.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.SalesAndPurchasesChart.Tooltips.TitleFont = chartFont356;
-            this.SalesAndPurchasesChart.XAxes.GridLines = grid133;
-            chartFont357.FontName = "Arial";
-            tick133.Font = chartFont357;
-            this.SalesAndPurchasesChart.XAxes.Ticks = tick133;
-            this.SalesAndPurchasesChart.YAxes.GridLines = grid134;
-            chartFont358.FontName = "Arial";
-            tick134.Font = chartFont358;
-            this.SalesAndPurchasesChart.YAxes.Ticks = tick134;
-            this.SalesAndPurchasesChart.ZAxes.GridLines = grid135;
-            chartFont359.FontName = "Arial";
-            pointLabel45.Font = chartFont359;
-            this.SalesAndPurchasesChart.ZAxes.PointLabels = pointLabel45;
-            chartFont360.FontName = "Arial";
-            tick135.Font = chartFont360;
-            this.SalesAndPurchasesChart.ZAxes.Ticks = tick135;
+            chartFont10.FontName = "Arial";
+            chartFont10.Size = 12;
+            chartFont10.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.SalesAndPurchasesChart.Title.Font = chartFont10;
+            chartFont11.FontName = "Arial";
+            this.SalesAndPurchasesChart.Tooltips.BodyFont = chartFont11;
+            chartFont12.FontName = "Arial";
+            chartFont12.Size = 9;
+            chartFont12.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.SalesAndPurchasesChart.Tooltips.TitleFont = chartFont12;
+            this.SalesAndPurchasesChart.XAxes.GridLines = grid4;
+            chartFont13.FontName = "Arial";
+            tick4.Font = chartFont13;
+            this.SalesAndPurchasesChart.XAxes.Ticks = tick4;
+            this.SalesAndPurchasesChart.YAxes.GridLines = grid5;
+            chartFont14.FontName = "Arial";
+            tick5.Font = chartFont14;
+            this.SalesAndPurchasesChart.YAxes.Ticks = tick5;
+            this.SalesAndPurchasesChart.ZAxes.GridLines = grid6;
+            chartFont15.FontName = "Arial";
+            pointLabel2.Font = chartFont15;
+            this.SalesAndPurchasesChart.ZAxes.PointLabels = pointLabel2;
+            chartFont16.FontName = "Arial";
+            tick6.Font = chartFont16;
+            this.SalesAndPurchasesChart.ZAxes.Ticks = tick6;
             // 
             // FinancialDataPanel
             // 
@@ -2361,37 +2609,37 @@
             // 
             // TypeOfOrdersChart
             // 
-            chartFont361.FontName = "Arial";
-            this.TypeOfOrdersChart.Legend.LabelFont = chartFont361;
+            chartFont17.FontName = "Arial";
+            this.TypeOfOrdersChart.Legend.LabelFont = chartFont17;
             this.TypeOfOrdersChart.Location = new System.Drawing.Point(677, 532);
             this.TypeOfOrdersChart.Name = "TypeOfOrdersChart";
             this.TypeOfOrdersChart.Size = new System.Drawing.Size(365, 223);
             this.TypeOfOrdersChart.TabIndex = 17;
-            chartFont362.FontName = "Arial";
-            chartFont362.Size = 12;
-            chartFont362.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.TypeOfOrdersChart.Title.Font = chartFont362;
-            chartFont363.FontName = "Arial";
-            this.TypeOfOrdersChart.Tooltips.BodyFont = chartFont363;
-            chartFont364.FontName = "Arial";
-            chartFont364.Size = 9;
-            chartFont364.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.TypeOfOrdersChart.Tooltips.TitleFont = chartFont364;
-            this.TypeOfOrdersChart.XAxes.GridLines = grid136;
-            chartFont365.FontName = "Arial";
-            tick136.Font = chartFont365;
-            this.TypeOfOrdersChart.XAxes.Ticks = tick136;
-            this.TypeOfOrdersChart.YAxes.GridLines = grid137;
-            chartFont366.FontName = "Arial";
-            tick137.Font = chartFont366;
-            this.TypeOfOrdersChart.YAxes.Ticks = tick137;
-            this.TypeOfOrdersChart.ZAxes.GridLines = grid138;
-            chartFont367.FontName = "Arial";
-            pointLabel46.Font = chartFont367;
-            this.TypeOfOrdersChart.ZAxes.PointLabels = pointLabel46;
-            chartFont368.FontName = "Arial";
-            tick138.Font = chartFont368;
-            this.TypeOfOrdersChart.ZAxes.Ticks = tick138;
+            chartFont18.FontName = "Arial";
+            chartFont18.Size = 12;
+            chartFont18.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.TypeOfOrdersChart.Title.Font = chartFont18;
+            chartFont19.FontName = "Arial";
+            this.TypeOfOrdersChart.Tooltips.BodyFont = chartFont19;
+            chartFont20.FontName = "Arial";
+            chartFont20.Size = 9;
+            chartFont20.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.TypeOfOrdersChart.Tooltips.TitleFont = chartFont20;
+            this.TypeOfOrdersChart.XAxes.GridLines = grid7;
+            chartFont21.FontName = "Arial";
+            tick7.Font = chartFont21;
+            this.TypeOfOrdersChart.XAxes.Ticks = tick7;
+            this.TypeOfOrdersChart.YAxes.GridLines = grid8;
+            chartFont22.FontName = "Arial";
+            tick8.Font = chartFont22;
+            this.TypeOfOrdersChart.YAxes.Ticks = tick8;
+            this.TypeOfOrdersChart.ZAxes.GridLines = grid9;
+            chartFont23.FontName = "Arial";
+            pointLabel3.Font = chartFont23;
+            this.TypeOfOrdersChart.ZAxes.PointLabels = pointLabel3;
+            chartFont24.FontName = "Arial";
+            tick9.Font = chartFont24;
+            this.TypeOfOrdersChart.ZAxes.Ticks = tick9;
             // 
             // TopItemsPanel
             // 
@@ -2538,37 +2786,37 @@
             // 
             // TotalOrdersThisMonthChart
             // 
-            chartFont369.FontName = "Arial";
-            this.TotalOrdersThisMonthChart.Legend.LabelFont = chartFont369;
+            chartFont25.FontName = "Arial";
+            this.TotalOrdersThisMonthChart.Legend.LabelFont = chartFont25;
             this.TotalOrdersThisMonthChart.Location = new System.Drawing.Point(49, 169);
             this.TotalOrdersThisMonthChart.Name = "TotalOrdersThisMonthChart";
             this.TotalOrdersThisMonthChart.Size = new System.Drawing.Size(591, 354);
             this.TotalOrdersThisMonthChart.TabIndex = 13;
-            chartFont370.FontName = "Arial";
-            chartFont370.Size = 12;
-            chartFont370.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.TotalOrdersThisMonthChart.Title.Font = chartFont370;
-            chartFont371.FontName = "Arial";
-            this.TotalOrdersThisMonthChart.Tooltips.BodyFont = chartFont371;
-            chartFont372.FontName = "Arial";
-            chartFont372.Size = 9;
-            chartFont372.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.TotalOrdersThisMonthChart.Tooltips.TitleFont = chartFont372;
-            this.TotalOrdersThisMonthChart.XAxes.GridLines = grid139;
-            chartFont373.FontName = "Arial";
-            tick139.Font = chartFont373;
-            this.TotalOrdersThisMonthChart.XAxes.Ticks = tick139;
-            this.TotalOrdersThisMonthChart.YAxes.GridLines = grid140;
-            chartFont374.FontName = "Arial";
-            tick140.Font = chartFont374;
-            this.TotalOrdersThisMonthChart.YAxes.Ticks = tick140;
-            this.TotalOrdersThisMonthChart.ZAxes.GridLines = grid141;
-            chartFont375.FontName = "Arial";
-            pointLabel47.Font = chartFont375;
-            this.TotalOrdersThisMonthChart.ZAxes.PointLabels = pointLabel47;
-            chartFont376.FontName = "Arial";
-            tick141.Font = chartFont376;
-            this.TotalOrdersThisMonthChart.ZAxes.Ticks = tick141;
+            chartFont26.FontName = "Arial";
+            chartFont26.Size = 12;
+            chartFont26.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.TotalOrdersThisMonthChart.Title.Font = chartFont26;
+            chartFont27.FontName = "Arial";
+            this.TotalOrdersThisMonthChart.Tooltips.BodyFont = chartFont27;
+            chartFont28.FontName = "Arial";
+            chartFont28.Size = 9;
+            chartFont28.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.TotalOrdersThisMonthChart.Tooltips.TitleFont = chartFont28;
+            this.TotalOrdersThisMonthChart.XAxes.GridLines = grid10;
+            chartFont29.FontName = "Arial";
+            tick10.Font = chartFont29;
+            this.TotalOrdersThisMonthChart.XAxes.Ticks = tick10;
+            this.TotalOrdersThisMonthChart.YAxes.GridLines = grid11;
+            chartFont30.FontName = "Arial";
+            tick11.Font = chartFont30;
+            this.TotalOrdersThisMonthChart.YAxes.Ticks = tick11;
+            this.TotalOrdersThisMonthChart.ZAxes.GridLines = grid12;
+            chartFont31.FontName = "Arial";
+            pointLabel4.Font = chartFont31;
+            this.TotalOrdersThisMonthChart.ZAxes.PointLabels = pointLabel4;
+            chartFont32.FontName = "Arial";
+            tick12.Font = chartFont32;
+            this.TotalOrdersThisMonthChart.ZAxes.Ticks = tick12;
             // 
             // AnalyticsMainLabel
             // 
@@ -2592,222 +2840,6 @@
             this.Analytics.Text = "Analytics";
             this.Analytics.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // FeedbackMainPanel
-            // 
-            this.FeedbackMainPanel.Controls.Add(this.guna2Panel15);
-            this.FeedbackMainPanel.Controls.Add(this.guna2Panel14);
-            this.FeedbackMainPanel.Controls.Add(this.gunaChart1);
-            this.FeedbackMainPanel.Controls.Add(this.guna2Panel13);
-            this.FeedbackMainPanel.Controls.Add(this.FeedBackPanel);
-            this.FeedbackMainPanel.Location = new System.Drawing.Point(0, 0);
-            this.FeedbackMainPanel.Name = "FeedbackMainPanel";
-            this.FeedbackMainPanel.Size = new System.Drawing.Size(1088, 791);
-            this.FeedbackMainPanel.TabIndex = 4;
-            // 
-            // guna2Panel15
-            // 
-            this.guna2Panel15.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Panel15.BorderRadius = 10;
-            this.guna2Panel15.BorderThickness = 2;
-            this.guna2Panel15.Controls.Add(this.guna2TextBox12);
-            this.guna2Panel15.Controls.Add(this.label40);
-            this.guna2Panel15.Location = new System.Drawing.Point(701, 667);
-            this.guna2Panel15.Name = "guna2Panel15";
-            this.guna2Panel15.Size = new System.Drawing.Size(297, 92);
-            this.guna2Panel15.TabIndex = 3;
-            // 
-            // guna2TextBox12
-            // 
-            this.guna2TextBox12.AutoRoundedCorners = true;
-            this.guna2TextBox12.BorderRadius = 17;
-            this.guna2TextBox12.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox12.DefaultText = "";
-            this.guna2TextBox12.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox12.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox12.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox12.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox12.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox12.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox12.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox12.Location = new System.Drawing.Point(202, 30);
-            this.guna2TextBox12.Name = "guna2TextBox12";
-            this.guna2TextBox12.PasswordChar = '\0';
-            this.guna2TextBox12.PlaceholderText = "";
-            this.guna2TextBox12.SelectedText = "";
-            this.guna2TextBox12.Size = new System.Drawing.Size(88, 36);
-            this.guna2TextBox12.TabIndex = 3;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(17, 36);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(180, 23);
-            this.label40.TabIndex = 2;
-            this.label40.Text = "Negative Feedbacks";
-            // 
-            // guna2Panel14
-            // 
-            this.guna2Panel14.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Panel14.BorderRadius = 10;
-            this.guna2Panel14.BorderThickness = 2;
-            this.guna2Panel14.Controls.Add(this.guna2TextBox11);
-            this.guna2Panel14.Controls.Add(this.label39);
-            this.guna2Panel14.Location = new System.Drawing.Point(374, 667);
-            this.guna2Panel14.Name = "guna2Panel14";
-            this.guna2Panel14.Size = new System.Drawing.Size(297, 92);
-            this.guna2Panel14.TabIndex = 2;
-            // 
-            // guna2TextBox11
-            // 
-            this.guna2TextBox11.AutoRoundedCorners = true;
-            this.guna2TextBox11.BorderRadius = 17;
-            this.guna2TextBox11.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox11.DefaultText = "";
-            this.guna2TextBox11.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox11.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox11.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox11.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox11.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox11.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox11.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox11.Location = new System.Drawing.Point(200, 29);
-            this.guna2TextBox11.Name = "guna2TextBox11";
-            this.guna2TextBox11.PasswordChar = '\0';
-            this.guna2TextBox11.PlaceholderText = "";
-            this.guna2TextBox11.SelectedText = "";
-            this.guna2TextBox11.Size = new System.Drawing.Size(88, 36);
-            this.guna2TextBox11.TabIndex = 2;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(14, 35);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(180, 23);
-            this.label39.TabIndex = 1;
-            this.label39.Text = "Positiver Feedbacks";
-            // 
-            // gunaChart1
-            // 
-            chartFont377.FontName = "Arial";
-            this.gunaChart1.Legend.LabelFont = chartFont377;
-            this.gunaChart1.Location = new System.Drawing.Point(83, 149);
-            this.gunaChart1.Name = "gunaChart1";
-            this.gunaChart1.Size = new System.Drawing.Size(915, 462);
-            this.gunaChart1.TabIndex = 2;
-            chartFont378.FontName = "Arial";
-            chartFont378.Size = 12;
-            chartFont378.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.gunaChart1.Title.Font = chartFont378;
-            chartFont379.FontName = "Arial";
-            this.gunaChart1.Tooltips.BodyFont = chartFont379;
-            chartFont380.FontName = "Arial";
-            chartFont380.Size = 9;
-            chartFont380.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.gunaChart1.Tooltips.TitleFont = chartFont380;
-            this.gunaChart1.XAxes.GridLines = grid142;
-            chartFont381.FontName = "Arial";
-            tick142.Font = chartFont381;
-            this.gunaChart1.XAxes.Ticks = tick142;
-            this.gunaChart1.YAxes.GridLines = grid143;
-            chartFont382.FontName = "Arial";
-            tick143.Font = chartFont382;
-            this.gunaChart1.YAxes.Ticks = tick143;
-            this.gunaChart1.ZAxes.GridLines = grid144;
-            chartFont383.FontName = "Arial";
-            pointLabel48.Font = chartFont383;
-            this.gunaChart1.ZAxes.PointLabels = pointLabel48;
-            chartFont384.FontName = "Arial";
-            tick144.Font = chartFont384;
-            this.gunaChart1.ZAxes.Ticks = tick144;
-            // 
-            // guna2Panel13
-            // 
-            this.guna2Panel13.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Panel13.BorderRadius = 10;
-            this.guna2Panel13.BorderThickness = 2;
-            this.guna2Panel13.Controls.Add(this.guna2TextBox9);
-            this.guna2Panel13.Controls.Add(this.label38);
-            this.guna2Panel13.Location = new System.Drawing.Point(53, 667);
-            this.guna2Panel13.Name = "guna2Panel13";
-            this.guna2Panel13.Size = new System.Drawing.Size(297, 92);
-            this.guna2Panel13.TabIndex = 1;
-            // 
-            // guna2TextBox9
-            // 
-            this.guna2TextBox9.AutoRoundedCorners = true;
-            this.guna2TextBox9.BorderRadius = 17;
-            this.guna2TextBox9.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox9.DefaultText = "";
-            this.guna2TextBox9.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox9.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox9.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox9.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox9.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox9.Location = new System.Drawing.Point(184, 29);
-            this.guna2TextBox9.Name = "guna2TextBox9";
-            this.guna2TextBox9.PasswordChar = '\0';
-            this.guna2TextBox9.PlaceholderText = "";
-            this.guna2TextBox9.SelectedText = "";
-            this.guna2TextBox9.Size = new System.Drawing.Size(88, 36);
-            this.guna2TextBox9.TabIndex = 1;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(20, 35);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(149, 23);
-            this.label38.TabIndex = 0;
-            this.label38.Text = "Total Feedbacks";
-            // 
-            // FeedBackPanel
-            // 
-            this.FeedBackPanel.BorderColor = System.Drawing.Color.Silver;
-            this.FeedBackPanel.BorderRadius = 10;
-            this.FeedBackPanel.BorderThickness = 2;
-            this.FeedBackPanel.Controls.Add(this.FeedbackLabel);
-            this.FeedBackPanel.Location = new System.Drawing.Point(403, 20);
-            this.FeedBackPanel.Name = "FeedBackPanel";
-            this.FeedBackPanel.Size = new System.Drawing.Size(297, 92);
-            this.FeedBackPanel.TabIndex = 0;
-            // 
-            // FeedbackLabel
-            // 
-            this.FeedbackLabel.AutoSize = true;
-            this.FeedbackLabel.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FeedbackLabel.Location = new System.Drawing.Point(48, 20);
-            this.FeedbackLabel.Name = "FeedbackLabel";
-            this.FeedbackLabel.Size = new System.Drawing.Size(201, 54);
-            this.FeedbackLabel.TabIndex = 0;
-            this.FeedbackLabel.Text = "Feedback";
-            // 
-            // itemsTableAdapter
-            // 
-            this.itemsTableAdapter.ClearBeforeFill = true;
-            // 
-            // personalInfoAdmin
-            // 
-            this.personalInfoAdmin.ContactTextPersonalInfo = "";
-            this.personalInfoAdmin.EmailTextPersonalInfo = "";
-            this.personalInfoAdmin.Location = new System.Drawing.Point(0, 0);
-            this.personalInfoAdmin.Name = "personalInfoAdmin";
-            this.personalInfoAdmin.NameTextPersonalInfo = "";
-            this.personalInfoAdmin.PassTextPersonalInfo = "";
-            this.personalInfoAdmin.PersonalInfoPicBox = ((System.Drawing.Image)(resources.GetObject("personalInfoAdmin.PersonalInfoPicBox")));
-            this.personalInfoAdmin.RoleTextPersonalInfo = "";
-            this.personalInfoAdmin.SalaryTextPersonalInfo = "Amount";
-            this.personalInfoAdmin.SinceTextPersonalInfo = "";
-            this.personalInfoAdmin.Size = new System.Drawing.Size(1087, 788);
-            this.personalInfoAdmin.TabIndex = 13;
-            this.personalInfoAdmin.Load += new System.EventHandler(this.personalInfo1_Load);
-            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2823,7 +2855,7 @@
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.AdminPanelMain.ResumeLayout(false);
             this.AdminPanelMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserUpperNavPic)).EndInit();
             this.AdminSideBarMainPanel.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
@@ -2831,6 +2863,7 @@
             this.AdminMainPanel.ResumeLayout(false);
             this.UserDetailsMainPanel.ResumeLayout(false);
             this.UserDetailsMainPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UserPicturebox)).EndInit();
             this.guna2Panel7.ResumeLayout(false);
             this.guna2Panel7.PerformLayout();
             this.guna2Panel6.ResumeLayout(false);
@@ -2840,11 +2873,12 @@
             this.guna2Panel5.PerformLayout();
             this.ItemDetailsMainPanel.ResumeLayout(false);
             this.ItemDetailsMainPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemPicturebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemsGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rMSDatabaseDataSet)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
+            this.PersonalInfoPanel.ResumeLayout(false);
             this.AttendanceMainPanel.ResumeLayout(false);
             this.AttendanceMainPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AttendanceGridView)).EndInit();
@@ -2854,6 +2888,15 @@
             this.InboxMainPanel.PerformLayout();
             this.InboxPanel.ResumeLayout(false);
             this.InboxPanel.PerformLayout();
+            this.FeedbackMainPanel.ResumeLayout(false);
+            this.guna2Panel15.ResumeLayout(false);
+            this.guna2Panel15.PerformLayout();
+            this.guna2Panel14.ResumeLayout(false);
+            this.guna2Panel14.PerformLayout();
+            this.guna2Panel13.ResumeLayout(false);
+            this.guna2Panel13.PerformLayout();
+            this.FeedBackPanel.ResumeLayout(false);
+            this.FeedBackPanel.PerformLayout();
             this.FinancialDataMainPanel.ResumeLayout(false);
             this.guna2Panel8.ResumeLayout(false);
             this.guna2Panel8.PerformLayout();
@@ -2882,15 +2925,6 @@
             this.PaymentsRecieved.PerformLayout();
             this.AnalyticsMainLabel.ResumeLayout(false);
             this.AnalyticsMainLabel.PerformLayout();
-            this.FeedbackMainPanel.ResumeLayout(false);
-            this.guna2Panel15.ResumeLayout(false);
-            this.guna2Panel15.PerformLayout();
-            this.guna2Panel14.ResumeLayout(false);
-            this.guna2Panel14.PerformLayout();
-            this.guna2Panel13.ResumeLayout(false);
-            this.guna2Panel13.PerformLayout();
-            this.FeedBackPanel.ResumeLayout(false);
-            this.FeedBackPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2902,7 +2936,7 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private System.Windows.Forms.Label labelDashboardName;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox UserUpperNavPic;
         private Guna.UI2.WinForms.Guna2Panel AdminSideBarMainPanel;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button btnFeedback;
@@ -2947,8 +2981,8 @@
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private System.Windows.Forms.Label Usernamelabel;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2Button btnDeleteUser;
+        private Guna.UI2.WinForms.Guna2Button btnUpdateUser;
         private Guna.UI2.WinForms.Guna2Button btnAddUser;
         private Guna.UI2.WinForms.Guna2ComboBox comboRole;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
@@ -3026,33 +3060,30 @@
         private System.Windows.Forms.Label label39;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox9;
         private Guna.UI2.WinForms.Guna2Button guna2Button12;
-        private System.Windows.Forms.ComboBox AttendanceUserIDCombo;
+        private System.Windows.Forms.ComboBox EmployeeIDCombo;
         private System.Windows.Forms.Label label42;
         private Guna.UI2.WinForms.Guna2DataGridView AttendanceGridView;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel16;
         private System.Windows.Forms.Label label41;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label43;
+        private Guna.UI2.WinForms.Guna2DateTimePicker DateTimePickerTimeOut;
+        private System.Windows.Forms.Label LabelMarkTimeOut;
+        private System.Windows.Forms.Label LabelMarkTimeIn;
         private Guna.UI2.WinForms.Guna2Button guna2Button13;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker DateTimePickerTimeIn;
         private PersonalInfo personalInfoAdmin;
         private Guna.UI2.WinForms.Guna2Button BtnSaveAttendance;
         private Guna.UI2.WinForms.Guna2Button guna2Button14;
         private Guna.UI2.WinForms.Guna2Button btnAddItemPhoto;
         private System.Windows.Forms.Label label45;
-        private Guna.UI2.WinForms.Guna2TextBox TxtEmailInbox;
         private System.Windows.Forms.Label PersonalInfoEmail;
         private Guna.UI2.WinForms.Guna2Button guna2Button16;
-        private Guna.UI2.WinForms.Guna2TextBox SendTextTxt;
+        private Guna.UI2.WinForms.Guna2TextBox txtMessage;
         private Guna.UI2.WinForms.Guna2TextBox txtTotalUsers;
         private Guna.UI2.WinForms.Guna2TextBox txtTopItemsMonth;
         private Guna.UI2.WinForms.Guna2TextBox txtRepeatingCustomers;
         private Guna.UI2.WinForms.Guna2Button btnAddPhotoUserDetail;
         private System.Windows.Forms.Label label13;
-        private RMSDatabaseDataSet rMSDatabaseDataSet;
         private System.Windows.Forms.BindingSource itemsBindingSource;
-        private RMSDatabaseDataSetTableAdapters.ItemsTableAdapter itemsTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
@@ -3060,5 +3091,12 @@
         private System.Windows.Forms.DataGridViewImageColumn pictureDataGridViewImageColumn;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2ComboBox ItemIDCombo;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox UserPicturebox;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox ItemPicturebox;
+        private Guna.UI2.WinForms.Guna2ComboBox UsersIDCombo;
+        private System.Windows.Forms.Label label14;
+        private Guna.UI2.WinForms.Guna2ComboBox UsernamesCombo;
+        private Guna.UI2.WinForms.Guna2CheckBox MarkAttenManuallyCheckbox;
+        private Guna.UI2.WinForms.Guna2Panel PersonalInfoPanel;
     }
 }

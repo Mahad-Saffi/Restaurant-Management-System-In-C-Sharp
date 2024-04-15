@@ -14,9 +14,53 @@ namespace RMS.UI
 {
     public partial class ManagerDashboard : Form
     {
-        public ManagerDashboard()
+        User manager;
+        public ManagerDashboard(User manager)
         {
+            this.manager = manager;
             InitializeComponent();
+            InitializeInventory();
+            InitializeCustomerDetails();
+            InitializeInbox();
+        }
+
+        private void InitializeInventory()
+        {
+            // Load all Item IDs for Combo Box
+            List<int> itemIDs = ObjectHandler.GetItemDL().LoadItemsID();
+            foreach (int itemID in itemIDs)
+            {
+                ItemIDCombo.Items.Add(itemID);
+            }
+        }
+
+        private void InitializeCustomerDetails()
+        {
+            // Load all Customer IDs for Combo Box
+            List<int> customerIDs = ObjectHandler.GetUserDL().LoadAllCustomerID();
+            foreach (int customerID in customerIDs)
+            {
+                CustomerIDCombo.Items.Add(customerID);
+            }
+        }
+
+        private void InitializeInbox()
+        {
+            // Load all Usernames for Combo Box
+            List<string> usernames = ObjectHandler.GetUserDL().LoadAllUsernames();
+            foreach (string username in usernames)
+            {
+                UsernamesCombo.Items.Add(username);
+            }
+            UsernamesCombo.SelectedIndex = 0;
+
+            // Load all the messages
+            List<Inbox> messages = ObjectHandler.GetInboxDL().LoadMessagesByUserID(manager);
+            messagesFlowPanel.Controls.Clear();
+            foreach (Inbox message in messages)
+            {
+                messagesFlowPanel.Controls.Add(new Message(message));
+            }
         }
 
         private void showPanel(Panel panel)
@@ -92,6 +136,138 @@ namespace RMS.UI
         private void personalInfoManager_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void InboxMainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Button16_Click(object sender, EventArgs e)
+        {
+            string message = txtMessage.Text;
+            string username = UsernamesCombo.Text;
+
+            MessageBox.Show(username);
+
+            User reciever = ObjectHandler.GetUserDL().GetUserByUsername(username);
+
+            Inbox inbox = new Inbox(manager.getUserID(), reciever.getUserID(), message, DateTime.Now);
+
+            if (ObjectHandler.GetInboxDL().SendMessage(inbox))
+            {
+                txtMessage.Clear();
+                MessageBox.Show("Message sent successfully.");
+            }
+            else
+            {
+                MessageBox.Show("Failed to send message.");
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            string itemName = txtItemName.Text;
+            string itemPrice = txtItemPrice.Text;
+            string itemCost = txtCostOfPurchase.Text;
+            byte[] itemImage = ItemPictureBox.Image != null ? ObjectHandler.GetUtilityDL().ImageToByteArray(ItemPictureBox.Image) : null;
+
+            var item = new Item(itemName, Convert.ToDouble(itemPrice), Convert.ToDouble(itemCost), itemImage);
+
+            if (ObjectHandler.GetItemDL().AddItem(item))
+            {
+                MessageBox.Show("Item added successfully.");
+            }
+            else
+            {
+                MessageBox.Show("Failed to add item.");
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string itemID = ItemIDCombo.Text;
+            string itemName = txtItemName.Text;
+            string itemPrice = txtItemPrice.Text;
+            string itemCost = txtCostOfPurchase.Text;
+            byte[] itemImage = ItemPictureBox.Image != null ? ObjectHandler.GetUtilityDL().ImageToByteArray(ItemPictureBox.Image) : null;
+            var item = new Item(Convert.ToInt32(itemID), itemName, Convert.ToDouble(itemPrice), Convert.ToDouble(itemCost), itemImage);
+
+            if (ObjectHandler.GetItemDL().UpdateItem(item))
+            {
+                MessageBox.Show("Item updated successfully.");
+            }
+            else
+            {
+                MessageBox.Show("Failed to update item.");
+            }
+        }
+
+        private void InventoryPanelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int itemID = Convert.ToInt32(ItemIDCombo.Text);
+
+            if (ObjectHandler.GetItemDL().DeleteItem(itemID))
+            {
+                MessageBox.Show("Item deleted successfully.");
+            }
+            else
+            {
+                MessageBox.Show("Failed to delete item.");
+            }
+        }
+
+        private void guna2Button15_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Image Files(*.jpg; *.jpeg; *.png; *.bmp)|*.jpg; *.jpeg; *.png; *.bmp";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                ItemPictureBox.Image = new Bitmap(dialog.FileName);
+                ItemPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+        }
+
+        private void CustomerIDCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            int customerID = Convert.ToInt32(CustomerIDCombo.Text);
+
+            if (ObjectHandler.GetUserDL().DeleteCustomer(customerID))
+            {
+                MessageBox.Show("Customer deleted successfully.");
+            }
+            else
+            {
+                MessageBox.Show("Failed to delete customer.");
+            }
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            int reciever = Convert.ToInt32(CustomerIDCombo.Text);
+            string message = txtMessage.Text;
+
+            Inbox inbox = new Inbox(manager.getUserID(), reciever, message, DateTime.Now);
+
+            if (ObjectHandler.GetInboxDL().SendMessage(inbox))
+            {
+                MessageBox.Show("Message sent successfully.");
+            }
+            else
+            {
+                MessageBox.Show("Failed to send message.");
+            }
         }
     }
 }

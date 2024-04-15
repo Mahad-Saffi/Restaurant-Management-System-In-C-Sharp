@@ -15,9 +15,31 @@ namespace RMS.UI
     public partial class RiderDashboard : Form
     {
         private Order acceptedOrder;
-        public RiderDashboard()
+        User rider;
+        public RiderDashboard(User rider)
         {
+            this.rider = rider;
             InitializeComponent();
+            InitializeInbox();
+        }
+
+        private void InitializeInbox()
+        {
+            // Load all Usernames for Combo Box
+            List<string> usernames = ObjectHandler.GetUserDL().LoadAllUsernames();
+            foreach (string username in usernames)
+            {
+                UsernamesCombo.Items.Add(username);
+            }
+            UsernamesCombo.SelectedIndex = 0;
+
+            // Load all the messages
+            List<Inbox> messages = ObjectHandler.GetInboxDL().LoadMessagesByUserID(rider);
+            messagesFlowPanel.Controls.Clear();
+            foreach (Inbox message in messages)
+            {
+                messagesFlowPanel.Controls.Add(new Message(message));
+            }
         }
 
         private void showPanel(Panel panel)
@@ -224,6 +246,33 @@ namespace RMS.UI
             this.Hide();
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
+        }
+
+        private void InboxMainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Button16_Click(object sender, EventArgs e)
+        {
+            string message = txtMessage.Text;
+            string username = UsernamesCombo.Text;
+
+            MessageBox.Show(username);
+
+            User reciever = ObjectHandler.GetUserDL().GetUserByUsername(username);
+
+            Inbox inbox = new Inbox(rider.getUserID(), reciever.getUserID(), message, DateTime.Now);
+
+            if (ObjectHandler.GetInboxDL().SendMessage(inbox))
+            {
+                txtMessage.Clear();
+                MessageBox.Show("Message sent successfully.");
+            }
+            else
+            {
+                MessageBox.Show("Failed to send message.");
+            }
         }
     }
 }

@@ -33,9 +33,9 @@
             this.ItemPicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.LabelItemPrice = new System.Windows.Forms.Label();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.ItemName = new System.Windows.Forms.Label();
             this.AddToCart = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.ItemName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ItemPicture)).BeginInit();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddToCart)).BeginInit();
@@ -61,9 +61,9 @@
             this.LabelItemPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelItemPrice.Location = new System.Drawing.Point(24, 176);
             this.LabelItemPrice.Name = "LabelItemPrice";
-            this.LabelItemPrice.Size = new System.Drawing.Size(53, 24);
+            this.LabelItemPrice.Size = new System.Drawing.Size(65, 24);
             this.LabelItemPrice.TabIndex = 1;
-            this.LabelItemPrice.Text = "Price";
+            this.LabelItemPrice.Text = "$00.00";
             this.LabelItemPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelItemPrice.Click += new System.EventHandler(this.ItemPrice_Click);
             // 
@@ -81,6 +81,17 @@
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(202, 212);
             this.guna2ShadowPanel1.TabIndex = 0;
+            // 
+            // ItemName
+            // 
+            this.ItemName.AutoSize = true;
+            this.ItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.ItemName.Location = new System.Drawing.Point(22, 143);
+            this.ItemName.Name = "ItemName";
+            this.ItemName.Size = new System.Drawing.Size(71, 26);
+            this.ItemName.TabIndex = 3;
+            this.ItemName.Text = "Name";
+            this.ItemName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AddToCart
             // 
@@ -102,17 +113,6 @@
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
-            // ItemName
-            // 
-            this.ItemName.AutoSize = true;
-            this.ItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.ItemName.Location = new System.Drawing.Point(22, 143);
-            this.ItemName.Name = "ItemName";
-            this.ItemName.Size = new System.Drawing.Size(71, 26);
-            this.ItemName.TabIndex = 3;
-            this.ItemName.Text = "Name";
-            this.ItemName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FoodItem
             // 

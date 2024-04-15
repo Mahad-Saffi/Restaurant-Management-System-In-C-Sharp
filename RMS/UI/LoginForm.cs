@@ -160,13 +160,13 @@ namespace RMS.UI
                     else if (user != null && user.getRole() == "manager")
                     {
                         this.Hide();
-                        var managerDashboard = new ManagerDashboard();
+                        var managerDashboard = new ManagerDashboard(new User());
                         managerDashboard.Show();
                     }
                     else if (user != null && user.getRole() == "rider")
                     {
                         this.Hide();
-                        var riderDashboard = new RiderDashboard();
+                        var riderDashboard = new RiderDashboard(new User());
                         riderDashboard.Show();
                     }
                     else

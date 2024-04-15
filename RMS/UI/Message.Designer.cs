@@ -31,12 +31,16 @@
             this.MessagePanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.TxtMessage = new Guna.UI2.WinForms.Guna2TextBox();
             this.Username = new System.Windows.Forms.Label();
+            this.MessageDateTime = new System.Windows.Forms.Label();
+            this.Role = new System.Windows.Forms.Label();
             this.MessagePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // MessagePanel
             // 
             this.MessagePanel.BackColor = System.Drawing.Color.Transparent;
+            this.MessagePanel.Controls.Add(this.Role);
+            this.MessagePanel.Controls.Add(this.MessageDateTime);
             this.MessagePanel.Controls.Add(this.TxtMessage);
             this.MessagePanel.Controls.Add(this.Username);
             this.MessagePanel.FillColor = System.Drawing.Color.White;
@@ -61,7 +65,7 @@
             this.TxtMessage.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.TxtMessage.ForeColor = System.Drawing.Color.Black;
             this.TxtMessage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtMessage.Location = new System.Drawing.Point(143, 43);
+            this.TxtMessage.Location = new System.Drawing.Point(24, 43);
             this.TxtMessage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.TxtMessage.Multiline = true;
             this.TxtMessage.Name = "TxtMessage";
@@ -69,18 +73,39 @@
             this.TxtMessage.PlaceholderText = "";
             this.TxtMessage.ReadOnly = true;
             this.TxtMessage.SelectedText = "";
-            this.TxtMessage.Size = new System.Drawing.Size(590, 88);
+            this.TxtMessage.Size = new System.Drawing.Size(709, 88);
             this.TxtMessage.TabIndex = 1;
             // 
             // Username
             // 
             this.Username.AutoSize = true;
-            this.Username.Font = new System.Drawing.Font("Mongolian Baiti", 20F);
-            this.Username.Location = new System.Drawing.Point(19, 15);
+            this.Username.Font = new System.Drawing.Font("Mongolian Baiti", 18F);
+            this.Username.Location = new System.Drawing.Point(32, 13);
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(123, 29);
+            this.Username.Size = new System.Drawing.Size(109, 25);
             this.Username.TabIndex = 0;
             this.Username.Text = "Username";
+            // 
+            // MessageDateTime
+            // 
+            this.MessageDateTime.AutoSize = true;
+            this.MessageDateTime.Font = new System.Drawing.Font("Mongolian Baiti", 14F);
+            this.MessageDateTime.Location = new System.Drawing.Point(515, 15);
+            this.MessageDateTime.Name = "MessageDateTime";
+            this.MessageDateTime.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.MessageDateTime.Size = new System.Drawing.Size(149, 20);
+            this.MessageDateTime.TabIndex = 2;
+            this.MessageDateTime.Text = "MessageDateTime";
+            // 
+            // Role
+            // 
+            this.Role.AutoSize = true;
+            this.Role.Font = new System.Drawing.Font("Mongolian Baiti", 18F);
+            this.Role.Location = new System.Drawing.Point(317, 13);
+            this.Role.Name = "Role";
+            this.Role.Size = new System.Drawing.Size(57, 25);
+            this.Role.TabIndex = 3;
+            this.Role.Text = "Role";
             // 
             // Message
             // 
@@ -89,6 +114,7 @@
             this.Controls.Add(this.MessagePanel);
             this.Name = "Message";
             this.Size = new System.Drawing.Size(1089, 189);
+            this.Load += new System.EventHandler(this.Message_Load);
             this.MessagePanel.ResumeLayout(false);
             this.MessagePanel.PerformLayout();
             this.ResumeLayout(false);
@@ -100,5 +126,7 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel MessagePanel;
         private Guna.UI2.WinForms.Guna2TextBox TxtMessage;
         private System.Windows.Forms.Label Username;
+        private System.Windows.Forms.Label MessageDateTime;
+        private System.Windows.Forms.Label Role;
     }
 }

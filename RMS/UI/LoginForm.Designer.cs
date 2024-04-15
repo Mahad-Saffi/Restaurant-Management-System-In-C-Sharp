@@ -239,6 +239,7 @@
             this.txtPassword.IconRight = global::RMS.Properties.Resources.eye;
             this.txtPassword.IconRightOffset = new System.Drawing.Point(10, 0);
             this.txtPassword.Location = new System.Drawing.Point(93, 412);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
             this.txtPassword.PlaceholderText = "PASSWORD";
@@ -267,6 +268,7 @@
             this.txtUsername.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtUsername.IconRightOffset = new System.Drawing.Point(10, 0);
             this.txtUsername.Location = new System.Drawing.Point(93, 350);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "USERNAME";
@@ -290,6 +292,7 @@
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";

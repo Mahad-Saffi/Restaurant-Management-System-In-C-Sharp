@@ -124,13 +124,13 @@
     <value>175, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>73</value>
+    <value>25</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="txtUsername.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAABoDSURBVHhe7d0J
+        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAABoDSURBVHhe7d0J
         0C11eefxy77LKosgigtKUHAJzmiGaNSJxn3DWI7lmHFCLNc4mtGMGyqZ0ZlUDO44Gnc0xDEp0eC4oXEZ
         3BJ3RVBBFFFR2RRky/weDETggfvee8/Sp/vzqfpWWSDvve/p7qff95zuf68DAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -248,7 +248,7 @@
   <data name="txtPassword.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACDHSURBVHhe7d0J
+        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACDHSURBVHhe7d0J
         tK7ZfOfxGsVMxEyhO52Ys4JCp5MQU5kjRKFEDKGJtHlJ62TFijGsSktUhyQlQwtB6NDSJIgMqELEVGYh
         BI0qQ5Uy1KSG7t8uYy3/W+697/Oes/ezP9+1PmvVKuXc9zznf/bZ9z3PcICkobtYXC/uFL8UvxpHx5/E
         K+P4+FB87JtO+aavxf/7pvbP3/r33/rvPhjHRfsY7WO1j9k+dvsz2p/V/sz2Z0uSpC11SFw/7hNPj5fE
@@ -395,7 +395,7 @@
   <data name="guna2PictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAEQfSURBVHhe7d0J
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAEQfSURBVHhe7d0J
         3G5jvf/xLZF5jJIGlCFKVFKiiZCMSaUMRWgS1d8RTUpFQiJj49F0kqOiojSbKlNlKiLJlDnKrPP/fp9t
         t5+992/vfQ/rGtZan8/r9X4dp3vv51n3/Tx7rXXf61rXNYWIWt8CsqpsInvIh+QI+ZqcLr+Vqx91m9wh
         /5D/e5T/2/+bH5v25/x3/He/Kv5a/pr+2v4e/l6PEyIiIsrQUvJy2Uu+IOfIjTLtQJ7Tv+UGOVs+L+8W
@@ -692,7 +692,7 @@
   <data name="btnLogin.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAB3/SURBVHhe7d0J
+        DAAACwwBP0AiyAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAB3/SURBVHhe7d0J
         sG1pWd/h293Q0IggIIMQGQScGkgUkZIZBbSBrmgHIoOF0YgESoNRCwtjBBNRC4wTGhpLDKCigRgxaogS
         QS3EMFpAAzGMgkzN1AwNDT0k/9UNdPe93733DO/ee71rPb+qp4o6fe7l1lnf/r5373PO2kck7axrxdfH
         d8aPxTPij+Ll8XfxofhIfCb+HzA774s/jhfFi+Nl8ep4RfxJPDd+MZ4Y58Rt45SQtKJOjTvGY+O34ry4
@@ -824,10 +824,13 @@
         AABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="guna2AnimateWindow1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>350, 17</value>
+  </metadata>
   <data name="guna2PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAE4fSURBVHhe7Z0J
+        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAE4fSURBVHhe7Z0J
         3G5T2f+9pQERUsZMlSFTIk1CKs3SoEFIKY2aJ73NGjRPVIoiemWOiEoyJBUqDYQ3JWVIKSIlvf//70dP
         nnPOdZ5z33tfa4/f7+fz/STOeZ69173uvfZa61rXtRgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD0mxXkE+Rucme5jVxCAgAAwAB5tDxN3iL/33zeKA+V60gA
@@ -1164,7 +1167,4 @@
         AAAAAH1iscX+P5AWNheA7b45AAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="guna2AnimateWindow1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>350, 17</value>
-  </metadata>
 </root>

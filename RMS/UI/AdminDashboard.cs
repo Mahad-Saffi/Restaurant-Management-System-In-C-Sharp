@@ -15,17 +15,71 @@ namespace RMS.UI
 {
     public partial class AdminDashboard : Form
     {
-        string username;
-        string password;
-        string email;
-        long phone;
-        string role;
-        double salary;
+        User admin;
+        private DateTime timeIn = DateTime.UtcNow;
+        private DateTime timeOut = DateTime.UtcNow;
 
         public AdminDashboard(User admin)
         {
+            this.admin = admin;
             InitializeComponent();
+            InitializeItemDetails();
+            InitializeUserDetails();
+            InitializeInbox();
+            InitializeAttendance();
             InitializePersonalInfo(admin);
+        }
+
+        private void InitializeItemDetails()
+        {
+            // Load all the Item IDs for Combo Box
+            List<int> items = ObjectHandler.GetItemDL().LoadItemsID();
+            foreach(int item in items)
+            {
+                ItemIDCombo.Items.Add(item);
+            }
+        }
+
+        private void InitializeUserDetails()
+        {
+            // Load all the User IDs for Combo Box
+            List<int> users = ObjectHandler.GetUserDL().LoadUsersID();
+            foreach (int user in users)
+            {
+                UsersIDCombo.Items.Add(user);
+            }
+
+            // Fill the two lower text boxes
+            txtTotalUsers.Text = ObjectHandler.GetUserDL().GetTotalUsers().ToString();
+            txtRepeatingCustomers.Text = ObjectHandler.GetUserDL().GetRepeatingCustomers().ToString();
+        }
+
+        private void InitializeInbox()
+        {
+            // Load all Usernames for Combo Box
+            List<string> usernames = ObjectHandler.GetUserDL().LoadAllUsernames();
+            foreach (string username in usernames)
+            {
+                UsernamesCombo.Items.Add(username);
+            }
+
+            // Load all the messages
+            List<Inbox> messages = ObjectHandler.GetInboxDL().LoadMessagesByUserID(admin);
+            messagesFlowPanel.Controls.Clear();
+            foreach (Inbox message in messages)
+            {
+                messagesFlowPanel.Controls.Add(new Message(message));
+            }
+        }
+
+        private void InitializeAttendance()
+        {
+            //Load All employee ID's for Combo Box
+            List<int> employeeID = ObjectHandler.GetUserDL().GetAllEmployeeID();
+            foreach (int id in employeeID)
+            {
+                EmployeeIDCombo.Items.Add(id);
+            }
         }
 
         private void InitializePersonalInfo(User admin)
@@ -36,6 +90,7 @@ namespace RMS.UI
             personalInfoAdmin.ContactTextPersonalInfo = admin.getUserPhone().ToString();
             personalInfoAdmin.SinceTextPersonalInfo = admin.getUserRegistrationDate().ToString();
             personalInfoAdmin.RoleTextPersonalInfo = admin.getRole();
+            personalInfoAdmin.SalaryTextPersonalInfo = "N/A";
         }
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -55,14 +110,6 @@ namespace RMS.UI
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'rMSDatabaseDataSet.Items' table. You can move, or remove it, as needed.
-            this.itemsTableAdapter.Fill(this.rMSDatabaseDataSet.Items);
-            messagesFlowPanel.Controls.Clear();
-            messagesFlowPanel.Controls.Add(new Message());
-            messagesFlowPanel.Controls.Add(new Message());
-            messagesFlowPanel.Controls.Add(new Message());
-            messagesFlowPanel.Controls.Add(new Message());
-            messagesFlowPanel.Controls.Add(new Message());
-            messagesFlowPanel.Controls.Add(new Message());
         }
 
         private void showPanel (Panel panel)
@@ -77,25 +124,25 @@ namespace RMS.UI
             InboxMainPanel.Visible = false;
             FeedbackMainPanel.Visible = false;
             AttendanceMainPanel.Visible = false;
-            personalInfoAdmin.Visible = false;
+            PersonalInfoPanel.Visible = false;
 
             panel.Visible = true;
         }
 
         private void personalInfo1_Load(object sender, EventArgs e)
         {
-            personalInfoAdmin.NameTextPersonalInfo = "Admin";
-            personalInfoAdmin.PassTextPersonalInfo = "admin";
-            personalInfoAdmin.EmailTextPersonalInfo = "admin@gmail.com";
-            personalInfoAdmin.ContactTextPersonalInfo = "1234567890";
-            personalInfoAdmin.SinceTextPersonalInfo = "2021";
-            personalInfoAdmin.RoleTextPersonalInfo = "Admin";
-            personalInfoAdmin.PersonalInfoPicBox = Properties.Resources.eye;
+
         }
 
         private void guna2Button17_Click(object sender, EventArgs e)
         {
-            
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                UserPicturebox.Image = Image.FromFile(openFileDialog.FileName);
+            }
         }
 
         private void UserDetailsMainPanel_Paint(object sender, PaintEventArgs e)
@@ -108,7 +155,9 @@ namespace RMS.UI
             string itemName = txtItemName.Text;
             string itemPrice = txtItemPrice.Text;
             string itemCost = txtCostOfPurchase.Text;
-            var item = new Item(itemName, Convert.ToDouble(itemPrice), Convert.ToDouble(itemCost));
+            byte[] itemImage = ItemPicturebox.Image != null ? ObjectHandler.GetUtilityDL().ImageToByteArray(ItemPicturebox.Image) : null;
+
+            var item = new Item(itemName, Convert.ToDouble(itemPrice), Convert.ToDouble(itemCost), itemImage);
 
             if (ObjectHandler.GetItemDL().AddItem(item))
             {
@@ -127,9 +176,8 @@ namespace RMS.UI
 
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                byte[] imageBytes = System.IO.File.ReadAllBytes(dialog.FileName);
-                string query = "INSERT INTO Items (Picture) VALUES (@image) Where ItemID = @itemID";
-                ObjectHandler.GetUtilityDL().SaveImage(imageBytes, query, 1, "item");
+                ItemPicturebox.Image = Image.FromFile(dialog.FileName);
+                ItemPicturebox.SizeMode = PictureBoxSizeMode.Zoom;
             }
         }
 
@@ -139,7 +187,8 @@ namespace RMS.UI
             string itemName = txtItemName.Text;
             string itemPrice = txtItemPrice.Text;
             string itemCost = txtCostOfPurchase.Text;
-            var item = new Item(Convert.ToInt32(itemID), itemName, Convert.ToDouble(itemPrice), Convert.ToDouble(itemCost));
+            byte[] itemImage = ItemPicturebox.Image != null ? ObjectHandler.GetUtilityDL().ImageToByteArray(ItemPicturebox.Image) : null;
+            var item = new Item(Convert.ToInt32(itemID), itemName, Convert.ToDouble(itemPrice), Convert.ToDouble(itemCost), itemImage);
 
             if (ObjectHandler.GetItemDL().UpdateItem(item))
             {
@@ -167,27 +216,46 @@ namespace RMS.UI
 
         private void guna2Button11_Click(object sender, EventArgs e)
         {
-            username = txtUsername.Text.ToLower();
-            password = ObjectHandler.GetUserDL().HashPassword(txtUserPassword.Text);
-            email = txtEmail.Text;
-            phone = Convert.ToInt64(txtContact.Text);
-            role = comboRole.Text.ToLower();
-            salary = Convert.ToDouble(txtSalary.Text);
+            string username = txtUsername.Text.ToLower();
+            string password = ObjectHandler.GetUserDL().HashPassword(txtUserPassword.Text);
+            string email = txtEmail.Text;
+            long phone = Convert.ToInt64(txtContact.Text);
+            string role = comboRole.Text.ToLower();
+            double salary = Convert.ToDouble(txtSalary.Text);
+            byte[] userPicture = UserPicturebox.Image != null ? ObjectHandler.GetUtilityDL().ImageToByteArray(UserPicturebox.Image) : null;
+
+            if (userPicture != null)
+            {
+                string base64String = Convert.ToBase64String(userPicture);
+                MessageBox.Show(base64String);
+            }
+            else
+            {
+                MessageBox.Show("No picture loaded.");
+            }
+
 
             if (role.ToLower() == "admin")
             {
-                User admin = new Admin(username, password, role, email, phone, DateTime.Now);
-                ObjectHandler.GetUserDL().AddUserData(admin);
+                Admin adminTobeAdded = new Admin(username, password, role, email, phone, DateTime.Now, userPicture);
+                if (ObjectHandler.GetUserDL().AddUserByAdmin(adminTobeAdded))
+                {
+                    MessageBox.Show("Admin added successfully.");
+                }
+                else
+                {
+                    MessageBox.Show("Username already present...\nPlease try a different username...");
+                }
             }
             else if (role.ToLower() == "manager" || role.ToLower() == "rider")
             {
-                User employee = new Employee(username, password, role, email, phone, DateTime.Now, salary);
-                ObjectHandler.GetUserDL().AddUserData(employee);
+                Employee employee = new Employee(username, password, role, email, phone, DateTime.Now, salary, userPicture);
+                ObjectHandler.GetUserDL().AddUserByAdmin(employee);
             }
             else if (role.ToLower() == "customer")
             {
-                User customer = new Customer(username, password, role, email, phone, DateTime.Now);
-                ObjectHandler.GetUserDL().AddUserData(customer);
+                Customer customer = new Customer(username, password, role, email, phone, DateTime.Now, userPicture);
+                ObjectHandler.GetUserDL().AddUserByAdmin(customer);
             }
         }
 
@@ -228,8 +296,7 @@ namespace RMS.UI
 
         private void btnPersonalInfo_Click(object sender, EventArgs e)
         {
-            showPanel(UserDetailsMainPanel);
-            personalInfoAdmin.Visible = true;
+            showPanel(PersonalInfoPanel);
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -237,6 +304,169 @@ namespace RMS.UI
             this.Hide();
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
+        }
+
+        private void ItemIDCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button16_Click(object sender, EventArgs e)
+        {
+            string message = txtMessage.Text;
+            string username = UsernamesCombo.Text;
+
+            MessageBox.Show(username);
+
+            User reciever = ObjectHandler.GetUserDL().GetUserByUsername(username);
+
+            Inbox inbox = new Inbox(admin.getUserID(), reciever.getUserID(), message, DateTime.Now);
+
+            if(ObjectHandler.GetInboxDL().SendMessage(inbox))
+            {
+                txtMessage.Clear();
+                ReloadInbox();
+                MessageBox.Show("Message sent successfully.");
+            }
+            else
+            {
+                MessageBox.Show("Failed to send message.");
+            }
+        }
+
+        private void ReloadInbox()
+        {
+            messagesFlowPanel.Controls.Clear();
+            List<Inbox> messages = ObjectHandler.GetInboxDL().LoadMessagesByUserID(admin);
+            foreach (Inbox message in messages)
+            {
+                messagesFlowPanel.Controls.Add(new Message(message));
+            }
+        }
+
+        private void AttendanceMainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Button12_Click(object sender, EventArgs e)
+        {
+            timeIn = DateTime.UtcNow;
+            DateTime date = timeIn.Date;
+            if (ObjectHandler.GetAttendanceDL().UserAndDatePresentIntable(int.Parse(EmployeeIDCombo.Text), date))
+            {
+                     ObjectHandler.GetAttendanceDL().UpdateAttendance(int.Parse(EmployeeIDCombo.Text), date, timeIn, timeOut);
+            }
+            else
+            {
+                if (MarkAttenManuallyCheckbox.Checked)
+                {
+                    timeIn = DateTimePickerTimeIn.Value;
+                    timeOut = DateTimePickerTimeOut.Value;
+                }
+                Attendance attendance = new Attendance(int.Parse(EmployeeIDCombo.Text), timeIn, timeOut, date);
+                if (ObjectHandler.GetAttendanceDL().MarkAttendance(attendance))
+                {
+                    MessageBox.Show("Attendance marked successfully.");
+                }
+                else
+                {
+                    MessageBox.Show("Failed to mark attendance.");
+                }
+            }
+        }
+
+        private void MarkAttenManuallyCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (MarkAttenManuallyCheckbox.Checked)
+            {
+                LabelMarkTimeIn.Visible = true;
+                LabelMarkTimeOut.Visible = true;
+                DateTimePickerTimeIn.Visible = true;
+                DateTimePickerTimeOut.Visible = true;
+            }
+            else
+            {
+                LabelMarkTimeIn.Visible = false;
+                LabelMarkTimeOut.Visible = false;
+                DateTimePickerTimeIn.Visible = false;
+                DateTimePickerTimeOut.Visible = false;
+            }
+        }
+
+        private void guna2Button13_Click(object sender, EventArgs e)
+        {
+            timeOut = DateTime.UtcNow;
+            DateTime date = timeOut.Date;
+
+            if (ObjectHandler.GetAttendanceDL().UserAndDatePresentIntable(int.Parse(EmployeeIDCombo.Text), date))
+            {
+                ObjectHandler.GetAttendanceDL().UpdateAttendance(int.Parse(EmployeeIDCombo.Text), date, timeIn, timeOut);
+            }
+            else
+            {
+                if (MarkAttenManuallyCheckbox.Checked)
+                {
+                    timeIn = DateTimePickerTimeIn.Value;
+                    timeOut = DateTimePickerTimeOut.Value;
+                }
+                Attendance attendance = new Attendance(int.Parse(EmployeeIDCombo.Text), timeIn, timeOut, date);
+                if (ObjectHandler.GetAttendanceDL().MarkAttendance(attendance))
+                {
+                    MessageBox.Show("Attendance marked successfully.");
+                }
+                else
+                {
+                    MessageBox.Show("Failed to mark attendance.");
+                }
+            }
+        }
+
+        private void AttendanceGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            int userID = Convert.ToInt32(UsersIDCombo.Text);
+
+            if (ObjectHandler.GetUserDL().DeleteUser(userID))
+            {
+                MessageBox.Show("User deleted Successfully!");
+            }
+            else
+            {
+                MessageBox.Show("Failed to delete the user!");
+            }
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            int userID = Convert.ToInt32(UsersIDCombo.Text);
+            string username = txtUsername.Text;
+            string password = ObjectHandler.GetUserDL().HashPassword(txtUserPassword.Text);
+            string email = txtEmail.Text;
+            long phone = Convert.ToInt64(txtContact.Text);
+            string role = comboRole.Text.ToLower();
+            double salary = Convert.ToDouble(txtSalary.Text);
+            byte[] userPicture = UserPicturebox.Image != null ? ObjectHandler.GetUtilityDL().ImageToByteArray(UserPicturebox.Image) : null;
+
+            if (role.ToLower() == "admin")
+            {
+                Admin adminTobeAdded = new Admin(userID, username, password, role, email, phone, DateTime.Now, userPicture);
+                ObjectHandler.GetUserDL().UpdateUser(adminTobeAdded);
+            }
+            else if (role.ToLower() == "manager" || role.ToLower() == "rider")
+            {
+                Employee employee = new Employee(userID, username, password, role, email, phone, DateTime.Now, salary, userPicture);
+                ObjectHandler.GetUserDL().UpdateUser(employee);
+            }
+            else if (role.ToLower() == "customer")
+            {
+                Customer customer = new Customer(userID, username, password, role, email, phone, DateTime.Now, userPicture);
+                ObjectHandler.GetUserDL().UpdateUser(customer);
+            }
         }
     }
 }
