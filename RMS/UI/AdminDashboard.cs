@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,8 +17,8 @@ namespace RMS.UI
     public partial class AdminDashboard : Form
     {
         User admin;
-        private DateTime timeIn = DateTime.UtcNow;
-        private DateTime timeOut = DateTime.UtcNow;
+        private DateTime timeIn = DateTime.Now;
+        private DateTime timeOut = DateTime.Now;
 
         public AdminDashboard(User admin)
         {
@@ -25,6 +26,8 @@ namespace RMS.UI
             InitializeComponent();
             InitializeItemDetails();
             InitializeUserDetails();
+            InitializeAnalytics();
+            InitializeFinancialTransactions();
             InitializeInbox();
             InitializeAttendance();
             InitializePersonalInfo(admin);
@@ -52,6 +55,58 @@ namespace RMS.UI
             // Fill the two lower text boxes
             txtTotalUsers.Text = ObjectHandler.GetUserDL().GetTotalUsers().ToString();
             txtRepeatingCustomers.Text = ObjectHandler.GetUserDL().GetRepeatingCustomers().ToString();
+        }
+
+        private void InitializeAnalytics()
+        {
+            double paymentsRecieved = ObjectHandler.GetOrderDL().GetTotalAmountOfSalesThisMonth();
+            double expenditures = ObjectHandler.GetItemDL().GetTotalCostOfPurchases();
+            List<string> topItems = ObjectHandler.GetOrderDL().GetTopItemsThisMonth();
+
+            AmountPaymentsReceved.Text = "$" + paymentsRecieved;
+            AmountExpenditures.Text = "$" + expenditures;
+
+            foreach (string item in topItems)
+            {
+                if (item == topItems.Last())
+                {
+                    txtTopItemsMonth.Text += item;
+                }
+                else
+                    txtTopItemsMonth.Text += item + ", ";
+            }
+        }
+
+        private void InitializeFinancialTransactions()
+        {
+            double totalTransactionsThisMonth = ObjectHandler.GetOrderDL().GetTotalAmountOfSalesThisMonth() + ObjectHandler.GetItemDL().GetTotalCostOfPurchases();
+            double totalTransactionsThisYear = ObjectHandler.GetOrderDL().GetTotalAmountOfSalesThisYear() + ObjectHandler.GetItemDL().GetTotalCostOfPurchases();
+
+            TransactionsMonthlyAmount.Text = "$" + totalTransactionsThisMonth;
+            TransactionsYearlyAmount.Text = "$" + totalTransactionsThisYear;
+
+            double totalRevenueThisMonth = ObjectHandler.GetOrderDL().GetTotalAmountOfSalesThisMonth();
+            double totalRevenueThisYear = ObjectHandler.GetOrderDL().GetTotalAmountOfSalesThisYear();
+
+            RevenueMonthlyAmount.Text = "$" + totalRevenueThisMonth;
+            RevenueYearlyAmount.Text = "$" + totalRevenueThisYear;
+
+            double monthlyIncome = totalRevenueThisMonth - ObjectHandler.GetItemDL().GetTotalCostOfPurchases();
+            double yearlyIncome = totalRevenueThisYear - ObjectHandler.GetItemDL().GetTotalCostOfPurchases();
+
+            MonthlyIncomeAmount.Text = "$" + (monthlyIncome);
+            YearlyIncomeAmount.Text = "$" + (yearlyIncome);
+
+            if (monthlyIncome > (yearlyIncome / 12))
+            {
+                ProfitOrLossThisMonth.Text = "Profit";
+                ProfitOrLossThisYear.Text = "Loss";
+            }
+            else
+            {
+                ProfitOrLossThisMonth.Text = "Loss";
+                ProfitOrLossThisYear.Text = "Profit";
+            }
         }
 
         private void InitializeInbox()
@@ -238,7 +293,7 @@ namespace RMS.UI
             if (role.ToLower() == "admin")
             {
                 Admin adminTobeAdded = new Admin(username, password, role, email, phone, DateTime.Now, userPicture);
-                if (ObjectHandler.GetUserDL().AddUserByAdmin(adminTobeAdded))
+                if (ObjectHandler.GetUserDL().AddUserData(adminTobeAdded))
                 {
                     MessageBox.Show("Admin added successfully.");
                 }
@@ -250,12 +305,12 @@ namespace RMS.UI
             else if (role.ToLower() == "manager" || role.ToLower() == "rider")
             {
                 Employee employee = new Employee(username, password, role, email, phone, DateTime.Now, salary, userPicture);
-                ObjectHandler.GetUserDL().AddUserByAdmin(employee);
+                ObjectHandler.GetUserDL().AddUserData(employee);
             }
             else if (role.ToLower() == "customer")
             {
                 Customer customer = new Customer(username, password, role, email, phone, DateTime.Now, userPicture);
-                ObjectHandler.GetUserDL().AddUserByAdmin(customer);
+                ObjectHandler.GetUserDL().AddUserData(customer);
             }
         }
 
@@ -351,29 +406,8 @@ namespace RMS.UI
 
         private void guna2Button12_Click(object sender, EventArgs e)
         {
-            timeIn = DateTime.UtcNow;
-            DateTime date = timeIn.Date;
-            if (ObjectHandler.GetAttendanceDL().UserAndDatePresentIntable(int.Parse(EmployeeIDCombo.Text), date))
-            {
-                     ObjectHandler.GetAttendanceDL().UpdateAttendance(int.Parse(EmployeeIDCombo.Text), date, timeIn, timeOut);
-            }
-            else
-            {
-                if (MarkAttenManuallyCheckbox.Checked)
-                {
-                    timeIn = DateTimePickerTimeIn.Value;
-                    timeOut = DateTimePickerTimeOut.Value;
-                }
-                Attendance attendance = new Attendance(int.Parse(EmployeeIDCombo.Text), timeIn, timeOut, date);
-                if (ObjectHandler.GetAttendanceDL().MarkAttendance(attendance))
-                {
-                    MessageBox.Show("Attendance marked successfully.");
-                }
-                else
-                {
-                    MessageBox.Show("Failed to mark attendance.");
-                }
-            }
+            timeIn = DateTime.Now;
+            MessageBox.Show("Time In marked successfully.\nDon't Forget To Click On Save To Save It...");
         }
 
         private void MarkAttenManuallyCheckbox_CheckedChanged(object sender, EventArgs e)
@@ -396,30 +430,8 @@ namespace RMS.UI
 
         private void guna2Button13_Click(object sender, EventArgs e)
         {
-            timeOut = DateTime.UtcNow;
-            DateTime date = timeOut.Date;
-
-            if (ObjectHandler.GetAttendanceDL().UserAndDatePresentIntable(int.Parse(EmployeeIDCombo.Text), date))
-            {
-                ObjectHandler.GetAttendanceDL().UpdateAttendance(int.Parse(EmployeeIDCombo.Text), date, timeIn, timeOut);
-            }
-            else
-            {
-                if (MarkAttenManuallyCheckbox.Checked)
-                {
-                    timeIn = DateTimePickerTimeIn.Value;
-                    timeOut = DateTimePickerTimeOut.Value;
-                }
-                Attendance attendance = new Attendance(int.Parse(EmployeeIDCombo.Text), timeIn, timeOut, date);
-                if (ObjectHandler.GetAttendanceDL().MarkAttendance(attendance))
-                {
-                    MessageBox.Show("Attendance marked successfully.");
-                }
-                else
-                {
-                    MessageBox.Show("Failed to mark attendance.");
-                }
-            }
+            timeOut = DateTime.Now;
+            MessageBox.Show("Time Out marked successfully.\nDon't Forget To Click On Save To Save It...");
         }
 
         private void AttendanceGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -467,6 +479,67 @@ namespace RMS.UI
                 Customer customer = new Customer(userID, username, password, role, email, phone, DateTime.Now, userPicture);
                 ObjectHandler.GetUserDL().UpdateUser(customer);
             }
+        }
+
+        private void ItemDetailsMainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FinancialDataMainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void AnalyticsMainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BtnSaveAttendance_Click(object sender, EventArgs e)
+        {
+            DateTime date = timeIn.Date;
+            if (ObjectHandler.GetAttendanceDL().UserAndDatePresentIntable(int.Parse(EmployeeIDCombo.Text), date))
+            {
+                //If Manual Marking is checked
+                if (MarkAttenManuallyCheckbox.Checked)
+                {
+                    timeIn = DateTimePickerTimeIn.Value;
+                    timeOut = DateTimePickerTimeOut.Value;
+                }
+
+
+                if(ObjectHandler.GetAttendanceDL().UpdateAttendance(int.Parse(EmployeeIDCombo.Text), date, timeIn, timeOut))
+                {
+                    MessageBox.Show("Attendance marked successfully.");
+                }
+                else
+                {
+                    MessageBox.Show("Failed to mark attendance.");
+                }
+            }
+            else
+            {
+                Attendance attendance = new Attendance(int.Parse(EmployeeIDCombo.Text), date.Date.ToString(), timeIn, timeOut);
+                if (ObjectHandler.GetAttendanceDL().MarkAttendance(attendance))
+                {
+                    MessageBox.Show("Attendance marked successfully.");
+                }
+                else
+                {
+                    MessageBox.Show("Failed to mark attendance.");
+                }
+            }
+        }
+
+        private void DateTimePickerTimeIn_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DateTimePickerTimeOut_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

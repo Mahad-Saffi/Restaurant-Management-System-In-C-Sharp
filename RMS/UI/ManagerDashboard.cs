@@ -21,6 +21,8 @@ namespace RMS.UI
             InitializeComponent();
             InitializeInventory();
             InitializeCustomerDetails();
+            InitializeAnalytics();
+            InitializeFinancialTransactions();
             InitializeInbox();
         }
 
@@ -41,6 +43,58 @@ namespace RMS.UI
             foreach (int customerID in customerIDs)
             {
                 CustomerIDCombo.Items.Add(customerID);
+            }
+        }
+
+        private void InitializeAnalytics()
+        {
+            double paymentsRecieved = ObjectHandler.GetOrderDL().GetTotalAmountOfSalesThisMonth();
+            double expenditures = ObjectHandler.GetItemDL().GetTotalCostOfPurchases();
+            List<string> topItems = ObjectHandler.GetOrderDL().GetTopItemsThisMonth();
+
+            AmountPaymentsReceved.Text = "$" + paymentsRecieved;
+            AmountExpenditures.Text = "$" + expenditures;
+
+            foreach (string item in topItems)
+            {
+                if (item == topItems.Last())
+                {
+                    txtTopItemsThisMonth.Text += item;
+                }
+                else
+                    txtTopItemsThisMonth.Text += item + ", ";
+            }
+        }
+
+        private void InitializeFinancialTransactions()
+        {
+            double totalTransactionsThisMonth = ObjectHandler.GetOrderDL().GetTotalAmountOfSalesThisMonth() + ObjectHandler.GetItemDL().GetTotalCostOfPurchases();
+            double totalTransactionsThisYear = ObjectHandler.GetOrderDL().GetTotalAmountOfSalesThisYear() + ObjectHandler.GetItemDL().GetTotalCostOfPurchases();
+
+            TransactionsMonthlyAmount.Text = "$" + totalTransactionsThisMonth;
+            TransactionsYearlyAmount.Text = "$" + totalTransactionsThisYear;
+
+            double totalRevenueThisMonth = ObjectHandler.GetOrderDL().GetTotalAmountOfSalesThisMonth();
+            double totalRevenueThisYear = ObjectHandler.GetOrderDL().GetTotalAmountOfSalesThisYear();
+
+            RevenueMonthlyAmount.Text = "$" + totalRevenueThisMonth;
+            RevenueYearlyAmount.Text = "$" + totalRevenueThisYear;
+
+            double monthlyIncome = totalRevenueThisMonth - ObjectHandler.GetItemDL().GetTotalCostOfPurchases();
+            double yearlyIncome = totalRevenueThisYear - ObjectHandler.GetItemDL().GetTotalCostOfPurchases();
+
+            MonthlyIncomeAmount.Text = "$" + (monthlyIncome);
+            YearlyIncomeAmount.Text = "$" + (yearlyIncome);
+
+            if (monthlyIncome > (yearlyIncome / 12))
+            {
+                ProfitOrLossThisMonth.Text = "Profit";
+                ProfitOrLossThisYear.Text = "Loss";
+            }
+            else
+            {
+                ProfitOrLossThisMonth.Text = "Loss";
+                ProfitOrLossThisYear.Text = "Profit";
             }
         }
 
@@ -243,7 +297,7 @@ namespace RMS.UI
         {
             int customerID = Convert.ToInt32(CustomerIDCombo.Text);
 
-            if (ObjectHandler.GetUserDL().DeleteCustomer(customerID))
+            if (ObjectHandler.GetUserDL().DeleteUser(customerID))
             {
                 MessageBox.Show("Customer deleted successfully.");
             }
@@ -268,6 +322,11 @@ namespace RMS.UI
             {
                 MessageBox.Show("Failed to send message.");
             }
+        }
+
+        private void OrderPanelMain_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

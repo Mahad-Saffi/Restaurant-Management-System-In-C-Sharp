@@ -13,6 +13,7 @@ namespace RMS
     {
         private static IUser userDB = new UserDB();
         private static IItem itemDB = new ItemDB();
+        private static ICart cartDB = new CartDB();
         private static IOrder orderDB = new OrderDB();
         private static IInbox inboxDB = new InboxDB();
         private static IAttendance attendanceDB = new AttendanceDB();
@@ -26,6 +27,11 @@ namespace RMS
         public static IItem GetItemDL()
         {
             return itemDB;
+        }
+
+        public static ICart GetCartDL()
+        {
+            return cartDB;
         }
 
         public static IOrder GetOrderDL()

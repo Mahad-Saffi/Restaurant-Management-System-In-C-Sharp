@@ -125,60 +125,78 @@ namespace RMS.UI
                 }
 
                 //If the password entered by the user matches the stored password
-                if (ObjectHandler.GetUserDL().VerifyPassword(password, storedPassword))
+                if (!ObjectHandler.GetUserDL().VerifyPassword(password, storedPassword))
                 {
-                    Customer customer = null;
-                    Admin admin = null;
-                    Employee employee = null;
-                    User user = ObjectHandler.GetUserDL().GetUserByUsername(username);
-
-                    if (user.getRole() == "customer")
-                    {
-                        customer = new Customer(user);
-                    }
-                    else if (user.getRole() == "admin")
-                    {
-                        admin = new Admin(user);
-                    }
-                    else if (user.getRole() == "manager" || user.getRole() == "rider")
-                    {
-                        employee = new Employee();
-                    }
-
-                    if (user != null && user.getRole() == "customer")
-                    {
-                        this.Hide();
-                        var customerDashboard = new CustomerDashboard(customer);
-                        customerDashboard.Show();
-                    }
-                    else if (user != null && user.getRole() == "admin")
-                    {
-                        this.Hide();
-                        var adminDashboard = new AdminDashboard(admin);
-                        adminDashboard.Show();
-                    }
-                    else if (user != null && user.getRole() == "manager")
-                    {
-                        this.Hide();
-                        var managerDashboard = new ManagerDashboard(new User());
-                        managerDashboard.Show();
-                    }
-                    else if (user != null && user.getRole() == "rider")
-                    {
-                        this.Hide();
-                        var riderDashboard = new RiderDashboard(new User());
-                        riderDashboard.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid password.");
-                    }
+                    MessageBox.Show("Invalid Password...");
                 }
-                else
-                {
-                    MessageBox.Show("Verified password failed...");
-                }
+
+                ProceedWithValidUser(username);
             }
+        }
+
+        private void ProceedWithValidUser(string username)
+        {
+            User user = ObjectHandler.GetUserDL().GetUserByUsername(username);
+            if (user == null)
+            {
+                MessageBox.Show("User not found.");
+                return;
+            }
+
+            this.Hide();  // Hide the login form in preparation for showing the appropriate dashboard
+
+            switch (user.getRole().ToLower())
+            {
+                case "customer":
+                    Customer customer = new Customer(user);
+                    ShowCustomerDashboard(customer);
+                    break;
+                case "admin":
+                    Admin admin = new Admin(user);
+                    ShowAdminDashboard(admin);
+                    break;
+                case "manager":
+                    Employee manager = new Employee(user);
+                    ShowManagerDashboard(manager);
+                    break;
+                case "rider":
+                    Employee rider = new Employee(user);
+                    ShowRiderDashboard(rider);
+                    break;
+                default:
+                    MessageBox.Show("Role not recognized.");
+                    this.Show();  // Re-show the login form
+                    break;
+            }
+        }
+
+        private void ShowCustomerDashboard(Customer customer)
+        {
+            if (!ObjectHandler.GetCartDL().IsCartPresent(customer.getUserID()))
+            {
+                ObjectHandler.GetCartDL().AddCart(new Cart(customer.getUserID()));
+            }
+            var customerWithCart = new Customer(customer, customer.GetCart());
+            var customerDashboard = new CustomerDashboard(customer);
+            customerDashboard.Show();
+        }
+
+        private void ShowAdminDashboard(Admin admin)
+        {
+            var adminDashboard = new AdminDashboard(admin);
+            adminDashboard.Show();
+        }
+
+        private void ShowManagerDashboard(Employee manager)
+        {
+            var managerDashboard = new ManagerDashboard(manager);
+            managerDashboard.Show();
+        }
+
+        private void ShowRiderDashboard(Employee rider)
+        {
+            var riderDashboard = new RiderDashboard(rider);
+            riderDashboard.Show();
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)

@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             Guna.Charts.WinForms.ChartFont chartFont1 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont2 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont3 = new Guna.Charts.WinForms.ChartFont();
@@ -59,10 +63,6 @@
             Guna.Charts.WinForms.ChartFont chartFont15 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.Tick tick6 = new Guna.Charts.WinForms.Tick();
             Guna.Charts.WinForms.ChartFont chartFont16 = new Guna.Charts.WinForms.ChartFont();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RiderDashboard));
             Guna.Charts.WinForms.ChartFont chartFont17 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.ChartFont chartFont18 = new Guna.Charts.WinForms.ChartFont();
@@ -98,6 +98,18 @@
             this.btnOrderHistory = new Guna.UI2.WinForms.Guna2Button();
             this.btnActiveOrders = new Guna.UI2.WinForms.Guna2Button();
             this.RiderMain = new Guna.UI2.WinForms.Guna2Panel();
+            this.OrdersMain = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
+            this.ActiveOrdersGrid = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.OrderId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrderItems = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrderAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrderAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MethodOfPayment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.LabelOrders = new System.Windows.Forms.Label();
             this.DeliveryStatusMain = new Guna.UI2.WinForms.Guna2Panel();
             this.DeliveryStatusPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.txtRecievablePayment = new Guna.UI2.WinForms.Guna2TextBox();
@@ -130,18 +142,6 @@
             this.OrderHistoryChart = new Guna.Charts.WinForms.GunaChart();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.OrderHistory = new System.Windows.Forms.Label();
-            this.OrdersMain = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            this.ActiveOrdersGrid = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.OrderId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrderItems = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrderAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrderAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MethodOfPayment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.LabelOrders = new System.Windows.Forms.Label();
             this.PersonalInfoMain = new Guna.UI2.WinForms.Guna2Panel();
             this.personalInfoRider = new RMS.UI.PersonalInfo();
             this.InboxMainPanel = new Guna.UI2.WinForms.Guna2Panel();
@@ -164,6 +164,9 @@
             this.RiderSideBarMainPanel.SuspendLayout();
             this.SubSideBarOptions.SuspendLayout();
             this.RiderMain.SuspendLayout();
+            this.OrdersMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ActiveOrdersGrid)).BeginInit();
+            this.guna2Panel3.SuspendLayout();
             this.DeliveryStatusMain.SuspendLayout();
             this.DeliveryStatusPanel.SuspendLayout();
             this.panel.SuspendLayout();
@@ -177,9 +180,6 @@
             this.OrdersPanel.SuspendLayout();
             this.TipOnOrder.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
-            this.OrdersMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ActiveOrdersGrid)).BeginInit();
-            this.guna2Panel3.SuspendLayout();
             this.PersonalInfoMain.SuspendLayout();
             this.InboxMainPanel.SuspendLayout();
             this.InboxPanel.SuspendLayout();
@@ -510,6 +510,211 @@
             this.RiderMain.Name = "RiderMain";
             this.RiderMain.Size = new System.Drawing.Size(1090, 699);
             this.RiderMain.TabIndex = 5;
+            // 
+            // OrdersMain
+            // 
+            this.OrdersMain.Controls.Add(this.guna2Button7);
+            this.OrdersMain.Controls.Add(this.guna2Button6);
+            this.OrdersMain.Controls.Add(this.ActiveOrdersGrid);
+            this.OrdersMain.Controls.Add(this.guna2Panel3);
+            this.OrdersMain.Location = new System.Drawing.Point(0, 0);
+            this.OrdersMain.Name = "OrdersMain";
+            this.OrdersMain.Size = new System.Drawing.Size(1090, 699);
+            this.OrdersMain.TabIndex = 4;
+            // 
+            // guna2Button7
+            // 
+            this.guna2Button7.AutoRoundedCorners = true;
+            this.guna2Button7.BorderRadius = 26;
+            this.guna2Button7.BorderThickness = 2;
+            this.guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button7.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button7.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.guna2Button7.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button7.Location = new System.Drawing.Point(681, 610);
+            this.guna2Button7.Name = "guna2Button7";
+            this.guna2Button7.Size = new System.Drawing.Size(146, 54);
+            this.guna2Button7.TabIndex = 3;
+            this.guna2Button7.Text = "Reject";
+            // 
+            // guna2Button6
+            // 
+            this.guna2Button6.AutoRoundedCorners = true;
+            this.guna2Button6.BorderRadius = 26;
+            this.guna2Button6.BorderThickness = 2;
+            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button6.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.guna2Button6.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button6.Location = new System.Drawing.Point(300, 610);
+            this.guna2Button6.Name = "guna2Button6";
+            this.guna2Button6.Size = new System.Drawing.Size(146, 54);
+            this.guna2Button6.TabIndex = 2;
+            this.guna2Button6.Text = "Accept";
+            // 
+            // ActiveOrdersGrid
+            // 
+            this.ActiveOrdersGrid.AllowUserToAddRows = false;
+            this.ActiveOrdersGrid.AllowUserToDeleteRows = false;
+            this.ActiveOrdersGrid.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.ActiveOrdersGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.ActiveOrdersGrid.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.ActiveOrdersGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ActiveOrdersGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.ActiveOrdersGrid.ColumnHeadersHeight = 30;
+            this.ActiveOrdersGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.ActiveOrdersGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.OrderId,
+            this.OrderItems,
+            this.OrderAddress,
+            this.OrderAmount,
+            this.Status,
+            this.MethodOfPayment});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ActiveOrdersGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ActiveOrdersGrid.GridColor = System.Drawing.Color.Black;
+            this.ActiveOrdersGrid.Location = new System.Drawing.Point(33, 145);
+            this.ActiveOrdersGrid.Name = "ActiveOrdersGrid";
+            this.ActiveOrdersGrid.ReadOnly = true;
+            this.ActiveOrdersGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ActiveOrdersGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.ActiveOrdersGrid.RowHeadersVisible = false;
+            this.ActiveOrdersGrid.Size = new System.Drawing.Size(1019, 427);
+            this.ActiveOrdersGrid.TabIndex = 1;
+            this.ActiveOrdersGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.ActiveOrdersGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.ActiveOrdersGrid.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.ActiveOrdersGrid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.ActiveOrdersGrid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.ActiveOrdersGrid.ThemeStyle.BackColor = System.Drawing.Color.Gainsboro;
+            this.ActiveOrdersGrid.ThemeStyle.GridColor = System.Drawing.Color.Black;
+            this.ActiveOrdersGrid.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.ActiveOrdersGrid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.ActiveOrdersGrid.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ActiveOrdersGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.ActiveOrdersGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.ActiveOrdersGrid.ThemeStyle.HeaderStyle.Height = 30;
+            this.ActiveOrdersGrid.ThemeStyle.ReadOnly = true;
+            this.ActiveOrdersGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.ActiveOrdersGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.ActiveOrdersGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ActiveOrdersGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.ActiveOrdersGrid.ThemeStyle.RowsStyle.Height = 22;
+            this.ActiveOrdersGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.ActiveOrdersGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // OrderId
+            // 
+            this.OrderId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.OrderId.DividerWidth = 1;
+            this.OrderId.FillWeight = 209.053F;
+            this.OrderId.HeaderText = "Order ID";
+            this.OrderId.Name = "OrderId";
+            this.OrderId.ReadOnly = true;
+            this.OrderId.Width = 50;
+            // 
+            // OrderItems
+            // 
+            this.OrderItems.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.OrderItems.DividerWidth = 1;
+            this.OrderItems.FillWeight = 4.198923F;
+            this.OrderItems.HeaderText = "Order Items";
+            this.OrderItems.Name = "OrderItems";
+            this.OrderItems.ReadOnly = true;
+            this.OrderItems.Width = 250;
+            // 
+            // OrderAddress
+            // 
+            this.OrderAddress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.OrderAddress.DividerWidth = 1;
+            this.OrderAddress.FillWeight = 341.7585F;
+            this.OrderAddress.HeaderText = "Address";
+            this.OrderAddress.Name = "OrderAddress";
+            this.OrderAddress.ReadOnly = true;
+            this.OrderAddress.Width = 400;
+            // 
+            // OrderAmount
+            // 
+            this.OrderAmount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.OrderAmount.DividerWidth = 1;
+            this.OrderAmount.FillWeight = 12.84216F;
+            this.OrderAmount.HeaderText = "Amount";
+            this.OrderAmount.Name = "OrderAmount";
+            this.OrderAmount.ReadOnly = true;
+            this.OrderAmount.Width = 80;
+            // 
+            // Status
+            // 
+            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Status.DividerWidth = 1;
+            this.Status.FillWeight = 14.87481F;
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            // 
+            // MethodOfPayment
+            // 
+            this.MethodOfPayment.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.MethodOfPayment.DividerWidth = 1;
+            this.MethodOfPayment.FillWeight = 17.2726F;
+            this.MethodOfPayment.HeaderText = "Payment Method";
+            this.MethodOfPayment.Name = "MethodOfPayment";
+            this.MethodOfPayment.ReadOnly = true;
+            this.MethodOfPayment.Width = 120;
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.BackColor = System.Drawing.Color.White;
+            this.guna2Panel3.BorderColor = System.Drawing.Color.Silver;
+            this.guna2Panel3.BorderRadius = 20;
+            this.guna2Panel3.BorderThickness = 2;
+            this.guna2Panel3.Controls.Add(this.LabelOrders);
+            this.guna2Panel3.Location = new System.Drawing.Point(456, 33);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(227, 94);
+            this.guna2Panel3.TabIndex = 0;
+            // 
+            // LabelOrders
+            // 
+            this.LabelOrders.AutoSize = true;
+            this.LabelOrders.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelOrders.Location = new System.Drawing.Point(40, 19);
+            this.LabelOrders.Name = "LabelOrders";
+            this.LabelOrders.Size = new System.Drawing.Size(150, 54);
+            this.LabelOrders.TabIndex = 0;
+            this.LabelOrders.Text = "Orders";
+            this.LabelOrders.Click += new System.EventHandler(this.LabelOrders_Click);
             // 
             // DeliveryStatusMain
             // 
@@ -987,211 +1192,6 @@
             this.OrderHistory.TabIndex = 0;
             this.OrderHistory.Text = "Order History";
             // 
-            // OrdersMain
-            // 
-            this.OrdersMain.Controls.Add(this.guna2Button7);
-            this.OrdersMain.Controls.Add(this.guna2Button6);
-            this.OrdersMain.Controls.Add(this.ActiveOrdersGrid);
-            this.OrdersMain.Controls.Add(this.guna2Panel3);
-            this.OrdersMain.Location = new System.Drawing.Point(0, 0);
-            this.OrdersMain.Name = "OrdersMain";
-            this.OrdersMain.Size = new System.Drawing.Size(1090, 699);
-            this.OrdersMain.TabIndex = 4;
-            // 
-            // guna2Button7
-            // 
-            this.guna2Button7.AutoRoundedCorners = true;
-            this.guna2Button7.BorderRadius = 26;
-            this.guna2Button7.BorderThickness = 2;
-            this.guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button7.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button7.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2Button7.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button7.Location = new System.Drawing.Point(681, 610);
-            this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.Size = new System.Drawing.Size(146, 54);
-            this.guna2Button7.TabIndex = 3;
-            this.guna2Button7.Text = "Reject";
-            // 
-            // guna2Button6
-            // 
-            this.guna2Button6.AutoRoundedCorners = true;
-            this.guna2Button6.BorderRadius = 26;
-            this.guna2Button6.BorderThickness = 2;
-            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button6.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2Button6.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button6.Location = new System.Drawing.Point(300, 610);
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(146, 54);
-            this.guna2Button6.TabIndex = 2;
-            this.guna2Button6.Text = "Accept";
-            // 
-            // ActiveOrdersGrid
-            // 
-            this.ActiveOrdersGrid.AllowUserToAddRows = false;
-            this.ActiveOrdersGrid.AllowUserToDeleteRows = false;
-            this.ActiveOrdersGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.ActiveOrdersGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.ActiveOrdersGrid.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.ActiveOrdersGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ActiveOrdersGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.ActiveOrdersGrid.ColumnHeadersHeight = 30;
-            this.ActiveOrdersGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.ActiveOrdersGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.OrderId,
-            this.OrderItems,
-            this.OrderAddress,
-            this.OrderAmount,
-            this.Status,
-            this.MethodOfPayment});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ActiveOrdersGrid.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ActiveOrdersGrid.GridColor = System.Drawing.Color.Black;
-            this.ActiveOrdersGrid.Location = new System.Drawing.Point(33, 145);
-            this.ActiveOrdersGrid.Name = "ActiveOrdersGrid";
-            this.ActiveOrdersGrid.ReadOnly = true;
-            this.ActiveOrdersGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ActiveOrdersGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.ActiveOrdersGrid.RowHeadersVisible = false;
-            this.ActiveOrdersGrid.Size = new System.Drawing.Size(1019, 427);
-            this.ActiveOrdersGrid.TabIndex = 1;
-            this.ActiveOrdersGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.ActiveOrdersGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.ActiveOrdersGrid.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.ActiveOrdersGrid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.ActiveOrdersGrid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.ActiveOrdersGrid.ThemeStyle.BackColor = System.Drawing.Color.Gainsboro;
-            this.ActiveOrdersGrid.ThemeStyle.GridColor = System.Drawing.Color.Black;
-            this.ActiveOrdersGrid.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.ActiveOrdersGrid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.ActiveOrdersGrid.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ActiveOrdersGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.ActiveOrdersGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.ActiveOrdersGrid.ThemeStyle.HeaderStyle.Height = 30;
-            this.ActiveOrdersGrid.ThemeStyle.ReadOnly = true;
-            this.ActiveOrdersGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.ActiveOrdersGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.ActiveOrdersGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ActiveOrdersGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.ActiveOrdersGrid.ThemeStyle.RowsStyle.Height = 22;
-            this.ActiveOrdersGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.ActiveOrdersGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // OrderId
-            // 
-            this.OrderId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.OrderId.DividerWidth = 1;
-            this.OrderId.FillWeight = 209.053F;
-            this.OrderId.HeaderText = "Order ID";
-            this.OrderId.Name = "OrderId";
-            this.OrderId.ReadOnly = true;
-            this.OrderId.Width = 50;
-            // 
-            // OrderItems
-            // 
-            this.OrderItems.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.OrderItems.DividerWidth = 1;
-            this.OrderItems.FillWeight = 4.198923F;
-            this.OrderItems.HeaderText = "Order Items";
-            this.OrderItems.Name = "OrderItems";
-            this.OrderItems.ReadOnly = true;
-            this.OrderItems.Width = 250;
-            // 
-            // OrderAddress
-            // 
-            this.OrderAddress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.OrderAddress.DividerWidth = 1;
-            this.OrderAddress.FillWeight = 341.7585F;
-            this.OrderAddress.HeaderText = "Address";
-            this.OrderAddress.Name = "OrderAddress";
-            this.OrderAddress.ReadOnly = true;
-            this.OrderAddress.Width = 400;
-            // 
-            // OrderAmount
-            // 
-            this.OrderAmount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.OrderAmount.DividerWidth = 1;
-            this.OrderAmount.FillWeight = 12.84216F;
-            this.OrderAmount.HeaderText = "Amount";
-            this.OrderAmount.Name = "OrderAmount";
-            this.OrderAmount.ReadOnly = true;
-            this.OrderAmount.Width = 80;
-            // 
-            // Status
-            // 
-            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Status.DividerWidth = 1;
-            this.Status.FillWeight = 14.87481F;
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            // 
-            // MethodOfPayment
-            // 
-            this.MethodOfPayment.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.MethodOfPayment.DividerWidth = 1;
-            this.MethodOfPayment.FillWeight = 17.2726F;
-            this.MethodOfPayment.HeaderText = "Payment Method";
-            this.MethodOfPayment.Name = "MethodOfPayment";
-            this.MethodOfPayment.ReadOnly = true;
-            this.MethodOfPayment.Width = 120;
-            // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.BackColor = System.Drawing.Color.White;
-            this.guna2Panel3.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Panel3.BorderRadius = 20;
-            this.guna2Panel3.BorderThickness = 2;
-            this.guna2Panel3.Controls.Add(this.LabelOrders);
-            this.guna2Panel3.Location = new System.Drawing.Point(456, 33);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(227, 94);
-            this.guna2Panel3.TabIndex = 0;
-            // 
-            // LabelOrders
-            // 
-            this.LabelOrders.AutoSize = true;
-            this.LabelOrders.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelOrders.Location = new System.Drawing.Point(40, 19);
-            this.LabelOrders.Name = "LabelOrders";
-            this.LabelOrders.Size = new System.Drawing.Size(150, 54);
-            this.LabelOrders.TabIndex = 0;
-            this.LabelOrders.Text = "Orders";
-            this.LabelOrders.Click += new System.EventHandler(this.LabelOrders_Click);
-            // 
             // PersonalInfoMain
             // 
             this.PersonalInfoMain.Controls.Add(this.personalInfoRider);
@@ -1427,6 +1427,10 @@
             this.RiderSideBarMainPanel.ResumeLayout(false);
             this.SubSideBarOptions.ResumeLayout(false);
             this.RiderMain.ResumeLayout(false);
+            this.OrdersMain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ActiveOrdersGrid)).EndInit();
+            this.guna2Panel3.ResumeLayout(false);
+            this.guna2Panel3.PerformLayout();
             this.DeliveryStatusMain.ResumeLayout(false);
             this.DeliveryStatusPanel.ResumeLayout(false);
             this.DeliveryStatusPanel.PerformLayout();
@@ -1451,10 +1455,6 @@
             this.TipOnOrder.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            this.OrdersMain.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ActiveOrdersGrid)).EndInit();
-            this.guna2Panel3.ResumeLayout(false);
-            this.guna2Panel3.PerformLayout();
             this.PersonalInfoMain.ResumeLayout(false);
             this.InboxMainPanel.ResumeLayout(false);
             this.InboxMainPanel.PerformLayout();

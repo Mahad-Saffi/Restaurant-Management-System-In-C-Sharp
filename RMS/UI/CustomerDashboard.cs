@@ -14,13 +14,40 @@ namespace RMS.UI
 {
     public partial class CustomerDashboard : Form
     {
-        User customer;
+        Customer customer;
+        private string orderType = "offline";
         public CustomerDashboard(Customer customer)
         {
             this.customer = customer;
             InitializeComponent();
+            showPanel(PopularItemsMain);
+            InitializePopularItems();
+            InitializeAllItems();
             InitializeInbox();
             InitializeCustomerPersonalInfo(customer);
+        }
+
+        private void InitializePopularItems()
+        {
+            // Load all the popular items
+            List<Item> popularItems = ObjectHandler.GetItemDL().LoadItems();
+            PopularItemsFlowPanel.Controls.Clear();
+            foreach (Item item in popularItems)
+            {
+                PopularItemsFlowPanel.Controls.Add(new FoodItem(item, customer));
+            }
+
+        }
+
+        private void InitializeAllItems()
+        {
+            // Load all the items
+            List<Item> allItems = ObjectHandler.GetItemDL().LoadItems();
+            AllitemFlowPanel.Controls.Clear();
+            foreach (Item item in allItems)
+            {
+                AllitemFlowPanel.Controls.Add(new FoodItem(item, customer));
+            }
         }
 
         private void InitializeInbox()
@@ -138,29 +165,11 @@ namespace RMS.UI
         private void CustomerDashboard_Load(object sender, EventArgs e)
         {
             showPanel(PopularItemsMain);
-            
-            PopularItemsFlowPanel.Controls.Add(new FoodItem());
-            PopularItemsFlowPanel.Controls.Add(new FoodItem());
-            PopularItemsFlowPanel.Controls.Add(new FoodItem());
-            PopularItemsFlowPanel.Controls.Add(new FoodItem());
-            PopularItemsFlowPanel.Controls.Add(new FoodItem());
-            AllitemFlowPanel.Controls.Add(new FoodItem());
-            AllitemFlowPanel.Controls.Add(new FoodItem());
-            AllitemFlowPanel.Controls.Add(new FoodItem());
-            AllitemFlowPanel.Controls.Add(new FoodItem());
-            AllitemFlowPanel.Controls.Add(new FoodItem());
-            AllitemFlowPanel.Controls.Add(new FoodItem());
-            AllitemFlowPanel.Controls.Add(new FoodItem());
-            AllitemFlowPanel.Controls.Add(new FoodItem());
-            AllitemFlowPanel.Controls.Add(new FoodItem());
-            AllitemFlowPanel.Controls.Add(new FoodItem());
-            messagesFlowPanel.Controls.Clear();
-
         }
 
         private void guna2Button3_Click_1(object sender, EventArgs e)
         {
-            showPanel(CartPanel);
+            showPanel(CartMain);
         }
 
         private void CartPanel_Paint(object sender, PaintEventArgs e)
@@ -229,14 +238,12 @@ namespace RMS.UI
 
         private void gunaChart1_Load(object sender, EventArgs e)
         {
-            Example(gunaChartCustomerPurchases);
+            Example(CustomerPurchasesChart);
         }
 
         private void guna2Button5_Click_1(object sender, EventArgs e)
         {
-            showPanel(CustomerPanel);
-            showPanel(CustomerSidePanel);
-            personalInfo1.Visible = true;
+            showPanel(PersonalInfoPanel);
         }
 
         private void personalInfo1_Load(object sender, EventArgs e)
@@ -251,9 +258,9 @@ namespace RMS.UI
 
             PopularItemsMain.Visible = false;
             AllItemMain.Visible = false;
-            CartPanel.Visible = false;
+            CartMain.Visible = false;
             AllPurchasesMain.Visible = false;
-            personalInfo1.Visible = false;
+            PersonalInfoPanel.Visible = false;
             InboxMainPanel.Visible = false;
 
             panel.Visible = true;
@@ -311,6 +318,117 @@ namespace RMS.UI
             {
                 MessageBox.Show("Failed to send message.");
             }
+        }
+
+        private void PopularItemsFlowPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            Cart cart = ObjectHandler.GetCartDL().LoadCartByCustomerID(customer.getUserID());
+            List<CartItems> cartItems = ObjectHandler.GetCartDL().LoadCartItems(cart.GetCartID());
+
+            double tip = Convert.ToDouble(txtTip.Text);
+            string paymentMethod = ComboPaymentMethod.Text;
+
+            double total = 0;
+            foreach (CartItems cartItem in cartItems)
+            {
+                total += cartItem.GetCartItemPrice();
+            }
+
+            if (orderType == "offline")
+            {
+                Order order = new Order(customer.getUserID(), DateTime.Now, total, "offline", "", paymentMethod, tip, 0, "pending");
+                if(ObjectHandler.GetOrderDL().AddOrder(order))
+                {
+                    if(AddCustomerItems(customer.getUserID()))
+                    {
+                        MessageBox.Show("Order placed successfully.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to place order.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Failed to place order.");
+                }
+            }
+            else
+            {
+                double deliveryCharges = Convert.ToDouble(LabeldeliveryChargesAmount.Text);
+                string address = txtAddress.Text;
+
+                Order order = new Order(customer.getUserID(), DateTime.Now, total, "online", address, paymentMethod, tip, deliveryCharges, "pending");
+                if(ObjectHandler.GetOrderDL().AddOrder(order))
+                {
+                    if (AddCustomerItems(customer.getUserID()))
+                    {
+                        MessageBox.Show("Thanks for ordering...\nYour Order is in Pending...");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to place order.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Failed to place order.");
+                }
+            }
+        }
+
+        private bool AddCustomerItems(int customerID)
+        {
+            Order order = ObjectHandler.GetOrderDL().GetCustomerOrder(customerID);
+            Cart cart = ObjectHandler.GetCartDL().LoadCartByCustomerID(customer.getUserID());
+            List<CartItems> cartItems = ObjectHandler.GetCartDL().LoadCartItems(cart.GetCartID());
+
+            if (ObjectHandler.GetOrderDL().AddOrderDetails(order, cartItems))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private void OnlineOrderSwitch_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if(OnlineOrderSwitch.Checked == true)
+            {
+                // WHEN ONLINE ORDER IS SELECTED
+                orderType = "Online";
+                LabeldeliveryChargesAmount.Text = "10";
+                LabelAddress.ForeColor = Color.Black;
+                LabelDeliveryCharges.ForeColor = Color.Black;
+                LabeldeliveryChargesAmount.ForeColor = Color.Black;
+                txtAddress.ReadOnly = false;
+                txtAddress.HoverState.BorderColor = Color.DodgerBlue;
+                txtAddress.FocusedState.BorderColor = Color.DodgerBlue;
+            }
+            else
+            {
+                // WHEN OFFLINE ORDER IS SELECTED
+                orderType = "Offline";
+                LabeldeliveryChargesAmount.Text = "Amount";
+                LabelAddress.ForeColor = Color.Gray;
+                LabelDeliveryCharges.ForeColor = Color.Gray;
+                LabeldeliveryChargesAmount.ForeColor = Color.Gray;
+                txtAddress.ReadOnly = true;
+                txtAddress.HoverState.BorderColor = Color.Transparent;
+                txtAddress.FocusedState.BorderColor = Color.Transparent;
+            }
+        }
+
+        private void CustomerSideSubPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
