@@ -20,11 +20,22 @@ namespace RMS.UI
         {
             this.customer = customer;
             InitializeComponent();
+            InitializeUpperBar(customer);
             showPanel(PopularItemsMain);
+
+            //Initialization of the customer dashboard
             InitializePopularItems();
             InitializeAllItems();
+            InitializePurchases();
+            InitializeCart();
             InitializeInbox();
             InitializeCustomerPersonalInfo(customer);
+        }
+
+        private void InitializeUpperBar(Customer customer)
+        {
+            UpperBarUsername.Text = customer.getUsername();
+            UpperBarPicBox.Image = ObjectHandler.GetUserDL().GetUserImageByUserID(customer.getUserID());
         }
 
         private void InitializePopularItems()
@@ -37,6 +48,9 @@ namespace RMS.UI
                 PopularItemsFlowPanel.Controls.Add(new FoodItem(item, customer));
             }
 
+            // Load all the items for cart
+            LoadCart(PopularItemsDataGridView);
+
         }
 
         private void InitializeAllItems()
@@ -48,6 +62,21 @@ namespace RMS.UI
             {
                 AllitemFlowPanel.Controls.Add(new FoodItem(item, customer));
             }
+
+            // Load all the items for cart
+            LoadCart(AllItemsdataGridView);
+        }
+
+        private void InitializePurchases()
+        {
+            CustomerTotalPurchases.Text = ObjectHandler.GetOrderDL().GetCustomerPurchases(customer.getUserID()).ToString();
+            CustomerPurchasesThisWeek.Text = ObjectHandler.GetOrderDL().GetCustomerPurchasesThisWeek(customer.getUserID()).ToString();
+            CustomerTotalAmountOfPurchases.Text = "$" + ObjectHandler.GetOrderDL().GetTotalAmountOfPurchasesOfCustomer(customer.getUserID()).ToString();
+        }
+
+        private void InitializeCart()
+        {
+            LoadCart(CustomerCartDataGridView);
         }
 
         private void InitializeInbox()
@@ -72,6 +101,32 @@ namespace RMS.UI
             personalInfo1.RoleTextPersonalInfo = customer.getRole();
         }
 
+        private void LoadCart(DataGridView dataGridViewOfCart)
+        {
+            Cart cart = ObjectHandler.GetCartDL().LoadCartByCustomerID(customer.getUserID());
+            List<CartItems> cartItems = ObjectHandler.GetCartDL().LoadCartItems(cart.GetCartID());
+
+            dataGridViewOfCart.Columns.Clear();
+            dataGridViewOfCart.Columns.Add("ItemID", "Item ID");
+            dataGridViewOfCart.Columns.Add("ItemName", "Item Name");
+            dataGridViewOfCart.Columns.Add("ItemPrice", "Item Price");
+
+            CustomerCartDataGridView.Rows.Clear();
+            foreach (CartItems cartItem in cartItems)
+            {
+                Item item = ObjectHandler.GetItemDL().LoadItemByItemID(cartItem.GetItemID());
+                dataGridViewOfCart.Rows.Add(cartItem.GetItemID(), item.getItemName(), cartItem.GetCartItemPrice());
+            }
+
+            // Calculate total amount of cart
+            double total = 0;
+            foreach (CartItems cartItem in cartItems)
+            {
+                total += cartItem.GetCartItemPrice();
+            }
+            AmountLabelCart.Text =total.ToString();
+        }
+
         private void guna2Button5_Click(object sender, EventArgs e)
         {
 
@@ -94,6 +149,7 @@ namespace RMS.UI
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            LoadCart(PopularItemsDataGridView);
             showPanel(PopularItemsMain);
         }
 
@@ -114,6 +170,7 @@ namespace RMS.UI
 
         private void guna2Button2_Click_1(object sender, EventArgs e)
         {
+            LoadCart(AllItemsdataGridView);
             showPanel(AllItemMain);
         }
 
@@ -169,6 +226,7 @@ namespace RMS.UI
 
         private void guna2Button3_Click_1(object sender, EventArgs e)
         {
+            LoadCart(CustomerCartDataGridView);
             showPanel(CartMain);
         }
 
@@ -208,32 +266,45 @@ namespace RMS.UI
         }
 
 
-        public static void Example(Guna.Charts.WinForms.GunaChart gunaChartCustomerPurchases)
+        public void Example(Guna.Charts.WinForms.GunaChart gunaChartCustomerPurchases)
         {
+            List<Order> customerOrders = ObjectHandler.GetOrderDL().GetCustomerAllOrders(customer.getUserID());
             string[] days = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
 
-            //Chart configuration
+            // Initialize an array to store the count of purchases for each day
+            int[] purchasesByDay = new int[7];
+
+            // Iterate through each order and count purchases for each day of the week
+            foreach (Order order in customerOrders)
+            {
+                // Get the day of the week for the order date
+                DayOfWeek dayOfWeek = order.GetOrderDate().DayOfWeek;
+
+                // Increment the count of purchases for the corresponding day
+                purchasesByDay[(int)dayOfWeek]++;
+            }
+
+            // Chart configuration
             gunaChartCustomerPurchases.YAxes.GridLines.Display = false;
 
-            //Create a new dataset 
+            // Create a new dataset
             var dataset = new Guna.Charts.WinForms.GunaBarDataset();
-            var r = new Random();
-            for (int i = 0; i < days.Length; i++)
-            {
-                //random number
-                int num = r.Next(10, 30);
-
-                dataset.DataPoints.Add(days[i], num);
-            }
             dataset.CornerRadius = 20;
             dataset.Label = "Purchases";
             dataset.FillColors.Add(Color.FromArgb(255, 0, 0, 0));
 
-            //Add a new dataset to a chart.Datasets
+            // Add purchase data to the dataset
+            for (int i = 0; i < days.Length; i++)
+            {
+                dataset.DataPoints.Add(days[i], purchasesByDay[i]);
+            }
+
+            // Add the dataset to the chart
             gunaChartCustomerPurchases.Datasets.Add(dataset);
 
-            //An update was made to re-render the chart
+            // Update the chart
             gunaChartCustomerPurchases.Update();
+
         }
 
         private void gunaChart1_Load(object sender, EventArgs e)
@@ -243,6 +314,7 @@ namespace RMS.UI
 
         private void guna2Button5_Click_1(object sender, EventArgs e)
         {
+            InitializeCustomerPersonalInfo(customer);
             showPanel(PersonalInfoPanel);
         }
 
@@ -303,7 +375,11 @@ namespace RMS.UI
             string message = txtMessage.Text;
             string username = "admin";
 
-            MessageBox.Show(username);
+            if (string.IsNullOrEmpty(message))
+            {
+                MessageBox.Show("Please enter message.");
+                return;
+            }
 
             User reciever = ObjectHandler.GetUserDL().GetUserByUsername(username);
 
@@ -330,8 +406,24 @@ namespace RMS.UI
             Cart cart = ObjectHandler.GetCartDL().LoadCartByCustomerID(customer.getUserID());
             List<CartItems> cartItems = ObjectHandler.GetCartDL().LoadCartItems(cart.GetCartID());
 
-            double tip = Convert.ToDouble(txtTip.Text);
+            double tip = 0;
+            string Strtip = txtTip.Text;
             string paymentMethod = ComboPaymentMethod.Text;
+
+            if (string.IsNullOrEmpty(Strtip))
+            {
+                tip = 0;
+            }
+            else
+            {
+                tip = Convert.ToDouble(Strtip);
+            }
+
+            if (string.IsNullOrEmpty(paymentMethod))
+            {
+                MessageBox.Show("Please select payment method.");
+                return;
+            }
 
             double total = 0;
             foreach (CartItems cartItem in cartItems)
@@ -341,12 +433,28 @@ namespace RMS.UI
 
             if (orderType == "offline")
             {
-                Order order = new Order(customer.getUserID(), DateTime.Now, total, "offline", "", paymentMethod, tip, 0, "pending");
+                Order order = new Order(customer.getUserID(), DateTime.Now, total, "offline", "", paymentMethod, tip, 0, "delivered");
                 if(ObjectHandler.GetOrderDL().AddOrder(order))
                 {
-                    if(AddCustomerItems(customer.getUserID()))
+                    List<Order> customerOrders = ObjectHandler.GetOrderDL().GetCustomerAllOrders(customer.getUserID());
+                    order = customerOrders.Last();
+
+                    // Add order details to list in order class
+                    foreach (var item in cartItems)
                     {
+                        int orderID = order.GetOrderID();
+                        int itemID = item.GetItemID();
+                        double price = item.GetCartItemPrice();
+                        OrderDetails orderDetails = new OrderDetails(itemID, orderID, price);
+
+                        order.AddOrderDetails(orderDetails);
+                    }
+
+                    if (AddCustomerItems(order))
+                    {
+                        new Feedback(customer).Show();
                         MessageBox.Show("Order placed successfully.");
+                        ObjectHandler.GetCartDL().ClearCart(cart.GetCartID());
                     }
                     else
                     {
@@ -363,11 +471,33 @@ namespace RMS.UI
                 double deliveryCharges = Convert.ToDouble(LabeldeliveryChargesAmount.Text);
                 string address = txtAddress.Text;
 
+                if (string.IsNullOrEmpty(address))
+                {
+                    MessageBox.Show("Please enter address.");
+                    return;
+                }
+
                 Order order = new Order(customer.getUserID(), DateTime.Now, total, "online", address, paymentMethod, tip, deliveryCharges, "pending");
                 if(ObjectHandler.GetOrderDL().AddOrder(order))
                 {
-                    if (AddCustomerItems(customer.getUserID()))
+                    List<Order> customerOrders = ObjectHandler.GetOrderDL().GetCustomerAllOrders(customer.getUserID());
+                    order = customerOrders.Last();
+
+                    // Add order details to list in order class
+                    foreach (var item in cartItems)
                     {
+                        int orderID = order.GetOrderID();
+                        int itemID = item.GetItemID();
+                        double price = item.GetCartItemPrice();
+                        OrderDetails orderDetails = new OrderDetails(itemID, orderID, price);
+
+                        order.AddOrderDetails(orderDetails);
+                    }
+
+
+                    if (AddCustomerItems(order))
+                    {
+                        new Feedback(customer).Show();
                         MessageBox.Show("Thanks for ordering...\nYour Order is in Pending...");
                     }
                     else
@@ -382,13 +512,9 @@ namespace RMS.UI
             }
         }
 
-        private bool AddCustomerItems(int customerID)
+        private bool AddCustomerItems(Order order)
         {
-            Order order = ObjectHandler.GetOrderDL().GetCustomerOrder(customerID);
-            Cart cart = ObjectHandler.GetCartDL().LoadCartByCustomerID(customer.getUserID());
-            List<CartItems> cartItems = ObjectHandler.GetCartDL().LoadCartItems(cart.GetCartID());
-
-            if (ObjectHandler.GetOrderDL().AddOrderDetails(order, cartItems))
+            if (ObjectHandler.GetOrderDL().AddOrderDetails(order))
             {
                 return true;
             }
@@ -404,7 +530,7 @@ namespace RMS.UI
             {
                 // WHEN ONLINE ORDER IS SELECTED
                 orderType = "Online";
-                LabeldeliveryChargesAmount.Text = "10";
+                LabeldeliveryChargesAmount.Text = "20";
                 LabelAddress.ForeColor = Color.Black;
                 LabelDeliveryCharges.ForeColor = Color.Black;
                 LabeldeliveryChargesAmount.ForeColor = Color.Black;
@@ -429,6 +555,19 @@ namespace RMS.UI
         private void CustomerSideSubPanel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnClearCart_Click(object sender, EventArgs e)
+        {
+            Cart cart = ObjectHandler.GetCartDL().LoadCartByCustomerID(customer.getUserID());
+            if (ObjectHandler.GetCartDL().ClearCart(cart.GetCartID()))
+            {
+                MessageBox.Show("Cart cleared successfully.");
+            }
+            else
+            {
+                MessageBox.Show("Failed to clear cart.");
+            }
         }
     }
 }

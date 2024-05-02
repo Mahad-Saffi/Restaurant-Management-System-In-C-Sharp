@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DLLForRMS.BL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -96,6 +97,31 @@ namespace RMS.UI
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 PersonalInfoPic.Image = Image.FromFile(ofd.FileName);
+            }
+        }
+
+        private void btnPersonalInfoSave_Click(object sender, EventArgs e)
+        {
+
+            if (string.IsNullOrEmpty(PassTextPersonalInfo) || string.IsNullOrEmpty(EmailTextPersonalInfo) || string.IsNullOrEmpty(ContactTextPersonalInfo))
+            {
+                MessageBox.Show("Please Fill Password, Email and Contact Fields...");
+                return;
+            }
+            else
+            {
+                string username = NameTextPersonalInfo; ;
+                string password = PassTextPersonalInfo;
+                string email = EmailTextPersonalInfo;
+                long phone = Convert.ToInt64(ContactTextPersonalInfo);
+                if (ObjectHandler.GetUserDL().UpdateUser(username, password, email, phone))
+                {
+                    MessageBox.Show("Personal Info Updated Successfully...");
+                }
+                else
+                {
+                    MessageBox.Show("Failed to update personal info...");
+                }
             }
         }
     }

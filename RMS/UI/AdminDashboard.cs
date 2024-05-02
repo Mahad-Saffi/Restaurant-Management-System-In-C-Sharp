@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Text;
-using System.Globalization;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DLLForRMS.BL;
 using DLLForRMS.DL;
+using Guna.Charts.WinForms;
 
 namespace RMS.UI
 {
@@ -24,27 +24,48 @@ namespace RMS.UI
         {
             this.admin = admin;
             InitializeComponent();
+            InitializeUpperBar(admin);
             InitializeItemDetails();
             InitializeUserDetails();
             InitializeAnalytics();
             InitializeFinancialTransactions();
             InitializeInbox();
+            InitializeFeedback();
             InitializeAttendance();
             InitializePersonalInfo(admin);
         }
 
+        private void InitializeUpperBar(User admin)
+        {
+            UpperBarUsername.Text = admin.getUsername();
+            UpperBarPicBox.Image = ObjectHandler.GetUserDL().GetUserImageByUserID(admin.getUserID());
+        }
+
         private void InitializeItemDetails()
         {
+            ItemIDCombo.Items.Clear();
             // Load all the Item IDs for Combo Box
-            List<int> items = ObjectHandler.GetItemDL().LoadItemsID();
-            foreach(int item in items)
+            if (ObjectHandler.GetItemDL().LoadItemsID() == null)
             {
-                ItemIDCombo.Items.Add(item);
+                return;
             }
+            else
+            {
+                List<int> items = ObjectHandler.GetItemDL().LoadItemsID();
+                foreach (int item in items)
+                {
+                    ItemIDCombo.Items.Add(item);
+                }
+            }
+
+            // Fill the data grid view
+            LoadItemDetailsToGridView(ItemDataGridView);
+
         }
 
         private void InitializeUserDetails()
         {
+            UsersIDCombo.Items.Clear();
             // Load all the User IDs for Combo Box
             List<int> users = ObjectHandler.GetUserDL().LoadUsersID();
             foreach (int user in users)
@@ -55,6 +76,9 @@ namespace RMS.UI
             // Fill the two lower text boxes
             txtTotalUsers.Text = ObjectHandler.GetUserDL().GetTotalUsers().ToString();
             txtRepeatingCustomers.Text = ObjectHandler.GetUserDL().GetRepeatingCustomers().ToString();
+
+            //fill the data grid view
+            LoadUserDataGridView(UsersDataGridView);
         }
 
         private void InitializeAnalytics()
@@ -111,6 +135,7 @@ namespace RMS.UI
 
         private void InitializeInbox()
         {
+            UsernamesCombo.Items.Clear();
             // Load all Usernames for Combo Box
             List<string> usernames = ObjectHandler.GetUserDL().LoadAllUsernames();
             foreach (string username in usernames)
@@ -127,14 +152,47 @@ namespace RMS.UI
             }
         }
 
+        private void InitializeFeedback()
+        {
+            txtTotalFeedbacks.Clear();
+            txtPositiveFeedbbacks.Clear();
+            txtNegativeFeedbacks.Clear();
+
+            // Load all the feedbacks
+            List<int> feedbacks = ObjectHandler.GetFeedbackDL().LoadAllFeedbacks();
+            int positiveFeedbacks = 0;
+            int negativeFeedbacks = 0;
+            int totalFeedbacks = feedbacks.Count;
+
+            foreach (int feedback in feedbacks)
+            {
+                if (feedback >= 3)
+                {
+                    positiveFeedbacks++;
+                }
+                else
+                {
+                    negativeFeedbacks++;
+                }
+            }
+
+            txtTotalFeedbacks.Text = totalFeedbacks.ToString();
+            txtPositiveFeedbbacks.Text = positiveFeedbacks.ToString();
+            txtNegativeFeedbacks.Text = negativeFeedbacks.ToString();
+        }
+
         private void InitializeAttendance()
         {
+            EmployeeIDCombo.Items.Clear();
             //Load All employee ID's for Combo Box
             List<int> employeeID = ObjectHandler.GetUserDL().GetAllEmployeeID();
             foreach (int id in employeeID)
             {
                 EmployeeIDCombo.Items.Add(id);
             }
+
+            //Fill the data grid view
+            LoadAttendanceDataGridView(AttendanceDataGridView);
         }
 
         private void InitializePersonalInfo(User admin)
@@ -146,6 +204,75 @@ namespace RMS.UI
             personalInfoAdmin.SinceTextPersonalInfo = admin.getUserRegistrationDate().ToString();
             personalInfoAdmin.RoleTextPersonalInfo = admin.getRole();
             personalInfoAdmin.SalaryTextPersonalInfo = "N/A";
+        }
+
+        private void LoadItemDetailsToGridView(DataGridView dataGridView)
+        {
+            List<Item> allItems = ObjectHandler.GetItemDL().LoadItems();
+
+            dataGridView.Columns.Clear();
+            dataGridView.Columns.Add("ItemID", "Item ID");
+            dataGridView.Columns.Add("ItemName", "Item Name");
+            dataGridView.Columns.Add("ItemPrice", "Item Price");
+            dataGridView.Columns.Add("ItemCost", "Item Cost");
+
+            dataGridView.Rows.Clear();
+            foreach (Item item in allItems)
+            {
+                dataGridView.Rows.Add(item.getItemID(), item.getItemName(), item.getItemPrice(), item.getCostOfPurchase());
+            }
+        }
+
+        private void LoadUserDataGridView(DataGridView dataGridView)
+        {
+            List<User> allUsers = ObjectHandler.GetUserDL().LoadAllUsers();
+
+            dataGridView.Columns.Clear();
+            dataGridView.Columns.Add("UserID", "User ID");
+            dataGridView.Columns.Add("Username", "Username");
+            dataGridView.Columns.Add("Role", "Role");
+            dataGridView.Columns.Add("Email", "Email");
+            dataGridView.Columns.Add("Phone", "Phone");
+            dataGridView.Columns.Add("RegistrationDate", "Registration Date");
+            dataGridView.Columns.Add("Salary", "Salary");
+
+            dataGridView.Rows.Clear();
+            foreach (User user in allUsers)
+            {
+                if (user.getRole() == "manager" || user.getRole() == "rider")
+                {
+                    Employee employee = ObjectHandler.GetUserDL().GetEmployeeByEmployeeID(user.getUserID());
+                    dataGridView.Rows.Add(employee.getUserID(), employee.getUsername(), employee.getRole(), employee.getUserEmail(), employee.getUserPhone(), employee.getUserRegistrationDate(), employee.GetSalary());
+                }
+                else
+                {
+                    dataGridView.Rows.Add(user.getUserID(), user.getUsername(), user.getRole(), user.getUserEmail(), user.getUserPhone(), user.getUserRegistrationDate(), 0);
+                }
+            }
+        }
+
+        private void LoadAttendanceDataGridView(DataGridView dataGridView)
+        {
+            List<User> users = ObjectHandler.GetUserDL().LoadAllUsers();
+
+            dataGridView.Columns.Clear();
+            dataGridView.Columns.Add("UserID", "User ID");
+            dataGridView.Columns.Add("Username", "Username");
+            dataGridView.Columns.Add("Role", "Role");
+            dataGridView.Columns.Add("Email", "Email");
+            dataGridView.Columns.Add("Phone", "Phone");
+            dataGridView.Columns.Add("RegistrationDate", "Registration Date");
+            dataGridView.Columns.Add("Salary", "Salary");
+
+            dataGridView.Rows.Clear();
+            foreach (User user in users)
+            {
+                if (user.getRole() == "manager" || user.getRole() == "rider")
+                {
+                    Employee employee = ObjectHandler.GetUserDL().GetEmployeeByEmployeeID(user.getUserID());
+                    dataGridView.Rows.Add(employee.getUserID(), employee.getUsername(), employee.getRole(), employee.getUserEmail(), employee.getUserPhone(), employee.getUserRegistrationDate(), employee.GetSalary());
+                }
+            }
         }
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -165,9 +292,11 @@ namespace RMS.UI
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'rMSDatabaseDataSet.Items' table. You can move, or remove it, as needed.
+            this.itemsTableAdapter.Fill(this.rMSDatabaseDataSet.Items);
+            // TODO: This line of code loads data into the 'rMSDatabaseDataSet.Items' table. You can move, or remove it, as needed.
         }
 
-        private void showPanel (Panel panel)
+        private void showPanel(Panel panel)
         {
             AdminSideBarMainPanel.Visible = true;
             AdminPanelMain.Visible = true;
@@ -186,7 +315,6 @@ namespace RMS.UI
 
         private void personalInfo1_Load(object sender, EventArgs e)
         {
-
         }
 
         private void guna2Button17_Click(object sender, EventArgs e)
@@ -197,6 +325,20 @@ namespace RMS.UI
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 UserPicturebox.Image = Image.FromFile(openFileDialog.FileName);
+                UserPicturebox.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+
+            if (ObjectHandler.GetValidations().ValidateInteger(UsersIDCombo.Text))
+            {
+                string query = "UPDATE Users SET Picture = @image WHERE UserID = @ID";
+                if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(UserPicturebox.Image), query, Convert.ToInt32(UsersIDCombo.Text), "user"))
+                {
+                    MessageBox.Show("User Image Updated successfully...");
+                }
+                else
+                {
+                    MessageBox.Show("Failed to update user image...");
+                }
             }
         }
 
@@ -207,16 +349,33 @@ namespace RMS.UI
 
         private void btnAddItem_Click(object sender, EventArgs e)
         {
+            if (!ObjectHandler.GetValidations().ValidateDouble(txtItemPrice.Text) || !ObjectHandler.GetValidations().ValidateDouble(txtCostOfPurchase.Text))
+            {
+                MessageBox.Show("Please enter valid inputs...");
+                txtItemPrice.Clear();
+                txtCostOfPurchase.Clear();
+                return;
+            }
+
             string itemName = txtItemName.Text;
             string itemPrice = txtItemPrice.Text;
             string itemCost = txtCostOfPurchase.Text;
-            byte[] itemImage = ItemPicturebox.Image != null ? ObjectHandler.GetUtilityDL().ImageToByteArray(ItemPicturebox.Image) : null;
 
-            var item = new Item(itemName, Convert.ToDouble(itemPrice), Convert.ToDouble(itemCost), itemImage);
+            var item = new Item(itemName, Convert.ToDouble(itemPrice), Convert.ToDouble(itemCost));
 
             if (ObjectHandler.GetItemDL().AddItem(item))
             {
-                MessageBox.Show("Item added successfully.");
+                Item tempItem = ObjectHandler.GetItemDL().LoadLastItem();
+                string query = "UPDATE Items SET Picture = @image WHERE ItemID = @ID";
+                if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(Properties.Resources.dish), query, tempItem.getItemID(), "item"))
+                {
+                    MessageBox.Show("Item added successfully.");
+                }
+                else
+                {
+                    MessageBox.Show("Failed to add item image.");
+                }
+                InitializeItemDetails();
             }
             else
             {
@@ -234,20 +393,48 @@ namespace RMS.UI
                 ItemPicturebox.Image = Image.FromFile(dialog.FileName);
                 ItemPicturebox.SizeMode = PictureBoxSizeMode.Zoom;
             }
+            if (ObjectHandler.GetValidations().ValidateInteger(ItemIDCombo.Text))
+            {
+                string query = "UPDATE Items SET Picture = @image WHERE ItemID = @ID";
+                if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(ItemPicturebox.Image), query, Convert.ToInt32(ItemIDCombo.Text), "item"))
+                {
+                    MessageBox.Show("Item Image Updated successfully...");
+                }
+                else
+                {
+                    MessageBox.Show("Failed to update item image...");
+                }
+            }
         }
 
         private void btnUpdateItem_Click(object sender, EventArgs e)
         {
+            if (!ObjectHandler.GetValidations().ValidateDouble(txtItemPrice.Text) || !ObjectHandler.GetValidations().ValidateDouble(txtCostOfPurchase.Text) || !ObjectHandler.GetValidations().ValidateInteger(ItemIDCombo.Text))
+            {
+                MessageBox.Show("Please enter valid inputs...");
+                txtItemPrice.Clear();
+                txtCostOfPurchase.Clear();
+                ItemIDCombo.Text = "";
+                return;
+            }
+
             string itemID = ItemIDCombo.Text;
             string itemName = txtItemName.Text;
             string itemPrice = txtItemPrice.Text;
             string itemCost = txtCostOfPurchase.Text;
-            byte[] itemImage = ItemPicturebox.Image != null ? ObjectHandler.GetUtilityDL().ImageToByteArray(ItemPicturebox.Image) : null;
-            var item = new Item(Convert.ToInt32(itemID), itemName, Convert.ToDouble(itemPrice), Convert.ToDouble(itemCost), itemImage);
+            byte[] imageBytes = ItemPicturebox.Image != null ? ObjectHandler.GetUtilityDL().ImageToByteArray(ItemPicturebox.Image) : null;
+
+            if (imageBytes == null)
+            {
+                imageBytes = ObjectHandler.GetUtilityDL().ImageToByteArray(Properties.Resources.dish);
+            }
+
+            var item = new Item(Convert.ToInt32(itemID), itemName, Convert.ToDouble(itemPrice), Convert.ToDouble(itemCost), imageBytes);
 
             if (ObjectHandler.GetItemDL().UpdateItem(item))
             {
                 MessageBox.Show("Item updated successfully.");
+                InitializeItemDetails();
             }
             else
             {
@@ -257,11 +444,19 @@ namespace RMS.UI
 
         private void btnDeleteItem_Click(object sender, EventArgs e)
         {
+            if (!ObjectHandler.GetValidations().ValidateInteger(ItemIDCombo.Text))
+            {
+                MessageBox.Show("Please enter valid inputs...");
+                ItemIDCombo.Text = "";
+                return;
+            }
+
             string itemID = ItemIDCombo.Text;
 
             if (ObjectHandler.GetItemDL().DeleteItem(Convert.ToInt32(itemID)))
             {
                 MessageBox.Show("Item deleted successfully.");
+                InitializeItemDetails();
             }
             else
             {
@@ -271,23 +466,44 @@ namespace RMS.UI
 
         private void guna2Button11_Click(object sender, EventArgs e)
         {
+            //Validations
+            if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtUserPassword.Text) || string.IsNullOrEmpty(comboRole.Text))
+            {
+                MessageBox.Show("Please fill all the fields.");
+                return;
+            }
+            else if (!ObjectHandler.GetValidations().ValidateString(comboRole.Text))
+            {
+                MessageBox.Show("Invalid Role.");
+                comboRole.Text = "";
+                return;
+            }
+            else if (ObjectHandler.GetValidations().ValidateContactNumber(txtContact.Text) == "false")
+            {
+                MessageBox.Show("Invalid Phone Number.");
+                txtContact.Clear();
+                return;
+            }
+            else if (!ObjectHandler.GetValidations().ValidateEmail(txtEmail.Text))
+            {
+                MessageBox.Show("Invalid Email.");
+                txtEmail.Clear();
+                return;
+            }
+            else if (!ObjectHandler.GetValidations().ValidateDouble(txtSalary.Text))
+            {
+                MessageBox.Show("Invalid Salary.");
+                txtSalary.Clear();
+                return;
+            }
+
             string username = txtUsername.Text.ToLower();
             string password = ObjectHandler.GetUserDL().HashPassword(txtUserPassword.Text);
             string email = txtEmail.Text;
-            long phone = Convert.ToInt64(txtContact.Text);
+            long phone = Convert.ToInt64(ObjectHandler.GetValidations().ValidateContactNumber(txtContact.Text));
             string role = comboRole.Text.ToLower();
             double salary = Convert.ToDouble(txtSalary.Text);
             byte[] userPicture = UserPicturebox.Image != null ? ObjectHandler.GetUtilityDL().ImageToByteArray(UserPicturebox.Image) : null;
-
-            if (userPicture != null)
-            {
-                string base64String = Convert.ToBase64String(userPicture);
-                MessageBox.Show(base64String);
-            }
-            else
-            {
-                MessageBox.Show("No picture loaded.");
-            }
 
 
             if (role.ToLower() == "admin")
@@ -295,7 +511,17 @@ namespace RMS.UI
                 Admin adminTobeAdded = new Admin(username, password, role, email, phone, DateTime.Now, userPicture);
                 if (ObjectHandler.GetUserDL().AddUserData(adminTobeAdded))
                 {
-                    MessageBox.Show("Admin added successfully.");
+                    User tempUser = ObjectHandler.GetUserDL().GetUserByUsername(username);
+                    string query = "UPDATE Users SET Picture = @image WHERE UserID = @ID";
+                    if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(Properties.Resources.user), query, tempUser.getUserID(), "user"))
+                    {
+                        MessageBox.Show("Admin added successfully.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to Add user image");
+                    }
+                    InitializeUserDetails();
                 }
                 else
                 {
@@ -305,22 +531,58 @@ namespace RMS.UI
             else if (role.ToLower() == "manager" || role.ToLower() == "rider")
             {
                 Employee employee = new Employee(username, password, role, email, phone, DateTime.Now, salary, userPicture);
-                ObjectHandler.GetUserDL().AddUserData(employee);
+                if(ObjectHandler.GetUserDL().AddUserData(employee))
+                {
+                    User tempUser = ObjectHandler.GetUserDL().GetUserByUsername(username);
+                    string query = "UPDATE Users SET Picture = @image WHERE UserID = @ID";
+                    if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(Properties.Resources.user), query, tempUser.getUserID(), "user"))
+                    {
+                        MessageBox.Show("Employee added successfully.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to Add user image");
+                    }
+                    InitializeUserDetails();
+                }
+                else
+                {
+                    MessageBox.Show("Username already present...\nPlease try a different username...");
+                }
             }
             else if (role.ToLower() == "customer")
             {
                 Customer customer = new Customer(username, password, role, email, phone, DateTime.Now, userPicture);
-                ObjectHandler.GetUserDL().AddUserData(customer);
+                if(ObjectHandler.GetUserDL().AddUserData(customer))
+                {
+                    User tempUser = ObjectHandler.GetUserDL().GetUserByUsername(username);
+                    string query = "UPDATE Users SET Picture = @image WHERE UserID = @ID";
+                    if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(Properties.Resources.user), query, tempUser.getUserID(), "user"))
+                    {
+                        MessageBox.Show("Customer added successfully.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to Add user image");
+                    }
+                    InitializeUserDetails();
+                }
+                else
+                {
+                    MessageBox.Show("Username already present...\nPlease try a different username...");
+                }
             }
         }
 
         private void btnItemDetails_Click(object sender, EventArgs e)
         {
+            InitializeItemDetails();
             showPanel(ItemDetailsMainPanel);
         }
 
         private void btnUserDetails_Click(object sender, EventArgs e)
         {
+            InitializeUserDetails();
             showPanel(UserDetailsMainPanel);
         }
 
@@ -336,6 +598,7 @@ namespace RMS.UI
 
         private void btnInbox_Click(object sender, EventArgs e)
         {
+            InitializeInbox();
             showPanel(InboxMainPanel);
         }
 
@@ -346,11 +609,13 @@ namespace RMS.UI
 
         private void btnCheckAttendance_Click(object sender, EventArgs e)
         {
+            InitializeAttendance();
             showPanel(AttendanceMainPanel);
         }
 
         private void btnPersonalInfo_Click(object sender, EventArgs e)
         {
+            InitializePersonalInfo(admin);
             showPanel(PersonalInfoPanel);
         }
 
@@ -368,16 +633,26 @@ namespace RMS.UI
 
         private void guna2Button16_Click(object sender, EventArgs e)
         {
+            //Validations
+            if (string.IsNullOrEmpty(txtMessage.Text))
+            {
+                MessageBox.Show("Please enter a message.");
+                return;
+            }
+            else if (ObjectHandler.GetValidations().ValidateString(UsernamesCombo.Text))
+            {
+                MessageBox.Show("Invalid Username.");
+                UsernamesCombo.Text = "";
+                return;
+            }
+
             string message = txtMessage.Text;
             string username = UsernamesCombo.Text;
 
-            MessageBox.Show(username);
-
             User reciever = ObjectHandler.GetUserDL().GetUserByUsername(username);
-
             Inbox inbox = new Inbox(admin.getUserID(), reciever.getUserID(), message, DateTime.Now);
 
-            if(ObjectHandler.GetInboxDL().SendMessage(inbox))
+            if (ObjectHandler.GetInboxDL().SendMessage(inbox))
             {
                 txtMessage.Clear();
                 ReloadInbox();
@@ -441,6 +716,12 @@ namespace RMS.UI
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
+            if (!ObjectHandler.GetValidations().ValidateInteger(UsersIDCombo.Text))
+            {
+                MessageBox.Show("Please enter a valid User ID.");
+                UsersIDCombo.Text = "";
+                return;
+            }
             int userID = Convert.ToInt32(UsersIDCombo.Text);
 
             if (ObjectHandler.GetUserDL().DeleteUser(userID))
@@ -450,34 +731,91 @@ namespace RMS.UI
             else
             {
                 MessageBox.Show("Failed to delete the user!");
+                InitializeUserDetails();
             }
         }
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
+            if (!ObjectHandler.GetValidations().ValidateInteger(UsersIDCombo.Text))
+            {
+                MessageBox.Show("Please enter a valid User ID.");
+                UsersIDCombo.Text = "";
+                return;
+            }
+            else if (!ObjectHandler.GetValidations().ValidateEmail(txtEmail.Text))
+            {
+                MessageBox.Show("Invalid Email Address.");
+                txtEmail.Clear();
+                return;
+            }
+            else if (ObjectHandler.GetValidations().ValidateContactNumber(txtContact.Text) == "false")
+            {
+                MessageBox.Show("Invalid Phone Number.");
+                txtContact.Clear();
+                return;
+            }
+            else if (!ObjectHandler.GetValidations().ValidateDouble(txtSalary.Text))
+            {
+                MessageBox.Show("Invalid Salary.");
+                txtSalary.Clear();
+                return;
+            }
+            else if (!ObjectHandler.GetValidations().ValidateString(comboRole.Text))
+            {
+                MessageBox.Show("Invalid Role.");
+                comboRole.Text = "";
+                return;
+            }
+
+
+
             int userID = Convert.ToInt32(UsersIDCombo.Text);
             string username = txtUsername.Text;
             string password = ObjectHandler.GetUserDL().HashPassword(txtUserPassword.Text);
             string email = txtEmail.Text;
-            long phone = Convert.ToInt64(txtContact.Text);
+            long phone = Convert.ToInt64(ObjectHandler.GetValidations().ValidateContactNumber(txtContact.Text));
             string role = comboRole.Text.ToLower();
             double salary = Convert.ToDouble(txtSalary.Text);
-            byte[] userPicture = UserPicturebox.Image != null ? ObjectHandler.GetUtilityDL().ImageToByteArray(UserPicturebox.Image) : null;
 
             if (role.ToLower() == "admin")
             {
-                Admin adminTobeAdded = new Admin(userID, username, password, role, email, phone, DateTime.Now, userPicture);
-                ObjectHandler.GetUserDL().UpdateUser(adminTobeAdded);
+                Admin adminTobeAdded = new Admin(userID, username, password, role, email, phone, DateTime.Now);
+                if(ObjectHandler.GetUserDL().UpdateUser(adminTobeAdded))
+                {
+                    MessageBox.Show("Admin updated successfully.");
+                    InitializeUserDetails();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to update admin.");
+                }
             }
             else if (role.ToLower() == "manager" || role.ToLower() == "rider")
             {
-                Employee employee = new Employee(userID, username, password, role, email, phone, DateTime.Now, salary, userPicture);
-                ObjectHandler.GetUserDL().UpdateUser(employee);
+                Employee employee = new Employee(userID, username, password, role, email, phone, DateTime.Now, salary);
+                if(ObjectHandler.GetUserDL().UpdateUser(employee))
+                {
+                    MessageBox.Show("Employee updated successfully.");
+                    InitializeUserDetails();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to update employee.");
+                }
             }
             else if (role.ToLower() == "customer")
             {
-                Customer customer = new Customer(userID, username, password, role, email, phone, DateTime.Now, userPicture);
-                ObjectHandler.GetUserDL().UpdateUser(customer);
+                Customer customer = new Customer(userID, username, password, role, email, phone, DateTime.Now);
+                if(ObjectHandler.GetUserDL().UpdateUser(customer))
+                {
+                    MessageBox.Show("Customer updated successfully.");
+                    InitializeUserDetails();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to update customer.");
+                }
             }
         }
 
@@ -498,7 +836,15 @@ namespace RMS.UI
 
         private void BtnSaveAttendance_Click(object sender, EventArgs e)
         {
-            DateTime date = timeIn.Date;
+            DateTime date = DateTime.Now.Date;
+            if (!ObjectHandler.GetValidations().ValidateInteger(EmployeeIDCombo.Text))
+            {
+                MessageBox.Show("Please enter a valid Employee ID.");
+                EmployeeIDCombo.Text = "";
+                return;
+            }
+
+
             if (ObjectHandler.GetAttendanceDL().UserAndDatePresentIntable(int.Parse(EmployeeIDCombo.Text), date))
             {
                 //If Manual Marking is checked
@@ -509,7 +855,7 @@ namespace RMS.UI
                 }
 
 
-                if(ObjectHandler.GetAttendanceDL().UpdateAttendance(int.Parse(EmployeeIDCombo.Text), date, timeIn, timeOut))
+                if (ObjectHandler.GetAttendanceDL().UpdateAttendance(int.Parse(EmployeeIDCombo.Text), date, timeIn, timeOut))
                 {
                     MessageBox.Show("Attendance marked successfully.");
                 }
@@ -539,6 +885,184 @@ namespace RMS.UI
 
         private void DateTimePickerTimeOut_ValueChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void guna2Button14_Click(object sender, EventArgs e)
+        {
+            //Validation
+            if (!ObjectHandler.GetValidations().ValidateInteger(EmployeeIDCombo.Text))
+            {
+                MessageBox.Show("Please enter a valid Employee ID.");
+                EmployeeIDCombo.Text = "";
+                return;
+            }
+            int selectedEmployeeID = Convert.ToInt32(EmployeeIDCombo.Text);
+
+            var EmployeeAttendanceCheckerForm = new UserAttendanceCheckerForm(selectedEmployeeID);
+            EmployeeAttendanceCheckerForm.Show();
+        }
+
+        
+        private void TotalOrdersThisMonthChart_Load(object sender, EventArgs e)
+        {
+
+            //Create a new dataset 
+            var dataset = new GunaScatterDataset();
+            dataset.PointStyle = PointStyle.Rect;
+            dataset.Label = "Total Orders This Month";
+            var r = new Random();
+            for (int i = 0; i < 30; i++)
+            {
+                //random number
+                int x = i;
+                int y = r.Next(10, 100);
+
+                dataset.DataPoints.Add(x, y);
+            }
+
+            //Add a new dataset to a chart.Datasets
+            TotalOrdersThisMonthChart.Datasets.Add(dataset);
+
+            //An update was made to re-render the chart
+            TotalOrdersThisMonthChart.Update();
+
+        }
+
+        private void TypeOfOrdersChart_Load(object sender, EventArgs e)
+        {
+
+            List<Order> orders = ObjectHandler.GetOrderDL().LoadOrders();
+            int cash = 0;
+            int jazzCash = 0;
+            int easyPaisa = 0;
+            int card = 0;
+
+            foreach (Order order in orders)
+            {
+                if (order.GetPaymentMethod() == "Cash")
+                {
+                    cash++;
+                }
+                else if (order.GetPaymentMethod() == "JazzCash")
+                {
+                    jazzCash++;
+                }
+                else if (order.GetPaymentMethod() == "EasyPaisa")
+                {
+                    easyPaisa++;
+                }
+                else if (order.GetPaymentMethod() == "Card")
+                {
+                    card++;
+                }
+            }
+
+            string[] paymentMethods = { "Cash", "JazzCash", "EasyPaisa", "Card" };
+
+            //Chart configuration  
+            TypeOfOrdersChart.Legend.Position = LegendPosition.Right;
+            TypeOfOrdersChart.XAxes.Display = false;
+            TypeOfOrdersChart.YAxes.Display = false;
+
+            //Create a new dataset 
+            var dataset = new GunaPieDataset();
+            dataset.Label = "Payment Methods";
+            dataset.DataPoints.Add(paymentMethods[0], cash);
+            dataset.DataPoints.Add(paymentMethods[1], jazzCash);
+            dataset.DataPoints.Add(paymentMethods[2], easyPaisa);
+            dataset.DataPoints.Add(paymentMethods[3], card);
+
+            //Add a new dataset to a chart.Datasets
+            TypeOfOrdersChart.Datasets.Add(dataset);
+
+            //An update was made to re-render the chart
+            TypeOfOrdersChart.Update();
+
+        }
+
+        private void SalesAndPurchasesChart_Load(object sender, EventArgs e)
+        {
+
+            int orders = ObjectHandler.GetOrderDL().GetTotalItemsSoldThisMonth();
+            List<Item> items = ObjectHandler.GetItemDL().LoadItems();
+            string[] type = { "Sales", "Purchases" };
+
+            //Chart configuration 
+            SalesAndPurchasesChart.YAxes.GridLines.Display = false;
+
+            //Create a new dataset 
+            var dataset = new GunaSteppedAreaDataset();
+            dataset.Label = "Sales and Purchases";
+
+            dataset.DataPoints.Add(type[0], orders);
+            dataset.DataPoints.Add(type[1], items.Count);
+
+            dataset.PointRadius = 5;
+            dataset.PointFillColors = ChartUtils.Colors(type.Length, Color.OrangeRed);
+            dataset.PointBorderColors = dataset.PointFillColors;
+
+            //Add a new dataset to a chart.Datasets
+            SalesAndPurchasesChart.Datasets.Add(dataset);
+
+            //An update was made to re-render the chart
+            SalesAndPurchasesChart.Update();
+
+        }
+
+        private void FeedbackChart_Load(object sender, EventArgs e)
+        {
+
+            List<int> feedbacks = ObjectHandler.GetFeedbackDL().LoadAllFeedbacks();
+            string[] ratings = { "1 Star", "2 Star", "3 Star", "4 Star", "5 Star" };
+
+            int star1 = 0;
+            int star2 = 0;
+            int star3 = 0;
+            int star4 = 0;
+            int star5 = 0;
+            foreach (int feedback in feedbacks)
+            {
+                if (feedback == 1)
+                {
+                    star1++;
+                }
+                else if (feedback == 2)
+                {
+                    star2++;
+                }
+                else if (feedback == 3)
+                {
+                    star3++;
+                }
+                else if (feedback == 4)
+                {
+                    star4++;
+                }
+                else if (feedback == 5)
+                {
+                    star5++;
+                }
+            }
+
+            //Chart configuration 
+            FeedbackChart.YAxes.GridLines.Display = false;
+
+            //Create a new dataset 
+            var dataset = new GunaHorizontalBarDataset();
+            dataset.Label = "Feedbacks";
+
+            dataset.DataPoints.Add(ratings[0], star1);
+            dataset.DataPoints.Add(ratings[1], star2);
+            dataset.DataPoints.Add(ratings[2], star3);
+            dataset.DataPoints.Add(ratings[3], star4);
+            dataset.DataPoints.Add(ratings[4], star5);
+
+            //Add a new dataset to a chart.Datasets
+            FeedbackChart.Datasets.Add(dataset);
+
+            //An update was made to re-render the chart
+            FeedbackChart.Update();
 
         }
     }

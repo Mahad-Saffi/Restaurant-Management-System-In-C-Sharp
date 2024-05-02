@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace RMS.UI
             InitializeComponent();
             ItemName.Text = item.getItemName();
             ItemPrice.Text = "$" + item.getItemPrice().ToString();
+            ItemPicture.Image = Image.FromStream(new MemoryStream(item.getItemPicture()));
             this.item = item;
             this.customer = customer;
         }

@@ -34,8 +34,7 @@ CREATE TABLE Orders (
     DeliveryCharges DECIMAL(10, 2),
     Status VARCHAR(50),
     RiderID INT,
-    FOREIGN KEY (CustomerID) REFERENCES Users(UserID) ON DELETE CASCADE,
-    FOREIGN KEY (RiderID) REFERENCES Users(UserID) ON DELETE NO ACTION
+    FOREIGN KEY (CustomerID) REFERENCES Users(UserID) ON DELETE CASCADE
 );
 
 -- OrderDetails table remains unchanged

@@ -9,22 +9,91 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DLLForRMS.BL;
+using System.Threading;
+using System.Diagnostics.Contracts;
 
 namespace RMS.UI
 {
     public partial class RiderDashboard : Form
     {
         private Order acceptedOrder;
-        User rider;
+        private User rider;
+        private int selectedOrderID = 0;
         public RiderDashboard(User rider)
         {
             this.rider = rider;
             InitializeComponent();
+            InitializeUpperBar(rider);
+            InitializeActiveOrders();
+            InitializeDeliveryStatus();
             InitializeInbox();
+            InitializePersonalInfo(rider);
+        }
+
+        private void InitializeUpperBar(User rider)
+        {
+            UpperBarUsername.Text = rider.getUsername();
+            UpperBarPicBox.Image = ObjectHandler.GetUserDL().GetUserImageByUserID(rider.getUserID());
+        }
+
+        private void InitializeActiveOrders()
+        {
+            ComboOrderID.Items.Clear();
+            List<Order> orders = ObjectHandler.GetOrderDL().LoadOrders();
+
+            foreach (Order order in orders)
+            {
+                ComboOrderID.Items.Add(order.GetOrderID());
+            }
+
+            LoadAllOrdersDataGridView(AllOrdersDataGridView);
+        }
+
+        private void InitializeDeliveryStatus()
+        {
+            txtOrderID.Clear();
+            txtOrderItems.Clear();
+            txtRecievablePayment.Clear();
+
+            // Load The accepted order
+            acceptedOrder = ObjectHandler.GetOrderDL().LoadAcceptedOrderByRiderID(rider.getUserID());
+
+            //If there is no accepted order
+            if (acceptedOrder == null)
+            {
+                txtOrderID.Text = "N/A";
+                txtOrderItems.Text = "N/A";
+                return;
+            }
+            //If there is an accepted order
+            else
+            {
+                selectedOrderID = acceptedOrder.GetOrderID();
+
+                Order order = ObjectHandler.GetOrderDL().LoadOrderByOrderID(selectedOrderID);
+                List<OrderDetails> orderItems = ObjectHandler.GetOrderDL().GetOrderDetails(selectedOrderID);
+
+                txtOrderID.Text = order.GetOrderID().ToString();
+                foreach (OrderDetails orderItem in orderItems)
+                {
+                    Item item = ObjectHandler.GetItemDL().LoadItemByItemID(orderItem.GetItemID());
+                    if (orderItems.IndexOf(orderItem) == orderItems.Count - 1)
+                    {
+                        txtOrderItems.Text += item.getItemName();
+                    }
+                    else
+                    {
+                        txtOrderItems.Text += item.getItemName() + ", ";
+                    }
+                }
+                txtRecievablePayment.Text = order.GetTotalAmount().ToString();
+            }
+
         }
 
         private void InitializeInbox()
         {
+            UsernamesCombo.Items.Clear();
             // Load all Usernames for Combo Box
             List<string> usernames = ObjectHandler.GetUserDL().LoadAllUsernames();
             foreach (string username in usernames)
@@ -42,6 +111,18 @@ namespace RMS.UI
             }
         }
 
+        private void InitializePersonalInfo(User tempRider)
+        {
+            Employee rider = ObjectHandler.GetUserDL().GetEmployeeByEmployeeID(tempRider.getUserID());
+            personalInfoRider.NameTextPersonalInfo = rider.getUsername();
+            personalInfoRider.PassTextPersonalInfo = rider.getUserHashPassword();
+            personalInfoRider.EmailTextPersonalInfo = rider.getUserEmail();
+            personalInfoRider.ContactTextPersonalInfo = rider.getUserPhone().ToString();
+            personalInfoRider.SinceTextPersonalInfo = rider.getUserRegistrationDate().ToString();
+            personalInfoRider.RoleTextPersonalInfo = rider.getRole();
+            personalInfoRider.SalaryTextPersonalInfo = rider.GetSalary().ToString();
+        }
+
         private void showPanel(Panel panel)
         {
             RiderPanelMain.Visible = true;
@@ -57,23 +138,43 @@ namespace RMS.UI
             panel.Visible = true;
         }
 
+        private void LoadAllOrdersDataGridView(DataGridView dataGridView)
+        {
+            List<Order> orders = ObjectHandler.GetOrderDL().LoadOrders();
+
+            dataGridView.Columns.Clear();
+            dataGridView.Columns.Add("OrderID", "Order ID");
+            dataGridView.Columns.Add("OrderType", "Order Type");
+            dataGridView.Columns.Add("OrderStatus", "Order Status");
+            dataGridView.Columns.Add("OrderDate", "Order Date");
+            dataGridView.Columns.Add("OrderAddress", "Order Address");
+            dataGridView.Columns.Add("OrderTip", "Order Tip");
+            dataGridView.Columns.Add("OrderTotalAmount", "Order Total Amount");
+
+            dataGridView.Rows.Clear();
+            foreach (Order order in orders)
+            {
+                dataGridView.Rows.Add(order.GetOrderID(), order.GetOrderType(), order.GetOrderStatus(), order.GetOrderDate(), order.GetAddress(), order.GetTip(), order.GetTotalAmount());
+            }
+        }
+
         private void LabelOrders_Click(object sender, EventArgs e)
         {
 
         }
 
-        public static void Example(Guna.Charts.WinForms.GunaChart chart)
+        public void Example(GunaChart chart)
         {
+            List<Order> orders = ObjectHandler.GetOrderDL().LoadRiderOrdersByRiderID(rider.getUserID());
             //Create a new dataset 
-            var dataset = new Guna.Charts.WinForms.GunaBubbleDataset();
-            var r = new Random();
-            for (int i = 0; i < 7; i++)
+            var dataset = new GunaBubbleDataset();
+
+            for (int i = 0; i < orders.Count; i++)
             {
                 //random number
                 int radius = 10;
                 int x = i + 1;
-                int y = r.Next(1000, 10000);
-
+                int y = Convert.ToInt32(orders[i].GetTotalAmount());
 
                 dataset.DataPoints.Add(radius, x, y);
             }
@@ -101,35 +202,55 @@ namespace RMS.UI
 
         }
 
-        public static void Tip(Guna.Charts.WinForms.GunaChart chart)
+        public void Tip(GunaChart chart)
         {
-
+            List<Order> orders = ObjectHandler.GetOrderDL().LoadRiderOrdersByRiderID(rider.getUserID());
             //Chart configuration
             chart.Title.Text = "Tip In a Week";
-            chart.Legend.Position = Guna.Charts.WinForms.LegendPosition.Right;
+            chart.Legend.Position = LegendPosition.Right;
             chart.XAxes.Display = false;
             chart.YAxes.Display = false;
 
             //Create a new dataset 
-            var datasetMonday = new Guna.Charts.WinForms.GunaDoughnutDataset();
-            var datasetTuesday = new Guna.Charts.WinForms.GunaDoughnutDataset();
-            var datasetWednesday = new Guna.Charts.WinForms.GunaDoughnutDataset();
-            var datasetThursday = new Guna.Charts.WinForms.GunaDoughnutDataset();
-            var datasetFriday = new Guna.Charts.WinForms.GunaDoughnutDataset();
-            var datasetSaturday = new Guna.Charts.WinForms.GunaDoughnutDataset();
-            var datasetSunday = new Guna.Charts.WinForms.GunaDoughnutDataset();
-            var r = new Random();
-            
-            int num = r.Next(10, 100);
+            var datasetMonday = new GunaDoughnutDataset();
+            var datasetTuesday = new GunaDoughnutDataset();
+            var datasetWednesday = new GunaDoughnutDataset();
+            var datasetThursday = new GunaDoughnutDataset();
+            var datasetFriday = new GunaDoughnutDataset();
+            var datasetSaturday = new GunaDoughnutDataset();
+            var datasetSunday = new GunaDoughnutDataset();
 
-            datasetMonday.DataPoints.Add("Monday", num);
-            datasetTuesday.DataPoints.Add("Tuesday", num);
-            datasetWednesday.DataPoints.Add("Wednesday", num);
-            datasetThursday.DataPoints.Add("Thursday", num);
-            datasetFriday.DataPoints.Add("Friday", num);
-            datasetSaturday.DataPoints.Add("Saturday", num);
-            datasetSunday.DataPoints.Add("Sunday", num);
-
+            foreach(Order order in orders)
+            {
+                if (order.GetOrderDate().DayOfWeek == DayOfWeek.Monday)
+                {
+                    datasetMonday.DataPoints.Add("Monday", Convert.ToInt32(order.GetTip()));
+                }
+                else if (order.GetOrderDate().DayOfWeek == DayOfWeek.Tuesday)
+                {
+                    datasetTuesday.DataPoints.Add("Tuesday", Convert.ToInt32(order.GetTip()));
+                }
+                else if (order.GetOrderDate().DayOfWeek == DayOfWeek.Wednesday)
+                {
+                    datasetWednesday.DataPoints.Add("Wednesday", Convert.ToInt32(order.GetTip()));
+                }
+                else if (order.GetOrderDate().DayOfWeek == DayOfWeek.Thursday)
+                {
+                    datasetThursday.DataPoints.Add("Thursday", Convert.ToInt32(order.GetTip()));
+                }
+                else if (order.GetOrderDate().DayOfWeek == DayOfWeek.Friday)
+                {
+                    datasetFriday.DataPoints.Add("Friday", Convert.ToInt32(order.GetTip()));
+                }
+                else if (order.GetOrderDate().DayOfWeek == DayOfWeek.Saturday)
+                {
+                    datasetSaturday.DataPoints.Add("Saturday", Convert.ToInt32(order.GetTip()));
+                }
+                else if (order.GetOrderDate().DayOfWeek == DayOfWeek.Sunday)
+                {
+                    datasetSunday.DataPoints.Add("Sunday", Convert.ToInt32(order.GetTip()));
+                }
+            }
 
             datasetMonday.Label = "Monday";
             datasetMonday.FillColors.Add(Color.FromArgb(69, 179, 224));
@@ -165,32 +286,75 @@ namespace RMS.UI
             Tip(gunaChart1);
         }
 
-        public static void Earning(Guna.Charts.WinForms.GunaChart chart)
+        public void Earning(GunaChart chart)
         {
-            string[] months = { "January", "February", "March", "April", "May", "June", "July", "August", "Septempber", "October", "November", "December" };
+            Employee userRider = ObjectHandler.GetUserDL().GetEmployeeByEmployeeID(rider.getUserID());
 
-            //Chart configuration 
+            DateTime userRegDate = userRider.getUserRegistrationDate();
+            int userRegMonth = userRegDate.Month;
+            int userRegYear = userRegDate.Year;
+
+            // Get the current month and year
+            int currentMonth = DateTime.Now.Month;
+            int currentYear = DateTime.Now.Year;
+
+            // Initialize an array to store earnings for each month
+            int[] earningsByMonth = new int[12];
+
+            // Calculate earnings for each month from the registration month to the current month
+            for (int month = 1; month <= 12; month++)
+            {
+                // Check if the month is before the registration month or in the future
+                if ((currentYear < userRegYear || (currentYear == userRegYear && month < userRegMonth)) ||
+                    (currentYear == userRegYear && month > currentMonth))
+                {
+                    // If so, set earnings to 0
+                    earningsByMonth[month - 1] = 0;
+                }
+                else
+                {
+                    // Otherwise, calculate earnings (assuming you have a method for this)
+                    earningsByMonth[month - 1] = CalculateEarningsForMonth(userRider, month, currentYear);
+                }
+            }
+
+            // Chart configuration 
             chart.YAxes.GridLines.Display = false;
 
-            //Create a new dataset 
-            var dataset = new Guna.Charts.WinForms.GunaLineDataset();
+            // Create a new dataset 
+            var dataset = new GunaLineDataset();
             dataset.PointRadius = 10;
             dataset.PointStyle = PointStyle.Circle;
             dataset.Label = "Earnings";
-            var r = new Random();
-            for (int i = 0; i < months.Length; i++)
-            {
-                //random number
-                int num = r.Next(10, 100);
 
-                dataset.DataPoints.Add(months[i], num);
+            // Add earnings data to the dataset
+            string[] months = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
+            for (int i = 0; i < 12; i++)
+            {
+                dataset.DataPoints.Add(months[i], earningsByMonth[i]);
             }
 
-            //Add a new dataset to a chart.Datasets
+            // Add a new dataset to the chart's datasets
             chart.Datasets.Add(dataset);
 
-            //An update was made to re-render the chart
+            // An update was made to re-render the chart
             chart.Update();
+        }
+
+        private int CalculateEarningsForMonth(Employee rider, int month, int year)
+        {
+            //Return salary of rider + the tip he got from the orders
+            List<Order> orders = ObjectHandler.GetOrderDL().LoadRiderOrdersByRiderID(rider.getUserID());
+            double tip = 0;
+            foreach (Order order in orders)
+            {
+                if (order.GetOrderDate().Month == month && order.GetOrderDate().Year == year)
+                {
+                    tip += order.GetTip();
+                }
+            }
+            //Return the total earnings
+            return Convert.ToInt32(rider.GetSalary() + tip);
         }
 
 
@@ -201,9 +365,13 @@ namespace RMS.UI
 
         private void AddressLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            string url = acceptedOrder.GetAddressInConcatenatedForm();
-            System.Diagnostics.Process.Start(url);
-            AddressLabel.LinkVisited = true;
+            if (selectedOrderID == 0)
+            {
+                return;
+            }
+                string url = acceptedOrder.GetAddressInConcatenatedForm();
+                System.Diagnostics.Process.Start(url);
+                AddressLabel.LinkVisited = true;
         }
 
         private void RiderDashboard_Load(object sender, EventArgs e)
@@ -213,16 +381,19 @@ namespace RMS.UI
 
         private void btnActiveOrders_Click(object sender, EventArgs e)
         {
+            InitializeActiveOrders();
             showPanel(OrdersMain);
         }
 
         private void btnOrderHistory_Click(object sender, EventArgs e)
         {
+            OrderHistoryChart_Load(sender, e);
             showPanel(OrderHistoryMain);
         }
 
         private void btnDeliveryStatus_Click(object sender, EventArgs e)
         {
+            InitializeDeliveryStatus();
             showPanel(DeliveryStatusMain);
         }
 
@@ -233,11 +404,13 @@ namespace RMS.UI
 
         private void btnPersonalInfo_Click(object sender, EventArgs e)
         {
+            InitializePersonalInfo(rider);
             showPanel(PersonalInfoMain);
         }
 
         private void btnInbox_Click(object sender, EventArgs e)
         {
+            InitializeInbox();
             showPanel(InboxMainPanel);
         }
 
@@ -272,6 +445,110 @@ namespace RMS.UI
             else
             {
                 MessageBox.Show("Failed to send message.");
+            }
+        }
+
+        private void btnAcceptOrder_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(ComboOrderID.Text))
+            { 
+                MessageBox.Show("Please select an order to accept.");
+                return;
+            }
+
+            if (selectedOrderID != 0)
+            {
+                MessageBox.Show("You have already accepted an order.");
+                return;
+            }
+
+            string status = ObjectHandler.GetOrderDL().GetOrderStatus(Convert.ToInt32(ComboOrderID.Text));
+            string orderType = ObjectHandler.GetOrderDL().GetOrderType(Convert.ToInt32(ComboOrderID.Text));
+
+            if (status == "pending" && orderType == "online")
+            {
+                selectedOrderID = Convert.ToInt32(ComboOrderID.Text);
+                if (ObjectHandler.GetOrderDL().AcceptOrder(selectedOrderID, rider.getUserID()))
+                {
+                    acceptedOrder = ObjectHandler.GetOrderDL().LoadAcceptedOrderByRiderID(rider.getUserID());
+                    Order order = ObjectHandler.GetOrderDL().LoadOrderByOrderID(selectedOrderID);
+                    UpdateRiderTip(order.GetTip());
+                    MessageBox.Show("Order Accepted Successfully.");
+                }
+                else
+                {
+                    MessageBox.Show("Failed to accept order.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Order has already been accepted Or It is not availaible for deliverey...");
+            }
+        }
+
+        private void btnRejectOrder_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(ComboOrderID.Text))
+            {
+                MessageBox.Show("Please select an order to reject.");
+                return;
+            }
+
+            if (Convert.ToDouble(ComboOrderID.Text) == selectedOrderID)
+            {
+                int selectedOrderToReject = Convert.ToInt32(ComboOrderID.Text);
+                if (ObjectHandler.GetOrderDL().RejectOrder(selectedOrderToReject))
+                {
+                    Order order = ObjectHandler.GetOrderDL().LoadOrderByOrderID(selectedOrderToReject);
+                    UpdateRiderTip(order.GetTip() * -1);
+                    selectedOrderID = 0;
+                    MessageBox.Show("Order Rejected Successfully.");
+                }
+                else
+                {
+                    MessageBox.Show("Failed to reject order.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("There is no such accepted order to reject");
+            }
+        }
+
+        private bool UpdateRiderTip(double tipToBeAdded)
+        {
+            Employee tempRider = ObjectHandler.GetUserDL().GetEmployeeByEmployeeID(rider.getUserID());
+            double tip = ObjectHandler.GetUserDL().GetStoredUserTipByUserID(rider.getUserID());
+
+            MessageBox.Show("Tip: " + tip);
+
+            double updatedTip = tip + tipToBeAdded;
+
+            MessageBox.Show("Updated Tip: " + updatedTip);
+
+            Employee UpdatedRider = new Employee(tempRider.getUserID(), tempRider.getUsername(), tempRider.getUserHashPassword(), tempRider.getRole(), tempRider.getUserEmail(), tempRider.getUserPhone(), tempRider.getUserRegistrationDate(), tempRider.GetSalary() , updatedTip);
+            
+
+            if (ObjectHandler.GetUserDL().UpdateUser(UpdatedRider))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string status = ComboOrderStatus.Text.ToLower();
+            if(ObjectHandler.GetOrderDL().UpdateOrderStatus(selectedOrderID, status))
+            {
+                MessageBox.Show("Order status updated successfully.");
+            }
+            else
+            {
+                MessageBox.Show("Failed to update order status.");
             }
         }
     }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RMS;
 using DLLForRMS.DL;
 using DLLForRMS.BL;
 using DLLForRMS.DLInterfaces;
@@ -116,8 +117,6 @@ namespace RMS.UI
                 // To get the stored password from the database By the given username in textbox
                 storedPassword = ObjectHandler.GetUserDL().RetrieveStoredPassword(username);
 
-                MessageBox.Show(storedPassword);
-
                 if (storedPassword == null)
                 {
                     MessageBox.Show("Username not found.");
@@ -128,6 +127,7 @@ namespace RMS.UI
                 if (!ObjectHandler.GetUserDL().VerifyPassword(password, storedPassword))
                 {
                     MessageBox.Show("Invalid Password...");
+                    return;
                 }
 
                 ProceedWithValidUser(username);

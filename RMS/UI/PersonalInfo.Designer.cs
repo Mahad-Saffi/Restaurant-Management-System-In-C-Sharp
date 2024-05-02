@@ -40,7 +40,6 @@
             this.TxtPassPersonalInfo = new Guna.UI2.WinForms.Guna2TextBox();
             this.TxtNamePersonalInfo = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnAddPicPersonalInfo = new Guna.UI2.WinForms.Guna2Button();
-            this.PersonalInfoPic = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.PersonalInfoRole = new System.Windows.Forms.Label();
             this.PersonalInfoSince = new System.Windows.Forms.Label();
             this.PersonalInfoEmail = new System.Windows.Forms.Label();
@@ -49,9 +48,10 @@
             this.PersonalInfoName = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.PersonalInfoLabel = new System.Windows.Forms.Label();
+            this.PersonalInfoPic = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PersonalInfoPic)).BeginInit();
             this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PersonalInfoPic)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -131,6 +131,7 @@
             this.btnPersonalInfoSave.Size = new System.Drawing.Size(148, 44);
             this.btnPersonalInfoSave.TabIndex = 16;
             this.btnPersonalInfoSave.Text = "Save";
+            this.btnPersonalInfoSave.Click += new System.EventHandler(this.btnPersonalInfoSave_Click);
             // 
             // TxtRolePersonalInfo
             // 
@@ -268,6 +269,7 @@
             this.TxtNamePersonalInfo.Name = "TxtNamePersonalInfo";
             this.TxtNamePersonalInfo.PasswordChar = '\0';
             this.TxtNamePersonalInfo.PlaceholderText = "";
+            this.TxtNamePersonalInfo.ReadOnly = true;
             this.TxtNamePersonalInfo.SelectedText = "";
             this.TxtNamePersonalInfo.Size = new System.Drawing.Size(180, 37);
             this.TxtNamePersonalInfo.TabIndex = 10;
@@ -291,24 +293,6 @@
             this.btnAddPicPersonalInfo.TabIndex = 9;
             this.btnAddPicPersonalInfo.Text = "Add Picture";
             this.btnAddPicPersonalInfo.Click += new System.EventHandler(this.btnAddPicPersonalInfo_Click);
-            // 
-            // PersonalInfoPic
-            // 
-            this.PersonalInfoPic.BackColor = System.Drawing.Color.Transparent;
-            this.PersonalInfoPic.ErrorImage = ((System.Drawing.Image)(resources.GetObject("PersonalInfoPic.ErrorImage")));
-            this.PersonalInfoPic.FillColor = System.Drawing.Color.Transparent;
-            this.PersonalInfoPic.Image = ((System.Drawing.Image)(resources.GetObject("PersonalInfoPic.Image")));
-            this.PersonalInfoPic.ImageRotate = 0F;
-            this.PersonalInfoPic.InitialImage = ((System.Drawing.Image)(resources.GetObject("PersonalInfoPic.InitialImage")));
-            this.PersonalInfoPic.Location = new System.Drawing.Point(754, 202);
-            this.PersonalInfoPic.Name = "PersonalInfoPic";
-            this.PersonalInfoPic.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.PersonalInfoPic.Size = new System.Drawing.Size(247, 250);
-            this.PersonalInfoPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PersonalInfoPic.TabIndex = 8;
-            this.PersonalInfoPic.TabStop = false;
-            this.PersonalInfoPic.UseTransparentBackground = true;
-            this.PersonalInfoPic.Click += new System.EventHandler(this.PersonalInfoPic_Click);
             // 
             // PersonalInfoRole
             // 
@@ -393,6 +377,24 @@
             this.PersonalInfoLabel.Text = "Personal Information";
             this.PersonalInfoLabel.Click += new System.EventHandler(this.PersonalInfoLabel_Click);
             // 
+            // PersonalInfoPic
+            // 
+            this.PersonalInfoPic.BackColor = System.Drawing.Color.Transparent;
+            this.PersonalInfoPic.ErrorImage = ((System.Drawing.Image)(resources.GetObject("PersonalInfoPic.ErrorImage")));
+            this.PersonalInfoPic.FillColor = System.Drawing.Color.Transparent;
+            this.PersonalInfoPic.Image = ((System.Drawing.Image)(resources.GetObject("PersonalInfoPic.Image")));
+            this.PersonalInfoPic.ImageRotate = 0F;
+            this.PersonalInfoPic.InitialImage = ((System.Drawing.Image)(resources.GetObject("PersonalInfoPic.InitialImage")));
+            this.PersonalInfoPic.Location = new System.Drawing.Point(754, 202);
+            this.PersonalInfoPic.Name = "PersonalInfoPic";
+            this.PersonalInfoPic.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.PersonalInfoPic.Size = new System.Drawing.Size(247, 250);
+            this.PersonalInfoPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PersonalInfoPic.TabIndex = 8;
+            this.PersonalInfoPic.TabStop = false;
+            this.PersonalInfoPic.UseTransparentBackground = true;
+            this.PersonalInfoPic.Click += new System.EventHandler(this.PersonalInfoPic_Click);
+            // 
             // PersonalInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -402,9 +404,9 @@
             this.Size = new System.Drawing.Size(1090, 700);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PersonalInfoPic)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PersonalInfoPic)).EndInit();
             this.ResumeLayout(false);
 
         }

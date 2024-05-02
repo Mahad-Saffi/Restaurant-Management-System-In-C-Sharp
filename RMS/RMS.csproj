@@ -61,6 +61,11 @@
     <Compile Include="ObjectHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RMSDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RMSDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UI\AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +77,12 @@
     </Compile>
     <Compile Include="UI\CustomerDashboard.Designer.cs">
       <DependentUpon>CustomerDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Feedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Feedback.Designer.cs">
+      <DependentUpon>Feedback.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FoodItem.cs">
       <SubType>UserControl</SubType>
@@ -137,6 +148,9 @@
     <EmbeddedResource Include="UI\CustomerDashboard.resx">
       <DependentUpon>CustomerDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Feedback.resx">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FoodItem.resx">
       <DependentUpon>FoodItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +185,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="RMSDatabaseDataSet.xsc">
+      <DependentUpon>RMSDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RMSDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RMSDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RMSDatabaseDataSet.xss">
+      <DependentUpon>RMSDatabaseDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -180,6 +205,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star Fill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dish.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DLLForRMS;
 using DLLForRMS.DLInterfaces;
 using DLLForRMS.DL;
+using DLLForRMS.Utilities;
 
 namespace RMS
 {
@@ -18,6 +19,9 @@ namespace RMS
         private static IInbox inboxDB = new InboxDB();
         private static IAttendance attendanceDB = new AttendanceDB();
         private static IUtility utilityDB = new UtilityDB();
+        private static IFeedback feedbackDB = new FeedbackDB();
+        private static Validations validations = new Validations();
+
 
         public static IUser GetUserDL()
         {
@@ -52,6 +56,16 @@ namespace RMS
         public static IAttendance GetAttendanceDL()
         {
             return attendanceDB;
+        }
+
+        public static IFeedback GetFeedbackDL()
+        {
+            return feedbackDB;
+        }
+
+        public static Validations GetValidations()
+        {
+            return validations;
         }
     }
 }

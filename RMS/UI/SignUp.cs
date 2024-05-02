@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +19,7 @@ namespace RMS.UI
         private string username;
         private string password;
         private string email;
+        private string phoneStr;
         private long phone;
 
         public SignUp()
@@ -63,32 +66,57 @@ namespace RMS.UI
 
         private void txtContact_TextChanged(object sender, EventArgs e)
         {
-            string phoneStr = txtContact.Text;
-            phone = long.Parse(phoneStr);
+            phoneStr = txtContact.Text;
         }
 
         private void btnSignUp_Click_1(object sender, EventArgs e)
         {
-            if (username == null || password == null || email == null || phone == 0)
+            // Validations
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(phoneStr))
             {
                 MessageBox.Show("Please fill all the fields");
+                return;
             }
-            else
+            else if (ObjectHandler.GetValidations().ValidateContactNumber(phoneStr) == "false")
             {
-                User user = new User(username, password, "Customer", email, phone, DateTime.Now);
-                if (ObjectHandler.GetUserDL().AddUserData(user))
+                txtContact.Clear();
+                MessageBox.Show("Invalid Phone Number");
+                return;
+            }
+            else if (ObjectHandler.GetValidations().ValidateContactNumber(phoneStr) != "false")
+            {
+                phone = Convert.ToInt64(ObjectHandler.GetValidations().ValidateContactNumber(phoneStr));
+            }
+            else if (!ObjectHandler.GetValidations().ValidateEmail(email))
+            {
+                txtEmail.Clear();
+                MessageBox.Show("Invalid Email Address");
+                return;
+            }
+
+            byte[] imageBytes = ObjectHandler.GetUtilityDL().ImageToByteArray(Properties.Resources.user);
+            User user = new User(username, password, "Customer", email, phone, DateTime.Now, imageBytes);
+            if (ObjectHandler.GetUserDL().AddUserData(user))
+            {
+                User tempUser = ObjectHandler.GetUserDL().GetUserByUsername(username);
+                string query = "UPDATE Users SET Picture = @image WHERE UserID = @ID";
+                if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(Properties.Resources.user), query, tempUser.getUserID(), "user"))
                 {
-                    MessageBox.Show("Sign Up Successful");
+                    MessageBox.Show("Sign Up Successfully...");
                 }
                 else
                 {
-                    MessageBox.Show("Sign Up Failed");
+                    MessageBox.Show("Some error occurs...");
                 }
-
-                this.Hide();
-                var loginForm = new LoginForm();
-                loginForm.Show();
             }
+            else
+            {
+                MessageBox.Show("Username already present...\nPlease try a different username...");
+            }
+
+            this.Hide();
+            var loginForm = new LoginForm();
+            loginForm.Show();
         }
     }
 }
