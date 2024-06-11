@@ -16,12 +16,12 @@ namespace RMS.UI
 {
     public partial class AdminDashboard : Form
     {
-        User admin;
-        private DateTime timeIn = DateTime.Now;
+        User admin;      //admin object
+        private DateTime timeIn = DateTime.Now;       // to det tha time
         private DateTime timeOut = DateTime.Now;
 
         public AdminDashboard(User admin)
-        {
+        { 
             this.admin = admin;
             InitializeComponent();
             InitializeUpperBar(admin);
@@ -44,8 +44,8 @@ namespace RMS.UI
         private void InitializeItemDetails()
         {
             ItemIDCombo.Items.Clear();
-            // Load all the Item IDs for Combo Box
-            if (ObjectHandler.GetItemDL().LoadItemsID() == null)
+            
+            if (ObjectHandler.GetItemDL().LoadItemsID() == null)       // Load all the Item IDs for Combo Box
             {
                 return;
             }
@@ -57,17 +57,14 @@ namespace RMS.UI
                     ItemIDCombo.Items.Add(item);
                 }
             }
-
-            // Fill the data grid view
-            LoadItemDetailsToGridView(ItemDataGridView);
-
+            LoadItemDetailsToGridView(ItemDataGridView);      // Fill the data grid view
         }
 
         private void InitializeUserDetails()
         {
             UsersIDCombo.Items.Clear();
-            // Load all the User IDs for Combo Box
-            List<int> users = ObjectHandler.GetUserDL().LoadUsersID();
+            
+            List<int> users = ObjectHandler.GetUserDL().LoadUsersID();    // Load all the User IDs for Combo Box
             foreach (int user in users)
             {
                 UsersIDCombo.Items.Add(user);
@@ -87,7 +84,7 @@ namespace RMS.UI
             double expenditures = ObjectHandler.GetItemDL().GetTotalCostOfPurchases();
             List<string> topItems = ObjectHandler.GetOrderDL().GetTopItemsThisMonth();
 
-            AmountPaymentsReceved.Text = "$" + paymentsRecieved;
+            AmountPaymentsReceved.Text = "$" + paymentsRecieved;           //show thw amount  
             AmountExpenditures.Text = "$" + expenditures;
 
             foreach (string item in topItems)
@@ -123,7 +120,7 @@ namespace RMS.UI
 
             if (monthlyIncome > (yearlyIncome / 12))
             {
-                ProfitOrLossThisMonth.Text = "Profit";
+                ProfitOrLossThisMonth.Text = "Profit";         //for profit and loss viewing
                 ProfitOrLossThisYear.Text = "Loss";
             }
             else
@@ -136,14 +133,11 @@ namespace RMS.UI
         private void InitializeInbox()
         {
             UsernamesCombo.Items.Clear();
-            // Load all Usernames for Combo Box
-            List<string> usernames = ObjectHandler.GetUserDL().LoadAllUsernames();
+            List<string> usernames = ObjectHandler.GetUserDL().LoadAllUsernames();        // Load all Usernames for Combo Box
             foreach (string username in usernames)
             {
                 UsernamesCombo.Items.Add(username);
             }
-
-            // Load all the messages
             List<Inbox> messages = ObjectHandler.GetInboxDL().LoadMessagesByUserID(admin);
             messagesFlowPanel.Controls.Clear();
             foreach (Inbox message in messages)
@@ -228,7 +222,7 @@ namespace RMS.UI
             List<User> allUsers = ObjectHandler.GetUserDL().LoadAllUsers();
 
             dataGridView.Columns.Clear();
-            dataGridView.Columns.Add("UserID", "User ID");
+            dataGridView.Columns.Add("UserID", "User ID");       //columns name
             dataGridView.Columns.Add("Username", "Username");
             dataGridView.Columns.Add("Role", "Role");
             dataGridView.Columns.Add("Email", "Email");
@@ -256,7 +250,7 @@ namespace RMS.UI
             List<User> users = ObjectHandler.GetUserDL().LoadAllUsers();
 
             dataGridView.Columns.Clear();
-            dataGridView.Columns.Add("UserID", "User ID");
+            dataGridView.Columns.Add("UserID", "User ID");               //columns name
             dataGridView.Columns.Add("Username", "Username");
             dataGridView.Columns.Add("Role", "Role");
             dataGridView.Columns.Add("Email", "Email");
@@ -291,9 +285,7 @@ namespace RMS.UI
 
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'rMSDatabaseDataSet.Items' table. You can move, or remove it, as needed.
             this.itemsTableAdapter.Fill(this.rMSDatabaseDataSet.Items);
-            // TODO: This line of code loads data into the 'rMSDatabaseDataSet.Items' table. You can move, or remove it, as needed.
         }
 
         private void showPanel(Panel panel)
@@ -511,7 +503,7 @@ namespace RMS.UI
                 Admin adminTobeAdded = new Admin(username, password, role, email, phone, DateTime.Now, userPicture);
                 if (ObjectHandler.GetUserDL().AddUserData(adminTobeAdded))
                 {
-                    User tempUser = ObjectHandler.GetUserDL().GetUserByUsername(username);
+                    User tempUser = ObjectHandler.GetUserDL().GetUserByUsername(username);       //updating the details
                     string query = "UPDATE Users SET Picture = @image WHERE UserID = @ID";
                     if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(Properties.Resources.user), query, tempUser.getUserID(), "user"))
                     {
@@ -534,7 +526,7 @@ namespace RMS.UI
                 if(ObjectHandler.GetUserDL().AddUserData(employee))
                 {
                     User tempUser = ObjectHandler.GetUserDL().GetUserByUsername(username);
-                    string query = "UPDATE Users SET Picture = @image WHERE UserID = @ID";
+                    string query = "UPDATE Users SET Picture = @image WHERE UserID = @ID";          //update picture
                     if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(Properties.Resources.user), query, tempUser.getUserID(), "user"))
                     {
                         MessageBox.Show("Employee added successfully.");
@@ -737,7 +729,7 @@ namespace RMS.UI
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            if (!ObjectHandler.GetValidations().ValidateInteger(UsersIDCombo.Text))
+            if (!ObjectHandler.GetValidations().ValidateInteger(UsersIDCombo.Text))      //validations
             {
                 MessageBox.Show("Please enter a valid User ID.");
                 UsersIDCombo.Text = "";
@@ -988,10 +980,8 @@ namespace RMS.UI
             List<Item> items = ObjectHandler.GetItemDL().LoadItems();
             string[] type = { "Sales", "Purchases" };
 
-            //Chart configuration 
             SalesAndPurchasesChart.YAxes.GridLines.Display = false;
 
-            //Create a new dataset 
             var dataset = new GunaSteppedAreaDataset();
             dataset.Label = "Sales and Purchases";
 
@@ -1002,10 +992,8 @@ namespace RMS.UI
             dataset.PointFillColors = ChartUtils.Colors(type.Length, Color.OrangeRed);
             dataset.PointBorderColors = dataset.PointFillColors;
 
-            //Add a new dataset to a chart.Datasets
             SalesAndPurchasesChart.Datasets.Add(dataset);
 
-            //An update was made to re-render the chart
             SalesAndPurchasesChart.Update();
 
         }
@@ -1013,7 +1001,7 @@ namespace RMS.UI
         private void FeedbackChart_Load(object sender, EventArgs e)
         {
 
-            List<int> feedbacks = ObjectHandler.GetFeedbackDL().LoadAllFeedbacks();
+            List<int> feedbacks = ObjectHandler.GetFeedbackDL().LoadAllFeedbacks();      //rating
             string[] ratings = { "1 Star", "2 Star", "3 Star", "4 Star", "5 Star" };
 
             int star1 = 0;
@@ -1045,10 +1033,8 @@ namespace RMS.UI
                 }
             }
 
-            //Chart configuration 
             FeedbackChart.YAxes.GridLines.Display = false;
 
-            //Create a new dataset 
             var dataset = new GunaHorizontalBarDataset();
             dataset.Label = "Feedbacks";
 
@@ -1058,10 +1044,8 @@ namespace RMS.UI
             dataset.DataPoints.Add(ratings[3], star4);
             dataset.DataPoints.Add(ratings[4], star5);
 
-            //Add a new dataset to a chart.Datasets
             FeedbackChart.Datasets.Add(dataset);
 
-            //An update was made to re-render the chart
             FeedbackChart.Update();
 
         }

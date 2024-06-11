@@ -51,6 +51,7 @@
             // guna2DragControl1
             // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // AttendanceCheckerDataGridView
@@ -83,7 +84,8 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.AttendanceCheckerDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.AttendanceCheckerDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.AttendanceCheckerDataGridView.Location = new System.Drawing.Point(24, 35);
+            this.AttendanceCheckerDataGridView.Location = new System.Drawing.Point(32, 43);
+            this.AttendanceCheckerDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AttendanceCheckerDataGridView.Name = "AttendanceCheckerDataGridView";
             this.AttendanceCheckerDataGridView.ReadOnly = true;
             this.AttendanceCheckerDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -96,7 +98,8 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.AttendanceCheckerDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.AttendanceCheckerDataGridView.RowHeadersVisible = false;
-            this.AttendanceCheckerDataGridView.Size = new System.Drawing.Size(814, 477);
+            this.AttendanceCheckerDataGridView.RowHeadersWidth = 51;
+            this.AttendanceCheckerDataGridView.Size = new System.Drawing.Size(1085, 587);
             this.AttendanceCheckerDataGridView.TabIndex = 0;
             this.AttendanceCheckerDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.AttendanceCheckerDataGridView.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -124,7 +127,7 @@
             // 
             this.btnBack.AutoRoundedCorners = true;
             this.btnBack.BorderColor = System.Drawing.Color.Silver;
-            this.btnBack.BorderRadius = 25;
+            this.btnBack.BorderRadius = 31;
             this.btnBack.BorderThickness = 2;
             this.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -134,21 +137,23 @@
             this.btnBack.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnBack.ForeColor = System.Drawing.Color.Black;
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
-            this.btnBack.Location = new System.Drawing.Point(670, 528);
+            this.btnBack.Location = new System.Drawing.Point(893, 650);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(143, 52);
+            this.btnBack.Size = new System.Drawing.Size(191, 64);
             this.btnBack.TabIndex = 1;
             this.btnBack.Text = "Back";
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // UserAttendanceCheckerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(878, 599);
+            this.ClientSize = new System.Drawing.Size(1171, 737);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.AttendanceCheckerDataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UserAttendanceCheckerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserAttendanceCheckerForm";

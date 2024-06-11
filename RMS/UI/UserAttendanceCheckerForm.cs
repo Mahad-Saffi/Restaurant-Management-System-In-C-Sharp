@@ -13,6 +13,8 @@ namespace RMS.UI
 {
     public partial class UserAttendanceCheckerForm : Form
     {
+
+        //User Attendence form
         public UserAttendanceCheckerForm(int employeeID)
         {
             InitializeComponent();
@@ -21,7 +23,7 @@ namespace RMS.UI
 
         private void LoadDataGridViewForAttendanceChecker(int employeeID)
         {
-            AttendanceCheckerDataGridView.Columns.Add("AttendanceID", "Attendance ID");
+            AttendanceCheckerDataGridView.Columns.Add("AttendanceID", "Attendance ID");        //columns name
             AttendanceCheckerDataGridView.Columns.Add("EmployeeID", "Employee ID");
             AttendanceCheckerDataGridView.Columns.Add("Date", "Date");
             AttendanceCheckerDataGridView.Columns.Add("TimeIn", "Time In");
@@ -33,7 +35,7 @@ namespace RMS.UI
 
             foreach (Attendance a in attendance)
             {
-                AttendanceCheckerDataGridView.Rows.Add(a.GetAttendanceID(), a.GetUserID(), a.GetDate(), a.GetTimeIn(), a.GetTimeOut());
+                AttendanceCheckerDataGridView.Rows.Add(a.GetAttendanceID(), a.GetUserID(), a.GetDate(), a.GetTimeIn(), a.GetTimeOut());     //show attendence
             }
         }
 

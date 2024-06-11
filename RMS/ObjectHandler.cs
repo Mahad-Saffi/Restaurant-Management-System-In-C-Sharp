@@ -12,7 +12,9 @@ namespace RMS
 {
     public class ObjectHandler
     {
-        private static IUser userDB = new UserDB();
+
+        //implementing the factory pattern
+        private static IUser userDB = new UserDB();           //to Get Reference of all the 
         private static IItem itemDB = new ItemDB();
         private static ICart cartDB = new CartDB();
         private static IOrder orderDB = new OrderDB();
@@ -23,7 +25,7 @@ namespace RMS
         private static Validations validations = new Validations();
 
 
-        public static IUser GetUserDL()
+        public static IUser GetUserDL()        //to det instance of all the objjects
         {
             return userDB;
         }

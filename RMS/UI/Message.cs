@@ -13,6 +13,7 @@ namespace RMS.UI
 {
     public partial class Message : UserControl
     {
+        //message functionality
         public Message(Inbox inbox)
         {
             InitializeComponent();
@@ -30,25 +31,25 @@ namespace RMS.UI
 
         public string TextUsername
         {
-            get { return Username.Text; }
+            get { return Username.Text; }       //getters and setters
             set { Username.Text = value; }
         }
 
         public string TextRole
         {
-            get { return Role.Text; }
+            get { return Role.Text; }                       //getters and setters        
             set { Role.Text = value; }
         }
 
         public string TextDateTime
         {
-            get { return MessageDateTime.Text; }
+            get { return MessageDateTime.Text; }                //getters and setters
             set { MessageDateTime.Text = value; }
         }
 
         public string TextMessage
         {
-            get { return TxtMessage.Text; }
+            get { return TxtMessage.Text; }         //getters and setters
             set { TxtMessage.Text = value; }
         }
 

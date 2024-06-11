@@ -14,8 +14,8 @@ namespace RMS.UI
 {
     public partial class FoodItem : UserControl
     {
-        Item item;
-        Customer customer;
+        Item item;  //item oject
+        Customer customer;     //customer object
         public FoodItem(Item item, Customer customer)
         {
             InitializeComponent();
@@ -36,21 +36,21 @@ namespace RMS.UI
 
         }
 
-        public string TxtItemName
+        public string TxtItemName        
         {
-            get { return ItemName.Text; }
+            get { return ItemName.Text; }   //getter setters
             set { ItemName.Text = value; }
         }
 
         public double TxtItemPrice
         {
-            get { return Convert.ToDouble(ItemPrice.Text); }
+            get { return Convert.ToDouble(ItemPrice.Text); }        //getter setters
             set { ItemPrice.Text = value.ToString(); }
         }
 
         public Image ImageItemPicture
         {
-            get { return ItemPicture.Image; }
+            get { return ItemPicture.Image; }                      //getter setters
             set { ItemPicture.Image = value; }
         }
 
@@ -70,11 +70,12 @@ namespace RMS.UI
             Cart cart = ObjectHandler.GetCartDL().LoadCartByCustomerID(customer.getUserID());
             if(ObjectHandler.GetCartDL().AddItemToCart(cart.GetCartID(), item.getItemID(), item.getItemPrice()))
             {
-                MessageBox.Show("Item added to cart successfully.");
+                //to show that item added
+                MessageBox.Show("Item added to cart successfully.");    
             }
-            else
+            else       //if not added in cart
             {
-                MessageBox.Show("Failed to add item to cart.");
+                MessageBox.Show("Failed to add item to cart.");        
             }
         }
     }

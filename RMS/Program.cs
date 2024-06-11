@@ -19,6 +19,7 @@ namespace RMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //first form will be the loginin form 
             Application.Run(new LoginForm());
         }
     }

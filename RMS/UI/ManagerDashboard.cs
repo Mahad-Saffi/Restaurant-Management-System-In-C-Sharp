@@ -15,7 +15,7 @@ namespace RMS.UI
 {
     public partial class ManagerDashboard : Form
     {
-        User manager;
+        User manager;            //manager
         public ManagerDashboard(User manager)
         {
             this.manager = manager;
@@ -56,7 +56,7 @@ namespace RMS.UI
             List<Item> items = ObjectHandler.GetItemDL().LoadItems();
 
             ManagerInventoryGridView.Columns.Clear();
-            ManagerInventoryGridView.Columns.Add("ItemID", "Item ID");
+            ManagerInventoryGridView.Columns.Add("ItemID", "Item ID");          //columns name
             ManagerInventoryGridView.Columns.Add("ItemName", "Item Name");
             ManagerInventoryGridView.Columns.Add("ItemPrice", "Item Price");
             ManagerInventoryGridView.Columns.Add("CostOfPurchase", "Cost Of Purchase");
@@ -88,7 +88,7 @@ namespace RMS.UI
             List<Order> orders = ObjectHandler.GetOrderDL().LoadOrders();
 
             OrdersDataGridView.Columns.Clear();
-            OrdersDataGridView.Columns.Add("CustomerID", "Customer ID");
+            OrdersDataGridView.Columns.Add("CustomerID", "Customer ID");                 //columns name
             OrdersDataGridView.Columns.Add("OrderDate", "Order Date");
             OrdersDataGridView.Columns.Add("OrderType", "Order Type");
             OrdersDataGridView.Columns.Add("OrderStatus", "Order Status");
@@ -154,8 +154,8 @@ namespace RMS.UI
 
         private void InitializeFinancialTransactions()
         {
-            double totalTransactionsThisMonth = ObjectHandler.GetOrderDL().GetTotalAmountOfSalesThisMonth() + ObjectHandler.GetItemDL().GetTotalCostOfPurchases();
-            double totalTransactionsThisYear = ObjectHandler.GetOrderDL().GetTotalAmountOfSalesThisYear() + ObjectHandler.GetItemDL().GetTotalCostOfPurchases();
+            double totalTransactionsThisMonth = ObjectHandler.GetOrderDL().GetTotalAmountOfSalesThisMonth() + ObjectHandler.GetItemDL().GetTotalCostOfPurchases();      //sales this month
+            double totalTransactionsThisYear = ObjectHandler.GetOrderDL().GetTotalAmountOfSalesThisYear() + ObjectHandler.GetItemDL().GetTotalCostOfPurchases();                    //sales this year
 
             TransactionsMonthlyAmount.Text = "$" + totalTransactionsThisMonth;
             TransactionsYearlyAmount.Text = "$" + totalTransactionsThisYear;
@@ -444,10 +444,10 @@ namespace RMS.UI
             }
             if (ObjectHandler.GetValidations().ValidateInteger(ItemIDCombo.Text))
             {
-                string query = "UPDATE Items SET Picture = @image WHERE ItemID = @ID";
+                string query = "UPDATE Items SET Picture = @image WHERE ItemID = @ID";          //update the picture of the user
                 if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(ItemPictureBox.Image), query, Convert.ToInt32(ItemIDCombo.Text), "item"))
                 {
-                    MessageBox.Show("Item Image Updated successfully...");
+                    MessageBox.Show("Item Image Updated successfully...");         //pofile phopto changed
                 }
                 else
                 {
@@ -463,6 +463,9 @@ namespace RMS.UI
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
+
+            //for deleting the customer
+
             if (string.IsNullOrEmpty(CustomerIDCombo.Text))
             {
                 MessageBox.Show("Please select a customer to delete.");
@@ -490,6 +493,7 @@ namespace RMS.UI
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
+            //for sending the messagee
             if (string.IsNullOrEmpty(CustomerIDCombo.Text))
             {
                 MessageBox.Show("Please select a Reciever to send a message.");
@@ -620,6 +624,11 @@ namespace RMS.UI
 
             //An update was made to re-render the chart
             TypeOfOrdersChart.Update();
+        }
+
+        private void ManagerPanelMain_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

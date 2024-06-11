@@ -17,7 +17,7 @@ namespace RMS.UI
     public partial class LoginForm : Form
     {
         private string username;
-        private string password;
+        private string password;           
         private string storedPassword;
         UserDB userDB = new UserDB();
 
@@ -109,7 +109,8 @@ namespace RMS.UI
             password = txtPassword.Text;
 
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
-            {
+            {  
+                //if all the fields is not filled
                 MessageBox.Show("Please fill all the fields");
             }
             else
@@ -126,6 +127,7 @@ namespace RMS.UI
                 //If the password entered by the user matches the stored password
                 if (!ObjectHandler.GetUserDL().VerifyPassword(password, storedPassword))
                 {
+                    //invalid password
                     MessageBox.Show("Invalid Password...");
                     return;
                 }
@@ -146,7 +148,8 @@ namespace RMS.UI
             this.Hide();  // Hide the login form in preparation for showing the appropriate dashboard
 
             switch (user.getRole().ToLower())
-            {
+            { 
+                //to show differet dashboard according to their roles
                 case "customer":
                     Customer customer = new Customer(user);
                     ShowCustomerDashboard(customer);
@@ -172,6 +175,7 @@ namespace RMS.UI
 
         private void ShowCustomerDashboard(Customer customer)
         {
+
             if (!ObjectHandler.GetCartDL().IsCartPresent(customer.getUserID()))
             {
                 ObjectHandler.GetCartDL().AddCart(new Cart(customer.getUserID()));

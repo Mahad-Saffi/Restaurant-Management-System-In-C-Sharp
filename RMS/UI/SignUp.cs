@@ -16,7 +16,7 @@ namespace RMS.UI
 {
     public partial class SignUp : Form
     {
-        private string username;
+        private string username;     //all the things need for signup
         private string password;
         private string email;
         private string phoneStr;
@@ -56,7 +56,7 @@ namespace RMS.UI
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
-            password = ObjectHandler.GetUserDL().HashPassword(txtPassword.Text);
+            password = ObjectHandler.GetUserDL().HashPassword(txtPassword.Text);       //encrypting the password
         }
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
@@ -99,7 +99,7 @@ namespace RMS.UI
             if (ObjectHandler.GetUserDL().AddUserData(user))
             {
                 User tempUser = ObjectHandler.GetUserDL().GetUserByUsername(username);
-                string query = "UPDATE Users SET Picture = @image WHERE UserID = @ID";
+                string query = "UPDATE Users SET Picture = @image WHERE UserID = @ID";       //update picture
                 if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(Properties.Resources.user), query, tempUser.getUserID(), "user"))
                 {
                     MessageBox.Show("Sign Up Successfully...");
@@ -111,7 +111,7 @@ namespace RMS.UI
             }
             else
             {
-                MessageBox.Show("Username already present...\nPlease try a different username...");
+                MessageBox.Show("Username already present...\nPlease try a different username...");   // becaude username is unique
             }
 
             this.Hide();

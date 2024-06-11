@@ -58,16 +58,18 @@ namespace RMS.UI
             // Load The accepted order
             acceptedOrder = ObjectHandler.GetOrderDL().LoadAcceptedOrderByRiderID(rider.getUserID());
 
-            //If there is no accepted order
+            
             if (acceptedOrder == null)
             {
+                //If there is no accepted order
                 txtOrderID.Text = "N/A";
                 txtOrderItems.Text = "N/A";
                 return;
             }
-            //If there is an accepted order
             else
             {
+                //If there is an accepted order
+
                 selectedOrderID = acceptedOrder.GetOrderID();
 
                 Order order = ObjectHandler.GetOrderDL().LoadOrderByOrderID(selectedOrderID);
@@ -143,7 +145,7 @@ namespace RMS.UI
             List<Order> orders = ObjectHandler.GetOrderDL().LoadOrders();
 
             dataGridView.Columns.Clear();
-            dataGridView.Columns.Add("OrderID", "Order ID");
+            dataGridView.Columns.Add("OrderID", "Order ID");          //columns names
             dataGridView.Columns.Add("OrderType", "Order Type");
             dataGridView.Columns.Add("OrderStatus", "Order Status");
             dataGridView.Columns.Add("OrderDate", "Order Date");
@@ -452,6 +454,7 @@ namespace RMS.UI
         {
             if (string.IsNullOrEmpty(ComboOrderID.Text))
             { 
+                //if order is not selected 
                 MessageBox.Show("Please select an order to accept.");
                 return;
             }
@@ -473,16 +476,19 @@ namespace RMS.UI
                     acceptedOrder = ObjectHandler.GetOrderDL().LoadAcceptedOrderByRiderID(rider.getUserID());
                     Order order = ObjectHandler.GetOrderDL().LoadOrderByOrderID(selectedOrderID);
                     UpdateRiderTip(order.GetTip());
+                    //order accepted
                     MessageBox.Show("Order Accepted Successfully.");
+
                 }
                 else
                 {
+                    //somthing is wrong
                     MessageBox.Show("Failed to accept order.");
                 }
             }
             else
             {
-                MessageBox.Show("Order has already been accepted Or It is not availaible for deliverey...");
+                MessageBox.Show("Order has already been accepted Or It is not availaible for deliverey...");   //if order is already accepted by anoother rider
             }
         }
 

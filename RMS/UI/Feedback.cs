@@ -13,7 +13,7 @@ namespace RMS.UI
 {
     public partial class Feedback : Form
     {
-        private int feedbackRating = 0;
+        private int feedbackRating = 0;     //by detault rating is 0 star
         Customer customer;
         public Feedback(Customer customer)
         {
@@ -80,7 +80,7 @@ namespace RMS.UI
         {
             if(ObjectHandler.GetFeedbackDL().AddFeedback(customer.getUserID(), feedbackRating))
             {
-                MessageBox.Show("Thank you for your feedback!", "Feedback", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Thank you for your feedback!", "Feedback", MessageBoxButtons.OK, MessageBoxIcon.Information);     //if feedback is successfull
                 this.Close();
             }
         }

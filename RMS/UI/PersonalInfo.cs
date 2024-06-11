@@ -40,49 +40,49 @@ namespace RMS.UI
 
         public string NameTextPersonalInfo
         {
-            get { return TxtNamePersonalInfo.Text; }
+            get { return TxtNamePersonalInfo.Text; }       //getters and setters
             set { TxtNamePersonalInfo.Text = value; }
         }
 
         public string PassTextPersonalInfo
         {
             get { return TxtPassPersonalInfo.Text; }
-            set { TxtPassPersonalInfo.Text = value; }
+            set { TxtPassPersonalInfo.Text = value; }           //getters and setters
         }
 
         public string EmailTextPersonalInfo
         {
-            get { return TxtEmailPersonalInfo.Text; }
+            get { return TxtEmailPersonalInfo.Text; }         //getters and setters
             set { TxtEmailPersonalInfo.Text = value; }
         }
 
         public string ContactTextPersonalInfo
         {
-            get { return TxtContactPersonalInfo.Text; }
+            get { return TxtContactPersonalInfo.Text; }           //getters and setters
             set { TxtContactPersonalInfo.Text = value; }
         }
 
         public string SinceTextPersonalInfo
         {
-            get { return TxtSincePersonalInfo.Text; }
+            get { return TxtSincePersonalInfo.Text; }            //getters and setters
             set { TxtSincePersonalInfo.Text = value; }
         }
 
         public string RoleTextPersonalInfo
-        {
-            get { return TxtRolePersonalInfo.Text; }
+        {  
+            get { return TxtRolePersonalInfo.Text; }                 //getters and setters
             set { TxtRolePersonalInfo.Text = value; }
         }
 
         public string SalaryTextPersonalInfo
         {
-            get { return TxtSalaryPersonalInfo.Text; }
+            get { return TxtSalaryPersonalInfo.Text; }                    //getters and setters
             set { TxtSalaryPersonalInfo.Text = value; }
         }
 
         public Image PersonalInfoPicBox
         {
-            get { return PersonalInfoPic.Image; }
+            get { return PersonalInfoPic.Image; }                 //getters and setters
             set { PersonalInfoPic.Image = value; }
         }
 
@@ -116,11 +116,11 @@ namespace RMS.UI
                 long phone = Convert.ToInt64(ContactTextPersonalInfo);
                 if (ObjectHandler.GetUserDL().UpdateUser(username, password, email, phone))
                 {
-                    MessageBox.Show("Personal Info Updated Successfully...");
+                    MessageBox.Show("Personal Info Updated Successfully...");          //info changed
                 }
                 else
                 {
-                    MessageBox.Show("Failed to update personal info...");
+                    MessageBox.Show("Failed to update personal info...");         //somthing is wrong
                 }
             }
         }
