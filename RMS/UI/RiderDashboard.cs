@@ -526,11 +526,7 @@ namespace RMS.UI
             Employee tempRider = ObjectHandler.GetUserDL().GetEmployeeByEmployeeID(rider.getUserID());
             double tip = ObjectHandler.GetUserDL().GetStoredUserTipByUserID(rider.getUserID());
 
-            MessageBox.Show("Tip: " + tip);
-
             double updatedTip = tip + tipToBeAdded;
-
-            MessageBox.Show("Updated Tip: " + updatedTip);
 
             Employee UpdatedRider = new Employee(tempRider.getUserID(), tempRider.getUsername(), tempRider.getUserHashPassword(), tempRider.getRole(), tempRider.getUserEmail(), tempRider.getUserPhone(), tempRider.getUserRegistrationDate(), tempRider.GetSalary() , updatedTip);
             

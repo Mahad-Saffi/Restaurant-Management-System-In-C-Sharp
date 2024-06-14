@@ -199,9 +199,8 @@
             this.RiderPanelMain.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.RiderPanelMain.Dock = System.Windows.Forms.DockStyle.Top;
             this.RiderPanelMain.Location = new System.Drawing.Point(0, 0);
-            this.RiderPanelMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.RiderPanelMain.Name = "RiderPanelMain";
-            this.RiderPanelMain.Size = new System.Drawing.Size(1712, 75);
+            this.RiderPanelMain.Size = new System.Drawing.Size(1284, 61);
             this.RiderPanelMain.TabIndex = 2;
             // 
             // guna2ControlBox3
@@ -213,10 +212,9 @@
             this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(1497, 23);
-            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(1123, 19);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
-            this.guna2ControlBox3.Size = new System.Drawing.Size(61, 36);
+            this.guna2ControlBox3.Size = new System.Drawing.Size(46, 29);
             this.guna2ControlBox3.TabIndex = 4;
             // 
             // guna2ControlBox2
@@ -228,10 +226,9 @@
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1567, 23);
-            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1175, 19);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(61, 36);
+            this.guna2ControlBox2.Size = new System.Drawing.Size(46, 29);
             this.guna2ControlBox2.TabIndex = 3;
             // 
             // guna2ControlBox1
@@ -242,20 +239,18 @@
             this.guna2ControlBox1.BorderThickness = 1;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1636, 21);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1227, 17);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(60, 36);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 2;
             // 
             // UpperBarUsername
             // 
             this.UpperBarUsername.AutoSize = true;
             this.UpperBarUsername.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpperBarUsername.Location = new System.Drawing.Point(119, 23);
-            this.UpperBarUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.UpperBarUsername.Location = new System.Drawing.Point(89, 19);
             this.UpperBarUsername.Name = "UpperBarUsername";
-            this.UpperBarUsername.Size = new System.Drawing.Size(128, 32);
+            this.UpperBarUsername.Size = new System.Drawing.Size(101, 25);
             this.UpperBarUsername.TabIndex = 1;
             this.UpperBarUsername.Text = "Username";
             // 
@@ -265,11 +260,10 @@
             this.UpperBarPicBox.FillColor = System.Drawing.Color.Transparent;
             this.UpperBarPicBox.Image = ((System.Drawing.Image)(resources.GetObject("UpperBarPicBox.Image")));
             this.UpperBarPicBox.ImageRotate = 0F;
-            this.UpperBarPicBox.Location = new System.Drawing.Point(44, 10);
-            this.UpperBarPicBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UpperBarPicBox.Location = new System.Drawing.Point(33, 8);
             this.UpperBarPicBox.Name = "UpperBarPicBox";
             this.UpperBarPicBox.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.UpperBarPicBox.Size = new System.Drawing.Size(61, 55);
+            this.UpperBarPicBox.Size = new System.Drawing.Size(46, 45);
             this.UpperBarPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.UpperBarPicBox.TabIndex = 0;
             this.UpperBarPicBox.TabStop = false;
@@ -279,10 +273,9 @@
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(16, 15);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 12);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(227, 112);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(170, 91);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
@@ -292,9 +285,8 @@
             this.CustomerSideSubPanel1.Controls.Add(this.guna2PictureBox1);
             this.CustomerSideSubPanel1.CustomBorderColor = System.Drawing.Color.Silver;
             this.CustomerSideSubPanel1.Location = new System.Drawing.Point(1, 1);
-            this.CustomerSideSubPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CustomerSideSubPanel1.Name = "CustomerSideSubPanel1";
-            this.CustomerSideSubPanel1.Size = new System.Drawing.Size(253, 140);
+            this.CustomerSideSubPanel1.Size = new System.Drawing.Size(190, 114);
             this.CustomerSideSubPanel1.TabIndex = 3;
             // 
             // RiderSideBarMainPanel
@@ -303,10 +295,9 @@
             this.RiderSideBarMainPanel.Controls.Add(this.CustomerSideSubPanel1);
             this.RiderSideBarMainPanel.CustomBorderColor = System.Drawing.Color.Silver;
             this.RiderSideBarMainPanel.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.RiderSideBarMainPanel.Location = new System.Drawing.Point(0, 74);
-            this.RiderSideBarMainPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RiderSideBarMainPanel.Location = new System.Drawing.Point(0, 60);
             this.RiderSideBarMainPanel.Name = "RiderSideBarMainPanel";
-            this.RiderSideBarMainPanel.Size = new System.Drawing.Size(259, 864);
+            this.RiderSideBarMainPanel.Size = new System.Drawing.Size(194, 702);
             this.RiderSideBarMainPanel.TabIndex = 4;
             // 
             // SubSideBarOptions
@@ -318,10 +309,9 @@
             this.SubSideBarOptions.Controls.Add(this.btnDeliveryStatus);
             this.SubSideBarOptions.Controls.Add(this.btnOrderHistory);
             this.SubSideBarOptions.Controls.Add(this.btnActiveOrders);
-            this.SubSideBarOptions.Location = new System.Drawing.Point(3, 143);
-            this.SubSideBarOptions.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SubSideBarOptions.Location = new System.Drawing.Point(2, 116);
             this.SubSideBarOptions.Name = "SubSideBarOptions";
-            this.SubSideBarOptions.Size = new System.Drawing.Size(251, 718);
+            this.SubSideBarOptions.Size = new System.Drawing.Size(188, 583);
             this.SubSideBarOptions.TabIndex = 4;
             // 
             // btnInbox
@@ -341,10 +331,9 @@
             this.btnInbox.Image = ((System.Drawing.Image)(resources.GetObject("btnInbox.Image")));
             this.btnInbox.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnInbox.ImageOffset = new System.Drawing.Point(4, 0);
-            this.btnInbox.Location = new System.Drawing.Point(0, 450);
-            this.btnInbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInbox.Location = new System.Drawing.Point(0, 365);
             this.btnInbox.Name = "btnInbox";
-            this.btnInbox.Size = new System.Drawing.Size(251, 90);
+            this.btnInbox.Size = new System.Drawing.Size(188, 73);
             this.btnInbox.TabIndex = 12;
             this.btnInbox.Text = "Inbox";
             this.btnInbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -355,7 +344,7 @@
             // 
             this.btnLogOut.AutoRoundedCorners = true;
             this.btnLogOut.BorderColor = System.Drawing.Color.Silver;
-            this.btnLogOut.BorderRadius = 26;
+            this.btnLogOut.BorderRadius = 21;
             this.btnLogOut.BorderThickness = 1;
             this.btnLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -365,10 +354,9 @@
             this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnLogOut.ForeColor = System.Drawing.Color.Black;
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
-            this.btnLogOut.Location = new System.Drawing.Point(27, 570);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogOut.Location = new System.Drawing.Point(20, 463);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(193, 55);
+            this.btnLogOut.Size = new System.Drawing.Size(145, 45);
             this.btnLogOut.TabIndex = 11;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
@@ -390,10 +378,9 @@
             this.btnPersonalInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonalInfo.Image")));
             this.btnPersonalInfo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnPersonalInfo.ImageOffset = new System.Drawing.Point(4, 0);
-            this.btnPersonalInfo.Location = new System.Drawing.Point(0, 360);
-            this.btnPersonalInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPersonalInfo.Location = new System.Drawing.Point(0, 292);
             this.btnPersonalInfo.Name = "btnPersonalInfo";
-            this.btnPersonalInfo.Size = new System.Drawing.Size(251, 90);
+            this.btnPersonalInfo.Size = new System.Drawing.Size(188, 73);
             this.btnPersonalInfo.TabIndex = 10;
             this.btnPersonalInfo.Text = "Personal Info";
             this.btnPersonalInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -417,10 +404,9 @@
             this.btnEarningTracker.Image = ((System.Drawing.Image)(resources.GetObject("btnEarningTracker.Image")));
             this.btnEarningTracker.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnEarningTracker.ImageOffset = new System.Drawing.Point(3, 0);
-            this.btnEarningTracker.Location = new System.Drawing.Point(0, 270);
-            this.btnEarningTracker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEarningTracker.Location = new System.Drawing.Point(0, 219);
             this.btnEarningTracker.Name = "btnEarningTracker";
-            this.btnEarningTracker.Size = new System.Drawing.Size(251, 90);
+            this.btnEarningTracker.Size = new System.Drawing.Size(188, 73);
             this.btnEarningTracker.TabIndex = 9;
             this.btnEarningTracker.Text = "Earning Tracker";
             this.btnEarningTracker.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -444,10 +430,9 @@
             this.btnDeliveryStatus.Image = ((System.Drawing.Image)(resources.GetObject("btnDeliveryStatus.Image")));
             this.btnDeliveryStatus.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDeliveryStatus.ImageOffset = new System.Drawing.Point(3, 0);
-            this.btnDeliveryStatus.Location = new System.Drawing.Point(0, 180);
-            this.btnDeliveryStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeliveryStatus.Location = new System.Drawing.Point(0, 146);
             this.btnDeliveryStatus.Name = "btnDeliveryStatus";
-            this.btnDeliveryStatus.Size = new System.Drawing.Size(251, 90);
+            this.btnDeliveryStatus.Size = new System.Drawing.Size(188, 73);
             this.btnDeliveryStatus.TabIndex = 8;
             this.btnDeliveryStatus.Text = "Delivery Status";
             this.btnDeliveryStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -471,10 +456,9 @@
             this.btnOrderHistory.Image = ((System.Drawing.Image)(resources.GetObject("btnOrderHistory.Image")));
             this.btnOrderHistory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnOrderHistory.ImageOffset = new System.Drawing.Point(2, 0);
-            this.btnOrderHistory.Location = new System.Drawing.Point(0, 90);
-            this.btnOrderHistory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOrderHistory.Location = new System.Drawing.Point(0, 73);
             this.btnOrderHistory.Name = "btnOrderHistory";
-            this.btnOrderHistory.Size = new System.Drawing.Size(251, 90);
+            this.btnOrderHistory.Size = new System.Drawing.Size(188, 73);
             this.btnOrderHistory.TabIndex = 7;
             this.btnOrderHistory.Text = "Order History";
             this.btnOrderHistory.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -499,9 +483,8 @@
             this.btnActiveOrders.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnActiveOrders.ImageOffset = new System.Drawing.Point(3, 0);
             this.btnActiveOrders.Location = new System.Drawing.Point(0, 0);
-            this.btnActiveOrders.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnActiveOrders.Name = "btnActiveOrders";
-            this.btnActiveOrders.Size = new System.Drawing.Size(251, 90);
+            this.btnActiveOrders.Size = new System.Drawing.Size(188, 73);
             this.btnActiveOrders.TabIndex = 6;
             this.btnActiveOrders.Text = "Active Orders";
             this.btnActiveOrders.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -510,25 +493,23 @@
             // 
             // RiderMain
             // 
+            this.RiderMain.Controls.Add(this.DeliveryStatusMain);
             this.RiderMain.Controls.Add(this.PersonalInfoMain);
             this.RiderMain.Controls.Add(this.OrderHistoryMain);
             this.RiderMain.Controls.Add(this.OrdersMain);
             this.RiderMain.Controls.Add(this.EarningTrackerMain);
-            this.RiderMain.Controls.Add(this.DeliveryStatusMain);
             this.RiderMain.Controls.Add(this.InboxMainPanel);
-            this.RiderMain.Location = new System.Drawing.Point(257, 75);
-            this.RiderMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RiderMain.Location = new System.Drawing.Point(193, 61);
             this.RiderMain.Name = "RiderMain";
-            this.RiderMain.Size = new System.Drawing.Size(1453, 860);
+            this.RiderMain.Size = new System.Drawing.Size(1090, 699);
             this.RiderMain.TabIndex = 5;
             // 
             // PersonalInfoMain
             // 
             this.PersonalInfoMain.Controls.Add(this.personalInfoRider);
             this.PersonalInfoMain.Location = new System.Drawing.Point(-1, 1);
-            this.PersonalInfoMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PersonalInfoMain.Name = "PersonalInfoMain";
-            this.PersonalInfoMain.Size = new System.Drawing.Size(1453, 862);
+            this.PersonalInfoMain.Size = new System.Drawing.Size(1090, 700);
             this.PersonalInfoMain.TabIndex = 12;
             // 
             // personalInfoRider
@@ -536,7 +517,7 @@
             this.personalInfoRider.ContactTextPersonalInfo = "";
             this.personalInfoRider.EmailTextPersonalInfo = "";
             this.personalInfoRider.Location = new System.Drawing.Point(0, 0);
-            this.personalInfoRider.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.personalInfoRider.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.personalInfoRider.Name = "personalInfoRider";
             this.personalInfoRider.NameTextPersonalInfo = "";
             this.personalInfoRider.PassTextPersonalInfo = "";
@@ -544,7 +525,7 @@
             this.personalInfoRider.RoleTextPersonalInfo = "";
             this.personalInfoRider.SalaryTextPersonalInfo = "Amount";
             this.personalInfoRider.SinceTextPersonalInfo = "";
-            this.personalInfoRider.Size = new System.Drawing.Size(1452, 858);
+            this.personalInfoRider.Size = new System.Drawing.Size(1089, 697);
             this.personalInfoRider.TabIndex = 2;
             // 
             // OrderHistoryMain
@@ -556,9 +537,8 @@
             this.OrderHistoryMain.Controls.Add(this.OrderHistoryChart);
             this.OrderHistoryMain.Controls.Add(this.guna2Panel1);
             this.OrderHistoryMain.Location = new System.Drawing.Point(0, 0);
-            this.OrderHistoryMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.OrderHistoryMain.Name = "OrderHistoryMain";
-            this.OrderHistoryMain.Size = new System.Drawing.Size(1455, 860);
+            this.OrderHistoryMain.Size = new System.Drawing.Size(1091, 699);
             this.OrderHistoryMain.TabIndex = 5;
             this.OrderHistoryMain.Paint += new System.Windows.Forms.PaintEventHandler(this.OrderHistoryMain_Paint);
             // 
@@ -569,20 +549,18 @@
             this.OrdersPanel.BorderRadius = 20;
             this.OrdersPanel.BorderThickness = 2;
             this.OrdersPanel.Controls.Add(this.OrdersByRider);
-            this.OrdersPanel.Location = new System.Drawing.Point(137, 138);
-            this.OrdersPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.OrdersPanel.Location = new System.Drawing.Point(103, 112);
             this.OrdersPanel.Name = "OrdersPanel";
-            this.OrdersPanel.Size = new System.Drawing.Size(332, 94);
+            this.OrdersPanel.Size = new System.Drawing.Size(249, 76);
             this.OrdersPanel.TabIndex = 2;
             // 
             // OrdersByRider
             // 
             this.OrdersByRider.AutoSize = true;
             this.OrdersByRider.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.OrdersByRider.Location = new System.Drawing.Point(24, 23);
-            this.OrdersByRider.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.OrdersByRider.Location = new System.Drawing.Point(18, 19);
             this.OrdersByRider.Name = "OrdersByRider";
-            this.OrdersByRider.Size = new System.Drawing.Size(271, 46);
+            this.OrdersByRider.Size = new System.Drawing.Size(218, 37);
             this.OrdersByRider.TabIndex = 0;
             this.OrdersByRider.Text = "Orders By Rider";
             // 
@@ -593,20 +571,18 @@
             this.TipOnOrder.BorderRadius = 20;
             this.TipOnOrder.BorderThickness = 2;
             this.TipOnOrder.Controls.Add(this.TipLabel);
-            this.TipOnOrder.Location = new System.Drawing.Point(1023, 242);
-            this.TipOnOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TipOnOrder.Location = new System.Drawing.Point(767, 197);
             this.TipOnOrder.Name = "TipOnOrder";
-            this.TipOnOrder.Size = new System.Drawing.Size(292, 94);
+            this.TipOnOrder.Size = new System.Drawing.Size(219, 76);
             this.TipOnOrder.TabIndex = 1;
             // 
             // TipLabel
             // 
             this.TipLabel.AutoSize = true;
             this.TipLabel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.TipLabel.Location = new System.Drawing.Point(28, 23);
-            this.TipLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TipLabel.Location = new System.Drawing.Point(21, 19);
             this.TipLabel.Name = "TipLabel";
-            this.TipLabel.Size = new System.Drawing.Size(229, 46);
+            this.TipLabel.Size = new System.Drawing.Size(182, 37);
             this.TipLabel.TabIndex = 0;
             this.TipLabel.Text = "Tip On Order";
             // 
@@ -614,10 +590,9 @@
             // 
             chartFont1.FontName = "Arial";
             this.gunaChart1.Legend.LabelFont = chartFont1;
-            this.gunaChart1.Location = new System.Drawing.Point(869, 361);
-            this.gunaChart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaChart1.Location = new System.Drawing.Point(652, 293);
             this.gunaChart1.Name = "gunaChart1";
-            this.gunaChart1.Size = new System.Drawing.Size(556, 436);
+            this.gunaChart1.Size = new System.Drawing.Size(417, 354);
             this.gunaChart1.TabIndex = 2;
             chartFont2.FontName = "Arial";
             chartFont2.Size = 12;
@@ -650,10 +625,9 @@
             // 
             chartFont9.FontName = "Arial";
             this.OrderHistoryChart.Legend.LabelFont = chartFont9;
-            this.OrderHistoryChart.Location = new System.Drawing.Point(35, 242);
-            this.OrderHistoryChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.OrderHistoryChart.Location = new System.Drawing.Point(26, 197);
             this.OrderHistoryChart.Name = "OrderHistoryChart";
-            this.OrderHistoryChart.Size = new System.Drawing.Size(792, 554);
+            this.OrderHistoryChart.Size = new System.Drawing.Size(594, 450);
             this.OrderHistoryChart.TabIndex = 1;
             chartFont10.FontName = "Arial";
             chartFont10.Size = 12;
@@ -689,20 +663,18 @@
             this.guna2Panel1.BorderRadius = 10;
             this.guna2Panel1.BorderThickness = 2;
             this.guna2Panel1.Controls.Add(this.OrderHistory);
-            this.guna2Panel1.Location = new System.Drawing.Point(545, 31);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Location = new System.Drawing.Point(409, 25);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(431, 126);
+            this.guna2Panel1.Size = new System.Drawing.Size(323, 102);
             this.guna2Panel1.TabIndex = 0;
             // 
             // OrderHistory
             // 
             this.OrderHistory.AutoSize = true;
             this.OrderHistory.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OrderHistory.Location = new System.Drawing.Point(32, 26);
-            this.OrderHistory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.OrderHistory.Location = new System.Drawing.Point(24, 21);
             this.OrderHistory.Name = "OrderHistory";
-            this.OrderHistory.Size = new System.Drawing.Size(352, 67);
+            this.OrderHistory.Size = new System.Drawing.Size(283, 54);
             this.OrderHistory.TabIndex = 0;
             this.OrderHistory.Text = "Order History";
             // 
@@ -715,19 +687,17 @@
             this.OrdersMain.Controls.Add(this.AllOrdersDataGridView);
             this.OrdersMain.Controls.Add(this.guna2Panel3);
             this.OrdersMain.Location = new System.Drawing.Point(0, 0);
-            this.OrdersMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.OrdersMain.Name = "OrdersMain";
-            this.OrdersMain.Size = new System.Drawing.Size(1453, 860);
+            this.OrdersMain.Size = new System.Drawing.Size(1090, 699);
             this.OrdersMain.TabIndex = 4;
             // 
             // labelOrderID
             // 
             this.labelOrderID.AutoSize = true;
             this.labelOrderID.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOrderID.Location = new System.Drawing.Point(119, 754);
-            this.labelOrderID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelOrderID.Location = new System.Drawing.Point(89, 613);
             this.labelOrderID.Name = "labelOrderID";
-            this.labelOrderID.Size = new System.Drawing.Size(139, 36);
+            this.labelOrderID.Size = new System.Drawing.Size(113, 29);
             this.labelOrderID.TabIndex = 5;
             this.labelOrderID.Text = "Order ID";
             // 
@@ -741,16 +711,15 @@
             this.ComboOrderID.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.ComboOrderID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.ComboOrderID.ItemHeight = 30;
-            this.ComboOrderID.Location = new System.Drawing.Point(285, 750);
-            this.ComboOrderID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ComboOrderID.Location = new System.Drawing.Point(214, 609);
             this.ComboOrderID.Name = "ComboOrderID";
-            this.ComboOrderID.Size = new System.Drawing.Size(149, 36);
+            this.ComboOrderID.Size = new System.Drawing.Size(113, 36);
             this.ComboOrderID.TabIndex = 4;
             // 
             // btnRejectOrder
             // 
             this.btnRejectOrder.AutoRoundedCorners = true;
-            this.btnRejectOrder.BorderRadius = 32;
+            this.btnRejectOrder.BorderRadius = 26;
             this.btnRejectOrder.BorderThickness = 2;
             this.btnRejectOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnRejectOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -759,10 +728,9 @@
             this.btnRejectOrder.FillColor = System.Drawing.Color.Transparent;
             this.btnRejectOrder.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnRejectOrder.ForeColor = System.Drawing.Color.Black;
-            this.btnRejectOrder.Location = new System.Drawing.Point(1176, 741);
-            this.btnRejectOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRejectOrder.Location = new System.Drawing.Point(882, 602);
             this.btnRejectOrder.Name = "btnRejectOrder";
-            this.btnRejectOrder.Size = new System.Drawing.Size(195, 66);
+            this.btnRejectOrder.Size = new System.Drawing.Size(146, 54);
             this.btnRejectOrder.TabIndex = 3;
             this.btnRejectOrder.Text = "Reject";
             this.btnRejectOrder.Click += new System.EventHandler(this.btnRejectOrder_Click);
@@ -770,7 +738,7 @@
             // btnAcceptOrder
             // 
             this.btnAcceptOrder.AutoRoundedCorners = true;
-            this.btnAcceptOrder.BorderRadius = 32;
+            this.btnAcceptOrder.BorderRadius = 26;
             this.btnAcceptOrder.BorderThickness = 2;
             this.btnAcceptOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAcceptOrder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -779,10 +747,9 @@
             this.btnAcceptOrder.FillColor = System.Drawing.Color.Transparent;
             this.btnAcceptOrder.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnAcceptOrder.ForeColor = System.Drawing.Color.Black;
-            this.btnAcceptOrder.Location = new System.Drawing.Point(869, 741);
-            this.btnAcceptOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAcceptOrder.Location = new System.Drawing.Point(652, 602);
             this.btnAcceptOrder.Name = "btnAcceptOrder";
-            this.btnAcceptOrder.Size = new System.Drawing.Size(195, 66);
+            this.btnAcceptOrder.Size = new System.Drawing.Size(146, 54);
             this.btnAcceptOrder.TabIndex = 2;
             this.btnAcceptOrder.Text = "Accept";
             this.btnAcceptOrder.Click += new System.EventHandler(this.btnAcceptOrder_Click);
@@ -818,8 +785,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.AllOrdersDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.AllOrdersDataGridView.GridColor = System.Drawing.Color.Black;
-            this.AllOrdersDataGridView.Location = new System.Drawing.Point(44, 178);
-            this.AllOrdersDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AllOrdersDataGridView.Location = new System.Drawing.Point(33, 145);
             this.AllOrdersDataGridView.Name = "AllOrdersDataGridView";
             this.AllOrdersDataGridView.ReadOnly = true;
             this.AllOrdersDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -834,7 +800,7 @@
             this.AllOrdersDataGridView.RowHeadersVisible = false;
             this.AllOrdersDataGridView.RowHeadersWidth = 51;
             this.AllOrdersDataGridView.RowTemplate.Height = 25;
-            this.AllOrdersDataGridView.Size = new System.Drawing.Size(1359, 526);
+            this.AllOrdersDataGridView.Size = new System.Drawing.Size(1019, 427);
             this.AllOrdersDataGridView.TabIndex = 1;
             this.AllOrdersDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.AllOrdersDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -865,20 +831,18 @@
             this.guna2Panel3.BorderRadius = 20;
             this.guna2Panel3.BorderThickness = 2;
             this.guna2Panel3.Controls.Add(this.LabelOrders);
-            this.guna2Panel3.Location = new System.Drawing.Point(608, 41);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel3.Location = new System.Drawing.Point(456, 33);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(303, 116);
+            this.guna2Panel3.Size = new System.Drawing.Size(227, 94);
             this.guna2Panel3.TabIndex = 0;
             // 
             // LabelOrders
             // 
             this.LabelOrders.AutoSize = true;
             this.LabelOrders.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelOrders.Location = new System.Drawing.Point(53, 23);
-            this.LabelOrders.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LabelOrders.Location = new System.Drawing.Point(40, 19);
             this.LabelOrders.Name = "LabelOrders";
-            this.LabelOrders.Size = new System.Drawing.Size(187, 67);
+            this.LabelOrders.Size = new System.Drawing.Size(150, 54);
             this.LabelOrders.TabIndex = 0;
             this.LabelOrders.Text = "Orders";
             this.LabelOrders.Click += new System.EventHandler(this.LabelOrders_Click);
@@ -888,9 +852,8 @@
             this.EarningTrackerMain.Controls.Add(this.guna2Panel9);
             this.EarningTrackerMain.Controls.Add(this.EarningTrackerMainPanel);
             this.EarningTrackerMain.Location = new System.Drawing.Point(0, 0);
-            this.EarningTrackerMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.EarningTrackerMain.Name = "EarningTrackerMain";
-            this.EarningTrackerMain.Size = new System.Drawing.Size(1455, 863);
+            this.EarningTrackerMain.Size = new System.Drawing.Size(1091, 701);
             this.EarningTrackerMain.TabIndex = 6;
             // 
             // guna2Panel9
@@ -899,20 +862,18 @@
             this.guna2Panel9.BorderRadius = 20;
             this.guna2Panel9.BorderThickness = 2;
             this.guna2Panel9.Controls.Add(this.EarningDuringWholeYearChart);
-            this.guna2Panel9.Location = new System.Drawing.Point(60, 193);
-            this.guna2Panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel9.Location = new System.Drawing.Point(45, 157);
             this.guna2Panel9.Name = "guna2Panel9";
-            this.guna2Panel9.Size = new System.Drawing.Size(1333, 651);
+            this.guna2Panel9.Size = new System.Drawing.Size(1000, 529);
             this.guna2Panel9.TabIndex = 1;
             // 
             // EarningDuringWholeYearChart
             // 
             chartFont17.FontName = "Arial";
             this.EarningDuringWholeYearChart.Legend.LabelFont = chartFont17;
-            this.EarningDuringWholeYearChart.Location = new System.Drawing.Point(37, 27);
-            this.EarningDuringWholeYearChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.EarningDuringWholeYearChart.Location = new System.Drawing.Point(28, 22);
             this.EarningDuringWholeYearChart.Name = "EarningDuringWholeYearChart";
-            this.EarningDuringWholeYearChart.Size = new System.Drawing.Size(1260, 596);
+            this.EarningDuringWholeYearChart.Size = new System.Drawing.Size(945, 484);
             this.EarningDuringWholeYearChart.TabIndex = 0;
             chartFont18.FontName = "Arial";
             chartFont18.Size = 12;
@@ -947,20 +908,18 @@
             this.EarningTrackerMainPanel.BorderRadius = 10;
             this.EarningTrackerMainPanel.BorderThickness = 2;
             this.EarningTrackerMainPanel.Controls.Add(this.EarningTrackerLabel);
-            this.EarningTrackerMainPanel.Location = new System.Drawing.Point(544, 44);
-            this.EarningTrackerMainPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.EarningTrackerMainPanel.Location = new System.Drawing.Point(408, 36);
             this.EarningTrackerMainPanel.Name = "EarningTrackerMainPanel";
-            this.EarningTrackerMainPanel.Size = new System.Drawing.Size(439, 117);
+            this.EarningTrackerMainPanel.Size = new System.Drawing.Size(329, 95);
             this.EarningTrackerMainPanel.TabIndex = 0;
             // 
             // EarningTrackerLabel
             // 
             this.EarningTrackerLabel.AutoSize = true;
             this.EarningTrackerLabel.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EarningTrackerLabel.Location = new System.Drawing.Point(11, 26);
-            this.EarningTrackerLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.EarningTrackerLabel.Location = new System.Drawing.Point(8, 21);
             this.EarningTrackerLabel.Name = "EarningTrackerLabel";
-            this.EarningTrackerLabel.Size = new System.Drawing.Size(392, 67);
+            this.EarningTrackerLabel.Size = new System.Drawing.Size(313, 54);
             this.EarningTrackerLabel.TabIndex = 0;
             this.EarningTrackerLabel.Text = "Earning Tracker";
             // 
@@ -969,9 +928,8 @@
             this.DeliveryStatusMain.Controls.Add(this.DeliveryStatusPanel);
             this.DeliveryStatusMain.Controls.Add(this.guna2Panel2);
             this.DeliveryStatusMain.Location = new System.Drawing.Point(0, 0);
-            this.DeliveryStatusMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DeliveryStatusMain.Name = "DeliveryStatusMain";
-            this.DeliveryStatusMain.Size = new System.Drawing.Size(1455, 863);
+            this.DeliveryStatusMain.Size = new System.Drawing.Size(1091, 701);
             this.DeliveryStatusMain.TabIndex = 5;
             // 
             // DeliveryStatusPanel
@@ -990,10 +948,9 @@
             this.DeliveryStatusPanel.Controls.Add(this.guna2Panel6);
             this.DeliveryStatusPanel.Controls.Add(this.guna2Panel5);
             this.DeliveryStatusPanel.Controls.Add(this.guna2Panel4);
-            this.DeliveryStatusPanel.Location = new System.Drawing.Point(75, 190);
-            this.DeliveryStatusPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DeliveryStatusPanel.Location = new System.Drawing.Point(56, 154);
             this.DeliveryStatusPanel.Name = "DeliveryStatusPanel";
-            this.DeliveryStatusPanel.Size = new System.Drawing.Size(1272, 628);
+            this.DeliveryStatusPanel.Size = new System.Drawing.Size(954, 510);
             this.DeliveryStatusPanel.TabIndex = 4;
             // 
             // txtRecievablePayment
@@ -1009,14 +966,14 @@
             this.txtRecievablePayment.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRecievablePayment.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtRecievablePayment.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRecievablePayment.Location = new System.Drawing.Point(403, 270);
-            this.txtRecievablePayment.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtRecievablePayment.Location = new System.Drawing.Point(302, 219);
+            this.txtRecievablePayment.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtRecievablePayment.Name = "txtRecievablePayment";
             this.txtRecievablePayment.PasswordChar = '\0';
             this.txtRecievablePayment.PlaceholderText = "";
             this.txtRecievablePayment.ReadOnly = true;
             this.txtRecievablePayment.SelectedText = "";
-            this.txtRecievablePayment.Size = new System.Drawing.Size(195, 55);
+            this.txtRecievablePayment.Size = new System.Drawing.Size(146, 45);
             this.txtRecievablePayment.TabIndex = 18;
             // 
             // txtOrderItems
@@ -1036,14 +993,14 @@
             this.txtOrderItems.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.txtOrderItems.ForeColor = System.Drawing.Color.Black;
             this.txtOrderItems.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOrderItems.Location = new System.Drawing.Point(253, 143);
-            this.txtOrderItems.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtOrderItems.Location = new System.Drawing.Point(190, 116);
+            this.txtOrderItems.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtOrderItems.Name = "txtOrderItems";
             this.txtOrderItems.PasswordChar = '\0';
             this.txtOrderItems.PlaceholderText = "";
             this.txtOrderItems.ReadOnly = true;
             this.txtOrderItems.SelectedText = "";
-            this.txtOrderItems.Size = new System.Drawing.Size(583, 92);
+            this.txtOrderItems.Size = new System.Drawing.Size(437, 75);
             this.txtOrderItems.TabIndex = 16;
             // 
             // txtOrderID
@@ -1059,14 +1016,14 @@
             this.txtOrderID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtOrderID.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtOrderID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOrderID.Location = new System.Drawing.Point(253, 47);
-            this.txtOrderID.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtOrderID.Location = new System.Drawing.Point(190, 38);
+            this.txtOrderID.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtOrderID.Name = "txtOrderID";
             this.txtOrderID.PasswordChar = '\0';
             this.txtOrderID.PlaceholderText = "";
             this.txtOrderID.ReadOnly = true;
             this.txtOrderID.SelectedText = "";
-            this.txtOrderID.Size = new System.Drawing.Size(195, 55);
+            this.txtOrderID.Size = new System.Drawing.Size(146, 45);
             this.txtOrderID.TabIndex = 15;
             // 
             // AddressLabel
@@ -1076,10 +1033,9 @@
             this.AddressLabel.DisabledLinkColor = System.Drawing.Color.IndianRed;
             this.AddressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.AddressLabel.LinkColor = System.Drawing.Color.DimGray;
-            this.AddressLabel.Location = new System.Drawing.Point(256, 380);
-            this.AddressLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.AddressLabel.Location = new System.Drawing.Point(192, 309);
             this.AddressLabel.Name = "AddressLabel";
-            this.AddressLabel.Size = new System.Drawing.Size(151, 36);
+            this.AddressLabel.Size = new System.Drawing.Size(125, 29);
             this.AddressLabel.TabIndex = 14;
             this.AddressLabel.TabStop = true;
             this.AddressLabel.Text = "Click Here";
@@ -1098,10 +1054,9 @@
             this.btnSave.FillColor = System.Drawing.Color.Transparent;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.Location = new System.Drawing.Point(629, 543);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Location = new System.Drawing.Point(472, 441);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(145, 50);
+            this.btnSave.Size = new System.Drawing.Size(109, 41);
             this.btnSave.TabIndex = 13;
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -1112,20 +1067,18 @@
             this.panel.BorderRadius = 5;
             this.panel.BorderThickness = 2;
             this.panel.Controls.Add(this.Payemnt);
-            this.panel.Location = new System.Drawing.Point(53, 270);
-            this.panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel.Location = new System.Drawing.Point(40, 219);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(317, 55);
+            this.panel.Size = new System.Drawing.Size(238, 45);
             this.panel.TabIndex = 7;
             // 
             // Payemnt
             // 
             this.Payemnt.AutoSize = true;
             this.Payemnt.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Payemnt.Location = new System.Drawing.Point(9, 7);
-            this.Payemnt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Payemnt.Location = new System.Drawing.Point(7, 6);
             this.Payemnt.Name = "Payemnt";
-            this.Payemnt.Size = new System.Drawing.Size(281, 41);
+            this.Payemnt.Size = new System.Drawing.Size(226, 32);
             this.Payemnt.TabIndex = 3;
             this.Payemnt.Text = "Recievable Payment";
             // 
@@ -1143,10 +1096,9 @@
             "En-Route",
             "Picked",
             "Delivered"});
-            this.ComboOrderStatus.Location = new System.Drawing.Point(311, 471);
-            this.ComboOrderStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ComboOrderStatus.Location = new System.Drawing.Point(233, 383);
             this.ComboOrderStatus.Name = "ComboOrderStatus";
-            this.ComboOrderStatus.Size = new System.Drawing.Size(203, 36);
+            this.ComboOrderStatus.Size = new System.Drawing.Size(153, 36);
             this.ComboOrderStatus.StartIndex = 0;
             this.ComboOrderStatus.TabIndex = 7;
             // 
@@ -1156,20 +1108,18 @@
             this.guna2Panel7.BorderRadius = 5;
             this.guna2Panel7.BorderThickness = 2;
             this.guna2Panel7.Controls.Add(this.orderStatuss);
-            this.guna2Panel7.Location = new System.Drawing.Point(51, 464);
-            this.guna2Panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel7.Location = new System.Drawing.Point(38, 377);
             this.guna2Panel7.Name = "guna2Panel7";
-            this.guna2Panel7.Size = new System.Drawing.Size(223, 55);
+            this.guna2Panel7.Size = new System.Drawing.Size(167, 45);
             this.guna2Panel7.TabIndex = 6;
             // 
             // orderStatuss
             // 
             this.orderStatuss.AutoSize = true;
             this.orderStatuss.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderStatuss.Location = new System.Drawing.Point(9, 7);
-            this.orderStatuss.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.orderStatuss.Location = new System.Drawing.Point(7, 6);
             this.orderStatuss.Name = "orderStatuss";
-            this.orderStatuss.Size = new System.Drawing.Size(190, 41);
+            this.orderStatuss.Size = new System.Drawing.Size(151, 32);
             this.orderStatuss.TabIndex = 3;
             this.orderStatuss.Text = "Order Status:";
             // 
@@ -1179,20 +1129,18 @@
             this.guna2Panel6.BorderRadius = 5;
             this.guna2Panel6.BorderThickness = 2;
             this.guna2Panel6.Controls.Add(this.Address);
-            this.guna2Panel6.Location = new System.Drawing.Point(52, 369);
-            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel6.Location = new System.Drawing.Point(39, 300);
             this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(160, 55);
+            this.guna2Panel6.Size = new System.Drawing.Size(120, 45);
             this.guna2Panel6.TabIndex = 5;
             // 
             // Address
             // 
             this.Address.AutoSize = true;
             this.Address.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Address.Location = new System.Drawing.Point(9, 7);
-            this.Address.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Address.Location = new System.Drawing.Point(7, 6);
             this.Address.Name = "Address";
-            this.Address.Size = new System.Drawing.Size(132, 41);
+            this.Address.Size = new System.Drawing.Size(103, 32);
             this.Address.TabIndex = 3;
             this.Address.Text = "Address:";
             // 
@@ -1202,20 +1150,18 @@
             this.guna2Panel5.BorderRadius = 5;
             this.guna2Panel5.BorderThickness = 2;
             this.guna2Panel5.Controls.Add(this.Order);
-            this.guna2Panel5.Location = new System.Drawing.Point(52, 47);
-            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel5.Location = new System.Drawing.Point(39, 38);
             this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(172, 55);
+            this.guna2Panel5.Size = new System.Drawing.Size(129, 45);
             this.guna2Panel5.TabIndex = 4;
             // 
             // Order
             // 
             this.Order.AutoSize = true;
             this.Order.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Order.Location = new System.Drawing.Point(9, 7);
-            this.Order.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Order.Location = new System.Drawing.Point(7, 6);
             this.Order.Name = "Order";
-            this.Order.Size = new System.Drawing.Size(139, 41);
+            this.Order.Size = new System.Drawing.Size(110, 32);
             this.Order.TabIndex = 3;
             this.Order.Text = "Order ID:";
             // 
@@ -1225,20 +1171,18 @@
             this.guna2Panel4.BorderRadius = 5;
             this.guna2Panel4.BorderThickness = 2;
             this.guna2Panel4.Controls.Add(this.ItemsDeliveryStatus);
-            this.guna2Panel4.Location = new System.Drawing.Point(52, 151);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel4.Location = new System.Drawing.Point(39, 123);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(123, 55);
+            this.guna2Panel4.Size = new System.Drawing.Size(92, 45);
             this.guna2Panel4.TabIndex = 3;
             // 
             // ItemsDeliveryStatus
             // 
             this.ItemsDeliveryStatus.AutoSize = true;
             this.ItemsDeliveryStatus.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ItemsDeliveryStatus.Location = new System.Drawing.Point(9, 7);
-            this.ItemsDeliveryStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ItemsDeliveryStatus.Location = new System.Drawing.Point(7, 6);
             this.ItemsDeliveryStatus.Name = "ItemsDeliveryStatus";
-            this.ItemsDeliveryStatus.Size = new System.Drawing.Size(98, 41);
+            this.ItemsDeliveryStatus.Size = new System.Drawing.Size(77, 32);
             this.ItemsDeliveryStatus.TabIndex = 3;
             this.ItemsDeliveryStatus.Text = "Items:";
             // 
@@ -1248,20 +1192,18 @@
             this.guna2Panel2.BorderRadius = 10;
             this.guna2Panel2.BorderThickness = 2;
             this.guna2Panel2.Controls.Add(this.DeliveryStatus);
-            this.guna2Panel2.Location = new System.Drawing.Point(549, 31);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel2.Location = new System.Drawing.Point(412, 25);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(449, 127);
+            this.guna2Panel2.Size = new System.Drawing.Size(337, 103);
             this.guna2Panel2.TabIndex = 2;
             // 
             // DeliveryStatus
             // 
             this.DeliveryStatus.AutoSize = true;
             this.DeliveryStatus.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeliveryStatus.Location = new System.Drawing.Point(23, 28);
-            this.DeliveryStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.DeliveryStatus.Location = new System.Drawing.Point(17, 23);
             this.DeliveryStatus.Name = "DeliveryStatus";
-            this.DeliveryStatus.Size = new System.Drawing.Size(382, 67);
+            this.DeliveryStatus.Size = new System.Drawing.Size(309, 54);
             this.DeliveryStatus.TabIndex = 1;
             this.DeliveryStatus.Text = "Delivery Status";
             // 
@@ -1274,9 +1216,8 @@
             this.InboxMainPanel.Controls.Add(this.messagesFlowPanel);
             this.InboxMainPanel.Controls.Add(this.InboxPanel);
             this.InboxMainPanel.Location = new System.Drawing.Point(0, 0);
-            this.InboxMainPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.InboxMainPanel.Name = "InboxMainPanel";
-            this.InboxMainPanel.Size = new System.Drawing.Size(1451, 854);
+            this.InboxMainPanel.Size = new System.Drawing.Size(1088, 694);
             this.InboxMainPanel.TabIndex = 11;
             this.InboxMainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.InboxMainPanel_Paint);
             // 
@@ -1290,20 +1231,18 @@
             this.UsernamesCombo.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.UsernamesCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.UsernamesCombo.ItemHeight = 30;
-            this.UsernamesCombo.Location = new System.Drawing.Point(311, 751);
-            this.UsernamesCombo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UsernamesCombo.Location = new System.Drawing.Point(233, 610);
             this.UsernamesCombo.Name = "UsernamesCombo";
-            this.UsernamesCombo.Size = new System.Drawing.Size(211, 36);
+            this.UsernamesCombo.Size = new System.Drawing.Size(159, 36);
             this.UsernamesCombo.TabIndex = 21;
             // 
             // Usernames
             // 
             this.Usernames.AutoSize = true;
             this.Usernames.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Usernames.Location = new System.Drawing.Point(149, 759);
-            this.Usernames.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Usernames.Location = new System.Drawing.Point(112, 617);
             this.Usernames.Name = "Usernames";
-            this.Usernames.Size = new System.Drawing.Size(135, 31);
+            this.Usernames.Size = new System.Drawing.Size(109, 25);
             this.Usernames.TabIndex = 19;
             this.Usernames.Text = "Username";
             // 
@@ -1320,10 +1259,9 @@
             this.guna2Button16.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.guna2Button16.ForeColor = System.Drawing.Color.Black;
             this.guna2Button16.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button16.Image")));
-            this.guna2Button16.Location = new System.Drawing.Point(1109, 738);
-            this.guna2Button16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button16.Location = new System.Drawing.Point(832, 600);
             this.guna2Button16.Name = "guna2Button16";
-            this.guna2Button16.Size = new System.Drawing.Size(192, 69);
+            this.guna2Button16.Size = new System.Drawing.Size(144, 56);
             this.guna2Button16.TabIndex = 17;
             this.guna2Button16.Text = "Send";
             this.guna2Button16.Click += new System.EventHandler(this.guna2Button16_Click);
@@ -1343,14 +1281,14 @@
             this.txtMessage.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtMessage.ForeColor = System.Drawing.Color.Black;
             this.txtMessage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMessage.Location = new System.Drawing.Point(169, 577);
-            this.txtMessage.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtMessage.Location = new System.Drawing.Point(127, 469);
+            this.txtMessage.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtMessage.Multiline = true;
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.PasswordChar = '\0';
             this.txtMessage.PlaceholderText = "Your Message Goes here...";
             this.txtMessage.SelectedText = "";
-            this.txtMessage.Size = new System.Drawing.Size(1169, 119);
+            this.txtMessage.Size = new System.Drawing.Size(877, 97);
             this.txtMessage.TabIndex = 16;
             // 
             // messagesFlowPanel
@@ -1358,10 +1296,9 @@
             this.messagesFlowPanel.AutoScroll = true;
             this.messagesFlowPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.messagesFlowPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.messagesFlowPanel.Location = new System.Drawing.Point(52, 174);
-            this.messagesFlowPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.messagesFlowPanel.Location = new System.Drawing.Point(39, 141);
             this.messagesFlowPanel.Name = "messagesFlowPanel";
-            this.messagesFlowPanel.Size = new System.Drawing.Size(1353, 326);
+            this.messagesFlowPanel.Size = new System.Drawing.Size(1015, 265);
             this.messagesFlowPanel.TabIndex = 1;
             // 
             // InboxPanel
@@ -1370,20 +1307,18 @@
             this.InboxPanel.BorderRadius = 10;
             this.InboxPanel.BorderThickness = 2;
             this.InboxPanel.Controls.Add(this.label38);
-            this.InboxPanel.Location = new System.Drawing.Point(621, 31);
-            this.InboxPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.InboxPanel.Location = new System.Drawing.Point(466, 25);
             this.InboxPanel.Name = "InboxPanel";
-            this.InboxPanel.Size = new System.Drawing.Size(283, 105);
+            this.InboxPanel.Size = new System.Drawing.Size(212, 85);
             this.InboxPanel.TabIndex = 0;
             // 
             // label38
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(59, 18);
-            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label38.Location = new System.Drawing.Point(44, 15);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(164, 67);
+            this.label38.Size = new System.Drawing.Size(130, 54);
             this.label38.TabIndex = 0;
             this.label38.Text = "Inbox";
             // 
@@ -1395,14 +1330,13 @@
             // 
             // RiderDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1712, 937);
+            this.ClientSize = new System.Drawing.Size(1284, 761);
             this.Controls.Add(this.RiderMain);
             this.Controls.Add(this.RiderSideBarMainPanel);
             this.Controls.Add(this.RiderPanelMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "RiderDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RiderDashboard";

@@ -499,14 +499,14 @@ namespace RMS.UI
                 MessageBox.Show("Please select a Reciever to send a message.");
                 return;
             }
-            else if (string.IsNullOrEmpty(txtMessage.Text))
+            else if (string.IsNullOrEmpty(txtMessageCustomer.Text))
             {
                 MessageBox.Show("Please fill the message field.");
                 return;
             }
 
             int reciever = Convert.ToInt32(CustomerIDCombo.Text);
-            string message = txtMessage.Text;
+            string message = txtMessageCustomer.Text;
 
             Inbox inbox = new Inbox(manager.getUserID(), reciever, message, DateTime.Now);
 
