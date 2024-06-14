@@ -322,8 +322,8 @@ namespace RMS.UI
 
             if (ObjectHandler.GetValidations().ValidateInteger(UsersIDCombo.Text))
             {
-                string query = "UPDATE Users SET Picture = @image WHERE UserID = @ID";
-                if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(UserPicturebox.Image), query, Convert.ToInt32(UsersIDCombo.Text), "user"))
+                string type = "user";
+                if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(UserPicturebox.Image), type, Convert.ToInt32(UsersIDCombo.Text), "user"))
                 {
                     MessageBox.Show("User Image Updated successfully...");
                 }
@@ -358,8 +358,8 @@ namespace RMS.UI
             if (ObjectHandler.GetItemDL().AddItem(item))
             {
                 Item tempItem = ObjectHandler.GetItemDL().LoadLastItem();
-                string query = "UPDATE Items SET Picture = @image WHERE ItemID = @ID";
-                if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(Properties.Resources.dish), query, tempItem.getItemID(), "item"))
+                string type = "item";
+                if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(Properties.Resources.dish), type, tempItem.getItemID(), "item"))
                 {
                     MessageBox.Show("Item added successfully.");
                 }
@@ -387,8 +387,8 @@ namespace RMS.UI
             }
             if (ObjectHandler.GetValidations().ValidateInteger(ItemIDCombo.Text))
             {
-                string query = "UPDATE Items SET Picture = @image WHERE ItemID = @ID";
-                if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(ItemPicturebox.Image), query, Convert.ToInt32(ItemIDCombo.Text), "item"))
+                string type = "item";
+                if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(ItemPicturebox.Image), type, Convert.ToInt32(ItemIDCombo.Text), "item"))
                 {
                     MessageBox.Show("Item Image Updated successfully...");
                 }
@@ -496,7 +496,7 @@ namespace RMS.UI
             string role = comboRole.Text.ToLower();
             double salary = Convert.ToDouble(txtSalary.Text);
             byte[] userPicture = UserPicturebox.Image != null ? ObjectHandler.GetUtilityDL().ImageToByteArray(UserPicturebox.Image) : null;
-
+            string type = "user";
 
             if (role.ToLower() == "admin")
             {
@@ -504,8 +504,7 @@ namespace RMS.UI
                 if (ObjectHandler.GetUserDL().AddUserData(adminTobeAdded))
                 {
                     User tempUser = ObjectHandler.GetUserDL().GetUserByUsername(username);       //updating the details
-                    string query = "UPDATE Users SET Picture = @image WHERE UserID = @ID";
-                    if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(Properties.Resources.user), query, tempUser.getUserID(), "user"))
+                    if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(Properties.Resources.user), type, tempUser.getUserID(), "user"))
                     {
                         MessageBox.Show("Admin added successfully.");
                     }
@@ -526,8 +525,7 @@ namespace RMS.UI
                 if(ObjectHandler.GetUserDL().AddUserData(employee))
                 {
                     User tempUser = ObjectHandler.GetUserDL().GetUserByUsername(username);
-                    string query = "UPDATE Users SET Picture = @image WHERE UserID = @ID";          //update picture
-                    if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(Properties.Resources.user), query, tempUser.getUserID(), "user"))
+                    if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(Properties.Resources.user), type, tempUser.getUserID(), "user"))
                     {
                         MessageBox.Show("Employee added successfully.");
                     }
@@ -548,8 +546,7 @@ namespace RMS.UI
                 if(ObjectHandler.GetUserDL().AddUserData(customer))
                 {
                     User tempUser = ObjectHandler.GetUserDL().GetUserByUsername(username);
-                    string query = "UPDATE Users SET Picture = @image WHERE UserID = @ID";
-                    if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(Properties.Resources.user), query, tempUser.getUserID(), "user"))
+                    if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(Properties.Resources.user), type, tempUser.getUserID(), "user"))
                     {
                         MessageBox.Show("Customer added successfully.");
                     }

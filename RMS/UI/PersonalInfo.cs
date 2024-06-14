@@ -47,7 +47,7 @@ namespace RMS.UI
         public string PassTextPersonalInfo
         {
             get { return TxtPassPersonalInfo.Text; }
-            set { TxtPassPersonalInfo.Text = value; }           //getters and setters
+            set { TxtPassPersonalInfo.PlaceholderText = value; }       //getters and setters
         }
 
         public string EmailTextPersonalInfo

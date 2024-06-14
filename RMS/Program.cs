@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using DLLForRMS.BL;
+using DLLForRMS.Utilities;
 
 namespace RMS
 {
@@ -19,7 +20,8 @@ namespace RMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //first form will be the loginin form 
+            ///Integration of Admin Account Code Goes Here
+            
             Application.Run(new LoginForm());
         }
     }

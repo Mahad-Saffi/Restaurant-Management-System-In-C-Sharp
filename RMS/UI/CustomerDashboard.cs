@@ -15,7 +15,7 @@ namespace RMS.UI
     public partial class CustomerDashboard :Form  
     {
         Customer customer;
-        private string orderType = "offline";    //by default
+        private string orderType = "Offline";    //by default
 
         private void InitializePopularItems()
         {
@@ -252,42 +252,51 @@ namespace RMS.UI
 
         public void Example(Guna.Charts.WinForms.GunaChart gunaChartCustomerPurchases)
         {
+            // Fetch the orders for the customer
             List<Order> customerOrders = ObjectHandler.GetOrderDL().GetCustomerAllOrders(customer.getUserID());
-            string[] days = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
 
-            
-            int[] purchasesByDay = new int[7];       // Initialize an array to store the count of purchases for each day
+            // Initialize an array to store the count of purchases for each day
+            int[] purchasesByDay = new int[7];
 
-           
-            foreach (Order order in customerOrders)             // Iterate through each order and count purchases for each day of the week
+            // Iterate through each order to count purchases per day
+            foreach (Order order in customerOrders)
             {
-               
-                DayOfWeek dayOfWeek = order.GetOrderDate().DayOfWeek;   // Get the day of the week for the order date
-                
-                purchasesByDay[(int)dayOfWeek]++;            // Increment the count of purchases for the corresponding day
-            } 
+                // Get the day of the week for the order date
+                DayOfWeek dayOfWeek = order.GetOrderDate().DayOfWeek;
 
-            
-            gunaChartCustomerPurchases.YAxes.GridLines.Display = false;            // Chart configuration
+                // Increment the count of purchases for the corresponding day
+                purchasesByDay[(int)dayOfWeek]++;
+            }
 
-            
-            var dataset = new Guna.Charts.WinForms.GunaBarDataset();        // Create a new dataset
-            dataset.CornerRadius = 20;
-            dataset.Label = "Purchases";
+            // Clear existing datasets to avoid duplication
+            gunaChartCustomerPurchases.Datasets.Clear();
+
+            // Create a new dataset
+            var dataset = new Guna.Charts.WinForms.GunaBarDataset
+            {
+                CornerRadius = 20,
+                Label = "Purchases",
+            };
+
+            // Define colors for the dataset
             dataset.FillColors.Add(Color.FromArgb(255, 0, 0, 0));
 
-            
-            for (int i = 0; i < days.Length; i++)                // Add purchase data to the dataset
+            // Days of the week for labeling
+            string[] days = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+
+            // Add purchase data to the dataset
+            for (int i = 0; i < days.Length; i++)
             {
                 dataset.DataPoints.Add(days[i], purchasesByDay[i]);
             }
 
+            // Add dataset to the chart
             gunaChartCustomerPurchases.Datasets.Add(dataset);
 
-            
-            gunaChartCustomerPurchases.Update();          // Update the chart
-
+            // Update the chart to reflect changes
+            gunaChartCustomerPurchases.Update();
         }
+
 
         private void gunaChart1_Load(object sender, EventArgs e)
         {
@@ -427,7 +436,7 @@ namespace RMS.UI
                 total += cartItem.GetCartItemPrice();        //total price
             }
 
-            if (orderType == "offline")
+            if (orderType == "Offline")
             {
 
                 Order order = new Order(customer.getUserID(), DateTime.Now, total, "offline", "", paymentMethod, tip, 0, "delivered");
@@ -452,7 +461,7 @@ namespace RMS.UI
                     {
                         new Feedback(customer).Show();
                         MessageBox.Show("Order placed successfully.");
-
+                        LoadCart(CustomerCartDataGridView);
 
                         ObjectHandler.GetCartDL().ClearCart(cart.GetCartID());
                     }
@@ -502,6 +511,7 @@ namespace RMS.UI
                     {
                         new Feedback(customer).Show();
                         MessageBox.Show("Thanks for ordering...\nYour Order is in Pending...");
+                        LoadCart(CustomerCartDataGridView);
                     }
                     else
                     {
@@ -546,7 +556,7 @@ namespace RMS.UI
                 txtAddress.FocusedState.BorderColor = Color.DodgerBlue;
 
             }
-            else
+            else if (OnlineOrderSwitch.Checked == false)
             {
                
                 orderType = "Offline";            // WHEN OFFLINE ORDER IS SELECTED
