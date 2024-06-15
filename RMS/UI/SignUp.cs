@@ -99,8 +99,8 @@ namespace RMS.UI
             if (ObjectHandler.GetUserDL().AddUserData(user))
             {
                 User tempUser = ObjectHandler.GetUserDL().GetUserByUsername(username);
-                string query = "UPDATE Users SET Picture = @image WHERE UserID = @ID";       //update picture
-                if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(Properties.Resources.user), query, tempUser.getUserID(), "user"))
+                string type = "user";
+                if (ObjectHandler.GetUtilityDL().SaveImage(ObjectHandler.GetUtilityDL().ImageToByteArray(Properties.Resources.user), type, tempUser.getUserID(), "user"))
                 {
                     MessageBox.Show("Sign Up Successfully...");
                 }
